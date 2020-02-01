@@ -1,0 +1,113 @@
+// Base
+
+* {
+	&,&:before,&:after {
+		box-sizing: border-box;
+	}
+}
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 140%;
+	background-color: $color2;
+	color: $color3;
+	overflow-x: hidden;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif;
+	font-weight: 700;
+	line-height: 140%;
+	color: $color4;
+}
+
+// Links
+
+a {
+	color: $color1;
+	text-decoration: none;
+	transition: color .3s ease;
+	&:hover, &:focus {
+		color: $color1;
+		text-decoration: none;
+	}
+	&:active {
+		color: $color1;
+	}
+	&[disabled] {
+		&, &:hover, &:focus, &:active {
+			color: $color1;
+		}
+	}
+}
+
+*:focus {
+	outline:0;
+}
+
+// Form
+
+button, input, textarea {
+	background-color: $input--background;
+	border: 1px solid $input--border;
+	border-radius: 30px;
+	padding: 10px 25px;
+	font-size: 1rem;
+	line-height: 22px;
+	color: $input--color;
+	transition: border .3s ease, color .3s ease;
+	&:hover {
+		border-color: $input--border-hover;
+	}
+	&:focus {
+		border-color: $input--border-focus;
+	}
+	@include placeholder {
+		color: $input--color-placeholder;
+		transition: color .3s ease;
+		opacity: 1;
+	}
+	&[disabled] {
+		background-color: $input--background-disabled;
+		border-color: $input--border-disabled;
+	}
+}
+
+// Flex
+
+%flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+%flex--start__horizont {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+%flex--start__vertical {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.container {
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+	@media (min-width: 768px) {
+	    width: 750px;
+	}
+	@media (min-width: 992px) {
+	    width: 970px;
+	}
+	@media (min-width: 1200px) {
+	    width: 1170px;
+	}
+}

@@ -1,0 +1,17 @@
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'components/normalize',
+  'components/mixins',
+  'components/variable';
+
+// 2. Base stuff
+@import
+  'base/base';
+
+// 3. Layout
+@import
+  'layout/header',
+  'layout/footer',
+  'layout/content';

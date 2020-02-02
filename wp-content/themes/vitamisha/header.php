@@ -18,41 +18,34 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
+	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,900&display=swap&subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="<?= get_template_directory_uri() ?>/main.css">
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'vitamisha' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$vitamisha_description = get_bloginfo( 'description', 'display' );
-			if ( $vitamisha_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $vitamisha_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'vitamisha' ); ?></button>
+<header id="header" class="header">
+	<div class="container header--container">
+		<div class="header--logo">
+			<a href="/" class="header--logo__link">
+				<img src="<?= get_template_directory_uri() ?>/img/logo.svg" alt="Витамиша лого">
+			</a>
+		</div>
+		<div id="header-nav" class="header--nav">
 			<?php
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
 			) );
 			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
+		</div>
+		<div class="header--buttons">
+			<button class="header--button__toggle"><i></i></button>
+			<button class="header--button__cart"><i></i></button>
+			<button class="header--button__search"><i></i></button>
+		</div>
+	</div>
+</header>
 
-	<div id="content" class="site-content">
+<main id="main" class="main">

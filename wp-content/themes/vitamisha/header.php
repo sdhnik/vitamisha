@@ -41,7 +41,7 @@
 				<li><button class="header--button header--buttons__toggle"><i></i></button></li>
 				<li><a href="/my-account/" class="header--button header--buttons__account"><i></i></a></li>
 				<?php if(!is_page( 'cart' ) && !is_cart() && !is_page( 'checkout' ) && !is_checkout()) { ?>
-				<li><a id="cart-button" href="#" class="header--button header--buttons__cart"><i></i> <span><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a></li>
+				<li><a id="cart-button" href="#" class="header--button header--buttons__cart"><i></i> <?php echo WC()->cart->get_cart_contents_count()>0 ? sprintf ( _n( '<span>%d</span>', '<span>%d</span>', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) : ''; ?></a></li>
 				<?php } ?>
 				<li class="header--buttons__search-container">
 					<input id="search-toggle" class="header--buttons__search-input" type="checkbox">

@@ -113,6 +113,7 @@ input, textarea {
 .logo {
 	&--link {
 		@extend %flex--start__horizont;
+		align-items: flex-end;
 	}
 	&--face {
 		display: inline-block;
@@ -125,12 +126,13 @@ input, textarea {
 		display: inline-block;
 		font-size: 1.125rem;
 		font-weight: 900;
-		line-height: 20px;
+		line-height: 14px;
 		text-transform: uppercase;
 		color: $color5;
 		span {
 			display: block;
 			color: $color9;
+			margin-bottom: 8px;
 		}
 	}
 }

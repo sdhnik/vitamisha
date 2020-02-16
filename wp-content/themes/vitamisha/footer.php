@@ -24,8 +24,8 @@
 			</div>
 			<div class="footer--info__text">Наш интернет-магазин “Витамиша” всегда рад вам помочь в выборе правильных витаминов для здорового развития ваших детей</div>
 			<div class="footer--info__social">
-				<a href="/" class="footer--info__social-facebook">Витамиша facebook</a>
-				<a href="/" class="footer--info__social-instagram">Витамиша instagram</a>
+				<a href="/" class="footer--info__social-facebook" title="Витамиша Facebook"></a>
+				<a href="/" class="footer--info__social-instagram" title="Витамиша Instagram"></a>
 			</div>
 		</div>
 		<div class="footer--col">
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="container footer--copyright">
+	<div class="footer--copyright">
 		<p>Copyright © <?= date('Y') ?> Витамиша. Все права защищены.</p>
 	</div>
 </footer>

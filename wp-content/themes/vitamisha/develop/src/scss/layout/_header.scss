@@ -2,7 +2,7 @@
 	background-color: $color1;
 	box-shadow: 0px 2px 20px rgba($color0, 0.1);
 	padding: 24px 0;
-	
+
 	&--container {
 		@extend %flex;
 	}
@@ -15,7 +15,7 @@
 		align-items: center;
 		border-radius: 50%;
 		cursor: pointer;
-		
+
 		@include p_el(before, calc(100% + 12px), calc(100% + 12px)) {
 			@include position(absolute, -6px null null -6px);
 			border: 2px dashed;
@@ -37,7 +37,7 @@
 			padding: 0;
 			margin: 0;
 			@extend %flex--start__horizont;
-			
+
 			li + li {
 				margin-left: 20px;
 			}
@@ -60,7 +60,7 @@
 				@include size(20px);
 				vertical-align: top;
 				cursor: pointer;
-				
+
 				@include p_el(before, 20px, 20px) {
 					@include position(absolute, 0);
 					margin: auto;
@@ -81,7 +81,7 @@
 				@include size(20px);
 				vertical-align: top;
 				cursor: pointer;
-				
+
 				@include p_el(before, 20px, 20px) {
 					@include position(absolute, 0);
 					margin: auto;
@@ -162,7 +162,7 @@
 					@include size(20px);
 					vertical-align: top;
 					cursor: pointer;
-					
+
 					@include p_el(both, null, null) {
 						@include position(absolute, 0 null null 0);
 						border: 3px solid $color1;
@@ -220,14 +220,14 @@
 			padding: 0;
 			margin: 0;
 			cursor: pointer;
-			
+
 			i {
 					display: inline-block;
 					position: relative;
 					@include size(20px);
 					vertical-align: top;
 					cursor: pointer;
-					
+
 					@include p_el(both, null, null) {
 						@include position(absolute, 0 null null 0);
 						border: 3px solid $color2;
@@ -261,6 +261,6 @@
 
 @keyframes spin_left {
 	100% {
-		transform: rotateZ(-360deg); 
+		transform: rotateZ(-360deg);
 	}
 }

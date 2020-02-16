@@ -1,13 +1,154 @@
 // Footer
 
 .footer {
+	position: relative;
 	background-color: $color8;
-	padding: 24px 0;
+	padding: 50px 0 0;
+	margin-top: 81px;
+
+	@include p_el(before, 100%, 81px) {
+		@include position(absolute, -81px 0 null 0);
+		background: url(./img/backgrounds/footer_bg.png) center top no-repeat;
+		background-size: cover;
+	}
+
+	@include p_el(after, 244px, 183px) {
+		@include position(absolute, -175px null null 8%);
+		background: url(./img/backgrounds/cloud_footer.png) center center no-repeat;
+		background-size: cover;
+		pointer-events: none;
+	}
+
+	&--container {
+		@extend %flex;
+		align-items: flex-start;
+	}
+
+	&--col {
+		max-width: 320px;
+	}
+
 	&--info {
 		&__logo {
 			.logo--text__first {
 				color: $color1;
 			}
+		}
+		&__text {
+			color: $color1;
+			line-height: 170%;
+			margin: 24px 0;
+		}
+		&__social {
+			a {
+				position: relative;
+				display: inline-block;
+				@include size(32px);
+
+				@include p_el(before, 100%, 100%) {
+					@include position(absolute, 0);
+					background: center center no-repeat;
+					transition: transform .3s ease;
+				}
+
+				&:hover, &:focus {
+					&:before {
+						transform: translateY(-8px);
+					}
+				}
+
+				+ a {
+					margin-left: 16px;
+				}
+
+				&.footer--info__social-facebook {
+					&:before {
+						background-image: url(./img/icons/facebook.svg);
+					}
+				}
+				&.footer--info__social-instagram {
+					&:before {
+						background-image: url(./img/icons/instagram.svg);
+					}
+				}
+			}
+		}
+	}
+
+	&--contacts {
+		color: $color1;
+
+		&__title {
+			font-size: 1.5rem;
+			font-weight: 900;
+			color: $color1;
+			margin: 0 0 18px;
+		}
+
+		&__address, &__phone, &__mail {
+			position: relative;
+			padding-left: 50px;
+
+			@include p_el(before, null, null) {
+				@include position(absolute, 0 null 0 0);
+				background: center center no-repeat;
+				margin: auto;
+			}
+		}
+
+		&__phone, &__mail {
+			a {
+				display: inline-block;
+				color: $color1;
+				padding-bottom: 2px;
+				border-bottom: 1px dashed transparent;
+				transition: border .3s ease;
+
+				&:hover, &:focus {
+					border-color: $color1;
+				}
+			}
+		}
+
+		&__address {
+			line-height: 170%;
+			margin-bottom: 24px;
+
+			&:before {
+				background-image: url(./img/icons/contacts_icon_01.png);
+				background-size: 25px 27px;
+				@include size(25px, 27px);
+			}
+		}
+
+		&__phone {
+			margin-bottom: 24px;
+
+			&:before {
+				background-image: url(./img/icons/contacts_icon_02.png);
+				background-size: 30px 23px;
+				@include size(30px, 23px);
+			}
+		}
+
+		&__mail {
+			&:before {
+				background-image: url(./img/icons/contacts_icon_03.png);
+				background-size: 30px 17px;
+				@include size(30px, 17px);
+			}
+		}
+	}
+
+	&--copyright {
+		background: url(./img/backgrounds/footer_bg_3.jpg) center top no-repeat;
+		background-size: cover;
+		color: $color1;
+		text-align: center;
+		padding: 24px 0;
+
+		p {
+			margin: 52px 0 0;
 		}
 	}
 }

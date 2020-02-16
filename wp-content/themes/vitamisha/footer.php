@@ -17,8 +17,9 @@
 	<div class="container footer--container">
 		<div class="footer--col">
 			<div class="footer--info__logo">
-				<a href="/" class="footer--logo">
-					<img src="<?= get_template_directory_uri() ?>/img/logo--footer.svg" alt="Витамиша лого">
+				<a href="/" class="logo--link">
+					<span class="logo--face"><img src="<?= get_template_directory_uri() ?>/img/logo.svg" alt="Витамиша лого"></span>
+					<span class="logo--text"><span class="logo--text__first">Вита</span>миша</span>
 				</a>
 			</div>
 			<div class="footer--info__text">Наш интернет-магазин “Витамиша” всегда рад вам помочь в выборе правильных витаминов для здорового развития ваших детей</div>
@@ -40,6 +41,10 @@
 		<p>Copyright © <?= date('Y') ?> Витамиша. Все права защищены.</p>
 	</div>
 </footer>
+
+<?php if(!is_page( 'cart' ) && !is_cart() && !is_page( 'checkout' ) && !is_checkout()) {
+	if (is_active_sidebar('cart_widget')) : dynamic_sidebar('cart_widget'); endif;
+} ?>
 
 <?php wp_footer(); ?>
 

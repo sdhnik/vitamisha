@@ -1,4 +1,266 @@
 .header {
+	background-color: $color1;
+	box-shadow: 0px 2px 20px rgba($color0, 0.1);
+	padding: 24px 0;
+	
+	&--container {
+		@extend %flex;
+	}
 
+	&--button {
+		@include size(40px);
+		display: inline-flex;
+		position: relative;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		cursor: pointer;
+		
+		@include p_el(before, calc(100% + 12px), calc(100% + 12px)) {
+			@include position(absolute, -6px null null -6px);
+			border: 2px dashed;
+			border-radius: inherit;
+			animation: spin_left 5s linear infinite;
+			animation-play-state: paused;
+		}
+
+		&:hover, &:focus {
+			&:before {
+				animation-play-state: running;
+			}
+		}
+	}
+
+	&--buttons {
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			@extend %flex--start__horizont;
+			
+			li + li {
+				margin-left: 20px;
+			}
+		}
+
+		&__toggle {
+			display: none;
+
+		}
+
+		&__account {
+			background-color: $color10;
+			border: 0;
+			&:before {
+				border-color: $color10;
+			}
+			i {
+				display: inline-block;
+				position: relative;
+				@include size(20px);
+				vertical-align: top;
+				cursor: pointer;
+				
+				@include p_el(before, 20px, 20px) {
+					@include position(absolute, 0);
+					margin: auto;
+					background: url(./img/icons/account.svg) center center no-repeat;
+					background-size: 20px 20px;
+				}
+			}
+		}
+
+		&__cart {
+			background-color: $color7;
+			&:before {
+				border-color: $color7;
+			}
+			i {
+				display: inline-block;
+				position: relative;
+				@include size(20px);
+				vertical-align: top;
+				cursor: pointer;
+				
+				@include p_el(before, 20px, 20px) {
+					@include position(absolute, 0);
+					margin: auto;
+					background: url(./img/icons/cart.svg) center center no-repeat;
+					background-size: 20px 20px;
+				}
+			}
+			span {
+				display: inline-block;
+				@include position(absolute, 30px -5px null null);
+				z-index: 1;
+				height: 20px;
+				min-width: 20px;
+				border-radius: 50%;
+				padding: 0 5px;
+				font-size: 0.6875rem;
+				line-height: 22px;
+				font-weight: 600;
+				color: $color1;
+				text-align: center;
+				vertical-align: middle;
+				cursor: pointer;
+				background-color: $color12;
+			}
+
+		}
+
+		&__search {
+			&-container {
+				position: relative;
+			}
+			&-input {
+				@include position(absolute, 0 null null 0);
+				opacity: 0;
+				pointer-events: none;
+				&:checked {
+					+ label {
+						span {
+							&:before {
+								@include size(0, 100%);
+								border-radius: 0;
+								border-width: 0.5px;
+								left: 50%;
+								background-color: #fff;
+								transition: all 0.3s, background-color 0s linear 0.3s;
+								transform: translateX(-0.5px) rotate(45deg);
+							}
+							&:after {
+								height: 100%;
+								left: 50%;
+								top: 50%;
+								transform: translate(-50%, -50%) rotate(-45deg);
+							}
+						}
+					}
+					~ .header--buttons__search-form{
+						opacity: 1;
+						visibility: visible;
+						transform: translateY(0);
+						transform: scale3d(1, 1, 1);
+					}
+				}
+
+				&:focus + label {
+					&:before {
+						animation-play-state: running;
+					}
+				}
+			}
+			&-toggle {
+				background-color: $color5;
+				&:before {
+					border-color: $color5;
+				}
+				span {
+					display: inline-block;
+					position: relative;
+					@include size(20px);
+					vertical-align: top;
+					cursor: pointer;
+					
+					@include p_el(both, null, null) {
+						@include position(absolute, 0 null null 0);
+						border: 3px solid $color1;
+					}
+
+					&:before {
+						@include size(90%);
+						border-radius: 50%;
+						border-width: 2px;
+						transform: rotate(45deg);
+						transition: all 0.3s, background-color 0s linear 0s;
+					}
+					&:after {
+						border-width: 0.5px;
+						@include size(0, 35%);
+						left: 90%;
+						top: 90%;
+						margin-left: 0;
+						margin-top: 0;
+						background-color: $color1;
+						transform: translate(-50%, -50%) rotate(-45deg);
+						transition: all 0.3s;
+					}
+				}
+			}
+			&-form {
+				@include position(absolute, calc(100% + 27px) 0 null null);
+				z-index: 2;
+				background-color: $color1;
+				border-radius: 20px;
+				box-shadow: 3px 0 30px 0 rgba($color0, 0.05);
+				padding: 20px;
+				transform: scale3d(0.8, 0.8, 0.8);
+				opacity: 0;
+				visibility: hidden;
+				transition: 0.3s;
+
+				input[type=search] {
+					@include size(260px, 50px);
+					padding: 8px 70px 8px 20px;
+					box-sizing: border-box;
+					border-color: $color5;
+				}
+
+			}
+
+			@include position(absolute, 20px 20px null null);
+			@include size(50px, calc(100% - 40px));
+			z-index: 2;
+			font-size: 0;
+			background: transparent;
+			border: none;
+			box-shadow: none;
+			outline: none;
+			padding: 0;
+			margin: 0;
+			cursor: pointer;
+			
+			i {
+					display: inline-block;
+					position: relative;
+					@include size(20px);
+					vertical-align: top;
+					cursor: pointer;
+					
+					@include p_el(both, null, null) {
+						@include position(absolute, 0 null null 0);
+						border: 3px solid $color2;
+						font-size: 1rem;
+					}
+
+					&:before {
+						@include size(90%);
+						border-radius: 50%;
+						border-width: 2px;
+						transform: rotate(45deg);
+						transition: all 0.3s, background-color 0s linear 0s;
+					}
+					&:after {
+						border-width: 0.5px;
+						@include size(0, 35%);
+						left: 90%;
+						top: 90%;
+						margin-left: 0;
+						margin-top: 0;
+						background-color: $color2;
+						transform: translate(-50%, -50%) rotate(-45deg);
+						transition: all 0.3s;
+					}
+			}
+
+
+		}
+	}
 }
 
+@keyframes spin_left {
+	100% {
+		transform: rotateZ(-360deg); 
+	}
+}

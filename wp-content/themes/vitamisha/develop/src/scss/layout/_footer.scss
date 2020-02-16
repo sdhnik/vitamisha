@@ -1,5 +1,17 @@
 // Footer
 
 .footer {
+	background-color: $color8;
+	padding: 24px 0;
+	&--info {
+		&__logo {
+			.logo--text__first {
+				color: $color1;
+			}
+		}
+	}
+}
 
+.widget_shopping_cart {
+	display: none;
 }

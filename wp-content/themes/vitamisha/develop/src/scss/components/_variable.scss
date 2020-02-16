@@ -1,13 +1,10 @@
 // Input
 
-$input--background:					#fff;
+$input--background:					transparent;
 $input--background-disabled:		#F5F5F5;
-$input--border:						#707070;
-$input--border-hover:				#F36F21;
-$input--border-focus:				#F36F21;
-$input--border-disabled:			#E0E0E0;
-$input--color:						#3A4045;
-$input--color-placeholder:			rgba(#3A4045, .5);
+$input--border-disabled:			#C4C4C4;
+$input--color:						#70747F;
+$input--color-placeholder:			rgba(#70747F, .5);
 
 $input--label__background:			#F5F5F5;
 $input--label__background-hover:	#E5FFE6;
@@ -19,11 +16,22 @@ $input--label__color-hover:			#4CAF50;
 
 $color0:							#000;
 $color1:							#fff;
-$color2:							#F8FBFF;
-$color3:							#3A4045;
-$color4:							#F36F21;
-$color5:							#707070;
-$color6:							#f38b3a;
+// Gray
+$color2:							#70747F;
+$color3:							#FCF9F4;
+$color4:							#C4C4C4;
+// Pink
+$color5:							#FEB9CC;
+// Orange
+$color6:							#FFA245;
+$color7:							#FFC85B;
+// Blue
+$color8:							#2D4073;
+$color9:							#122659;
+$color10:							#89D4F3;
+$color11:							#45B3DF;
+
+$color12:							#434344;
 
 // Media
 

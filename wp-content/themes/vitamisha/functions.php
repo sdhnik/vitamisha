@@ -42,11 +42,6 @@ if ( ! function_exists( 'vitamisha_setup' ) ) :
 		 */
 		add_theme_support( 'post-thumbnails' );
 
-		// This theme uses wp_nav_menu() in one location.
-		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'vitamisha' ),
-		) );
-
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
@@ -63,6 +58,12 @@ if ( ! function_exists( 'vitamisha_setup' ) ) :
 endif;
 add_action( 'after_setup_theme', 'vitamisha_setup' );
 
+function theme_register_nav_menu() {
+	register_nav_menu( 'header', 'Header Menu' );
+	register_nav_menu( 'footer', 'Footer Menu' );
+}
+add_action( 'after_setup_theme', 'theme_register_nav_menu' );
+
 /**
  * Register widget area.
  *
@@ -78,6 +79,19 @@ function vitamisha_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+	$widget_cart = array(
+		'name'          => __('Cart Widget', 'vitamisha'),
+		'id'            => 'cart_widget',
+		'class'         => '',
+		'description'   => __('Widget added here are displayed in footer', 'vitamisha'),
+		'before_widget' => '<div id="%1$s" class="cart %2$s"><div class="cart--body">',
+		'after_widget'  => '</div></div>',
+		'before_title'  => '<button class="cart--close"></button><h2 class="cart--title">',
+		'after_title'   => '</h2>'
+	);
+
+	register_sidebar($widget_cart);
 }
 add_action( 'widgets_init', 'vitamisha_widgets_init' );
 
@@ -129,4 +143,61 @@ add_action( 'init', 'disable_emojis' );
 
 add_filter('show_admin_bar', '__return_false');
 
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment', 10, 1 );
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+	global $woocommerce;
+	ob_start(); ?>
+	<a id="cart-button" href="#" class="header--button header--buttons__cart"><i></i> <span><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></span></a>
+	<?php $fragments['a.header--buttons__cart'] = ob_get_clean();
+	return $fragments;
+}
 
+function build_menu( $theme_location ) {
+    if ( ($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location]) ) {
+
+        $menu = get_term( $locations[$theme_location], 'nav_menu' );
+        $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+        $menu_list .= '<ul>' ."\n";
+
+        foreach( $menu_items as $menu_item ) {
+            if( $menu_item->menu_item_parent == 0 ) {
+
+                $parent = $menu_item->ID;
+
+                $menu_array = array();
+                foreach( $menu_items as $submenu ) {
+                    if( $submenu->menu_item_parent == $parent ) {
+                        $bool = true;
+                        $menu_array[] = '<li><a href="' . $submenu->url . '">' . $submenu->title . '</a></li>' ."\n";
+                    }
+                }
+                if( $bool == true && count( $menu_array ) > 0 ) {
+
+                    $menu_list .= '<li>' ."\n";
+                    $menu_list .= '<a href="' . $menu_item->url . '">' . $menu_item->title . ' <i class="caret"></i></a>' ."\n";
+
+                    $menu_list .= '<ul>' ."\n";
+                    $menu_list .= implode( "\n", $menu_array );
+                    $menu_list .= '</ul>' ."\n";
+
+                } else {
+
+                    $menu_list .= '<li>' ."\n";
+                    $menu_list .= '<a href="' . $menu_item->url . '">' . $menu_item->title . '</a>' ."\n";
+                }
+
+            }
+
+            // end <li>
+            $menu_list .= '</li>' ."\n";
+        }
+
+        $menu_list .= '</ul>' ."\n";
+
+    } else {
+        $menu_list = '<!-- no menu defined in location "'.$theme_location.'" -->';
+    }
+
+    echo $menu_list;
+}

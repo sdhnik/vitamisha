@@ -136,8 +136,7 @@ function disable_emojis() {
 	remove_filter( 'comment_text_rss', 'wp_staticize_emoji' );	
 	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
 	
-	// Remove from TinyMCE
-	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+
 }
 add_action( 'init', 'disable_emojis' );
 
@@ -155,8 +154,12 @@ function woocommerce_header_add_to_cart_fragment( $fragments ) {
 function build_menu( $theme_location ) {
     if ( ($theme_location) && ($locations = get_nav_menu_locations()) && isset($locations[$theme_location]) ) {
 
+		global $wp;
+		$current_url = home_url(add_query_arg(array(), $wp->request)); 
         $menu = get_term( $locations[$theme_location], 'nav_menu' );
         $menu_items = wp_get_nav_menu_items($menu->term_id);
+
+
 
         $menu_list .= '<ul>' ."\n";
 
@@ -164,27 +167,51 @@ function build_menu( $theme_location ) {
             if( $menu_item->menu_item_parent == 0 ) {
 
                 $parent = $menu_item->ID;
-
                 $menu_array = array();
+
+                if($menu_item->object === 'product_cat') {
+					$argsSubmenu = array(
+						'post_type' => 'product',
+						'posts_per_page' => 4,
+						'orderby' =>'date',
+						'order' => 'DESC',
+						'tax_query' => array(
+							array(
+								'taxonomy'	=> 'product_cat',
+								'field'		=> 'term_id',
+								'terms'		=> $menu_item->object_id,
+								'operator' => 'IN'
+							)
+						)
+					);
+					$loopSubmenu = new WP_Query( $argsSubmenu );
+					while ( $loopSubmenu->have_posts() ) : $loopSubmenu->the_post();
+						global $product;
+						$bool = true;
+						$menu_array[] = '<li><a href="' . get_permalink( get_the_ID() ) . '"' . (substr(get_permalink( get_the_ID() ), 0, -1)===$current_url?' class="active"':'') . '>' . $product->name . '</a></li>' ."\n";
+					endwhile; 
+                }
+
                 foreach( $menu_items as $submenu ) {
                     if( $submenu->menu_item_parent == $parent ) {
                         $bool = true;
-                        $menu_array[] = '<li><a href="' . $submenu->url . '">' . $submenu->title . '</a></li>' ."\n";
+                        $menu_array[] = '<li><a href="' . $submenu->url . '"' . (substr($menu_item->url, 0, -1)===$current_url?' class="active"':'') . '>' . $submenu->title . '</a></li>' ."\n";
                     }
                 }
+
                 if( $bool == true && count( $menu_array ) > 0 ) {
 
                     $menu_list .= '<li>' ."\n";
-                    $menu_list .= '<a href="' . $menu_item->url . '">' . $menu_item->title . ' <i class="caret"></i></a>' ."\n";
+                    $menu_list .= '<a href="' . $menu_item->url . '"' . (substr($menu_item->url, 0, -1)===$current_url?' class="active"':'') . '>' . $menu_item->title . ' <i class="caret"></i></a>' ."\n";
 
-                    $menu_list .= '<ul>' ."\n";
+                    $menu_list .= '<ul class="submenu">' ."\n";
                     $menu_list .= implode( "\n", $menu_array );
                     $menu_list .= '</ul>' ."\n";
 
                 } else {
 
                     $menu_list .= '<li>' ."\n";
-                    $menu_list .= '<a href="' . $menu_item->url . '">' . $menu_item->title . '</a>' ."\n";
+                    $menu_list .= '<a href="' . $menu_item->url . '"' . (substr($menu_item->url, 0, -1)===$current_url?' class="active"':'') . '>' . $menu_item->title . '</a>' ."\n";
                 }
 
             }

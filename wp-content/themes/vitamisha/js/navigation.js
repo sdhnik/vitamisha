@@ -5,42 +5,48 @@
  * navigation support for dropdown menus.
  */
 ( function() {
+	var mobile_toggle = document.querySelector('#header--mobile__toggle'),
+		mobile_close = document.querySelector('#header--mobile__close'),
+		mobile_overlay = document.querySelector('.header--mobile__overlay');
+
+	mobile_toggle.addEventListener('click', function(){
+		this.classList.add('open');
+		document.querySelector('.header--mobile__container').classList.add('closing');
+		document.querySelector('.header--mobile__container').classList.add('open');
+
+	});
+
+	mobile_close.addEventListener('click', function(){
+		mobile_toggle.classList.remove('open');
+		document.querySelector('.header--mobile__container').classList.remove('closing');
+		setTimeout(function(){
+			document.querySelector('.header--mobile__container').classList.remove('open');
+		}, 450);
+	});
+
+	mobile_overlay.addEventListener('click', function(){
+		mobile_toggle.classList.remove('open');
+		document.querySelector('.header--mobile__container').classList.remove('closing');
+		setTimeout(function(){
+			document.querySelector('.header--mobile__container').classList.remove('open');
+		}, 450);
+	});
+
+
 	var container, button, menu, links, i, len;
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container ) {
-		return;
-	}
+	container = document.getElementById( 'header-nav' );
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button ) {
+	if ( !container ) {
 		return;
 	}
 
 	menu = container.getElementsByTagName( 'ul' )[0];
 
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
-
 	menu.setAttribute( 'aria-expanded', 'false' );
 	if ( -1 === menu.className.indexOf( 'nav-menu' ) ) {
 		menu.className += ' nav-menu';
 	}
-
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			container.className = container.className.replace( ' toggled', '' );
-			button.setAttribute( 'aria-expanded', 'false' );
-			menu.setAttribute( 'aria-expanded', 'false' );
-		} else {
-			container.className += ' toggled';
-			button.setAttribute( 'aria-expanded', 'true' );
-			menu.setAttribute( 'aria-expanded', 'true' );
-		}
-	};
 
 	// Get all the link elements within the menu.
 	links    = menu.getElementsByTagName( 'a' );

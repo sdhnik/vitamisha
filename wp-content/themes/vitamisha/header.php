@@ -27,6 +27,9 @@
 
 <header id="header" class="header">
 	<div class="container header--container">
+		<div class="header--mobile">
+			<button id="header--mobile__toggle" class="header--mobile__toggle"><span></span></button>
+		</div>
 		<div class="header--logo">
 			<a href="/" class="logo--link">
 				<span class="logo--face"><img src="<?= get_template_directory_uri() ?>/img/logo.svg" alt="Витамиша лого"></span>
@@ -38,7 +41,6 @@
 		</div>
 		<div class="header--buttons">
 			<ul>
-				<li><button class="header--button header--buttons__toggle"><i></i></button></li>
 				<li><a href="/my-account/" class="header--button header--buttons__account"><i></i></a></li>
 				<?php if(!is_page( 'cart' ) && !is_cart() && !is_page( 'checkout' ) && !is_checkout()) { ?>
 				<li><a id="cart-button" href="#" class="header--button header--buttons__cart"><i></i> <?php echo WC()->cart->get_cart_contents_count()>0 ? sprintf ( _n( '<span>%d</span>', '<span>%d</span>', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) : ''; ?></a></li>
@@ -55,6 +57,27 @@
 			</ul>
 		</div>
 	</div>
+
+	<div class="header--mobile__container">
+		<div class="header--mobile__overlay"></div>
+		<div class="header--mobile__nav">
+			<div class="header--mobile__actions">
+				<div class="header--mobile__logo">
+					<a href="/" class="logo--link">
+						<span class="logo--face"><img src="<?= get_template_directory_uri() ?>/img/logo.svg" alt="Витамиша лого"></span>
+						<span class="logo--text"><span class="logo--text__first">Вита</span>миша</span>
+					</a>
+				</div>
+				<div class="header--mobile__close">
+					<button id="header--mobile__close" class="header--mobile__close-button"></button>
+				</div>
+			</div>
+			<div class="header--mobile__links">
+				<?php build_menu('header'); ?>
+			</div>
+		</div>
+	</div>
+
 </header>
 
 <main id="main" class="main">

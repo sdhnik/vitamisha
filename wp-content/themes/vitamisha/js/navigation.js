@@ -33,7 +33,7 @@
 	});
 
 
-	var container, button, menu, links, i, len;
+	var container, menu, links, i, len;
 
 	container = document.getElementById( 'header-nav' );
 
@@ -82,31 +82,32 @@
 	/**
 	 * Toggles `focus` class to allow submenu access on tablets.
 	 */
-	( function( container ) {
-		var touchStartFn, i,
-			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
 
-		if ( 'ontouchstart' in window ) {
-			touchStartFn = function( e ) {
-				var menuItem = this.parentNode, i;
+	var touchStartFn, i,
+		parentLink = document.querySelector('.header--mobile__links').querySelectorAll( '.caret' );
 
-				if ( ! menuItem.classList.contains( 'focus' ) ) {
-					e.preventDefault();
-					for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
-						if ( menuItem === menuItem.parentNode.children[i] ) {
-							continue;
-						}
-						menuItem.parentNode.children[i].classList.remove( 'focus' );
+	if ( 'ontouchstart' in window ) {
+		touchStartFn = function( e ) {
+			var menuItem = this.parentNode.parentNode, i;
+
+			e.preventDefault();
+
+			if ( ! menuItem.classList.contains( 'focus' ) ) {
+				for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
+					if ( menuItem === menuItem.parentNode.children[i] ) {
+						continue;
 					}
-					menuItem.classList.add( 'focus' );
-				} else {
-					menuItem.classList.remove( 'focus' );
+					menuItem.parentNode.children[i].classList.remove( 'focus' );
 				}
-			};
-
-			for ( i = 0; i < parentLink.length; ++i ) {
-				parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
+				menuItem.classList.add( 'focus' );
+			} else {
+				menuItem.classList.remove( 'focus' );
 			}
+		};
+
+		for ( i = 0; i < parentLink.length; ++i ) {
+			parentLink[i].addEventListener( 'touchstart', touchStartFn, false );
 		}
-	}( container ) );
+	}
+
 } )();

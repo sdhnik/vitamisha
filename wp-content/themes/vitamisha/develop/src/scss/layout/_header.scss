@@ -1,7 +1,10 @@
 .header {
+	@include position(fixed, 0 null null 0);
 	background-color: $color1;
 	box-shadow: 0px 2px 20px rgba($color0, 0.1);
 	padding: 24px 0;
+	width: 100%;
+	z-index: 5;
 
 	@media(max-width: 1200px) {
 		background-color: $color13;

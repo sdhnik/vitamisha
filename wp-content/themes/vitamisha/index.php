@@ -15,45 +15,26 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<div class="home--first">
+		<div class="home--first__blots">
+			<div class="home--first__blot-blue"></div>
+			<div class="home--first__blot-red"></div>
+			<div class="home--first__blot-orange"></div>
+		</div>
+		<div class="container home--first__container">
+			<div class="home--first__col">
+				<div class="home--first__category">Привет! Я - Витамиша</div>
+				<h1 class="home--first__title">Чтобы Ваш ребенок был здоров, активен и полон сил, Вам нужны наши витамины</h1>
+				<div class="home--first__button">
+					<a href="/" class="button button--orange">Заказать</a>
+				</div>
+				<div class="home--first__elements">
+					<div class="home--first__sun"></div>
+					<div class="home--first__balloon"></div>
+				</div>
+			</div>
+		</div>
+	</div>
 
 <?php
-get_sidebar();
 get_footer();

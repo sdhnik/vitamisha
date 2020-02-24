@@ -159,9 +159,8 @@ function build_menu( $theme_location ) {
         $menu = get_term( $locations[$theme_location], 'nav_menu' );
         $menu_items = wp_get_nav_menu_items($menu->term_id);
 
-
-
         $menu_list .= '<ul>' ."\n";
+        $menu_list .= '<li><a href="' . esc_url( home_url( '/' ) ) . '"' . (substr(esc_url( home_url( '/' ) ), 0, -1)===$current_url?' class="active"':'') . '>Главная</a></li>' ."\n";
 
         foreach( $menu_items as $menu_item ) {
             if( $menu_item->menu_item_parent == 0 ) {
@@ -215,10 +214,8 @@ function build_menu( $theme_location ) {
                     $menu_list .= '<li>' ."\n";
                     $menu_list .= '<a href="' . $menu_item->url . '"' . (substr($menu_item->url, 0, -1)===$current_url?' class="active"':'') . '>' . $menu_item->title . '</a>' ."\n";
                 }
-
             }
 
-            // end <li>
             $menu_list .= '</li>' ."\n";
         }
 

@@ -531,7 +531,7 @@
 
 				&.header--mobile__buttons {
 					@extend %flex--start__horizont;
-					padding: 0 38px;
+					padding: 0 38px 24px;
 
 					li + li {
 						margin-left: 20px;

@@ -172,9 +172,11 @@ function build_menu( $theme_location ) {
                 if($menu_item->object === 'product_cat') {
 					$argsSubmenu = array(
 						'post_type' => 'product',
-						'posts_per_page' => 4,
-						'orderby' =>'date',
+						'posts_per_page' => 5,
+						'orderby' =>'meta_value_num',
 						'order' => 'DESC',
+						'meta_key' => 'total_sales',
+						'meta_query' => WC()->query->get_meta_query(),
 						'tax_query' => array(
 							array(
 								'taxonomy'	=> 'product_cat',

@@ -92,6 +92,19 @@ function vitamisha_widgets_init() {
 	);
 
 	register_sidebar($widget_cart);
+
+	$widget_beststayler = array(
+		'name'          => __('Beststayler', 'vitamisha'),
+		'id'            => 'beststayler',
+		'class'         => '',
+		'description'   => __('Widget added here are displayed in footer', 'vitamisha'),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => ''
+	);
+
+	register_sidebar($widget_beststayler);
 }
 add_action( 'widgets_init', 'vitamisha_widgets_init' );
 
@@ -102,6 +115,8 @@ function vitamisha_scripts() {
 	wp_enqueue_style( 'vitamisha-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'vitamisha-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'vitamisha-slider', get_template_directory_uri() . '/js/glide.min.js', array(), '20151216', true );
+	wp_enqueue_script( 'vitamisha-scripts', get_template_directory_uri() . '/js/main.js', array(), '20151217', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -141,6 +156,16 @@ function disable_emojis() {
 add_action( 'init', 'disable_emojis' );
 
 add_filter('show_admin_bar', '__return_false');
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+/*add_action( 'wp_enqueue_scripts', 'your_theme_woocommerce_scripts' );
+function your_theme_woocommerce_scripts() {
+  wp_enqueue_style( 'custom-woocommerce-style', get_template_directory_uri() . '/css/woocommerce.css' );
+}*/
 
 add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment', 10, 1 );
 function woocommerce_header_add_to_cart_fragment( $fragments ) {

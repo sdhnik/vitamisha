@@ -24,6 +24,28 @@ h1, h2, h3, h4, h5, h6 {
 	color: $color9;
 }
 
+.h {
+	span {
+		display: inline;
+		margin: 0 -12px;
+		padding: 0 12px;
+		position: relative;
+		z-index: 1;
+		background-repeat: no-repeat;
+		background-size: 100% 0.521em;
+		background-position: 0% 74%;
+		transition: background-size 1.8s 0.7s;		
+	}
+
+	&--pink {
+		span {
+			background-image: linear-gradient(to top, rgba($color5, 0.5), rgba($color5, 0.5));
+		}
+
+	}
+
+}
+
 // Links
 
 a {
@@ -136,3 +158,68 @@ input, textarea {
 		}
 	}
 }
+
+.button {
+	display: inline-flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+	border-radius: 30px;
+	padding: 20px 40px;
+	font-size: 1rem;
+	font-weight: 900;
+	line-height: 1;
+	transition: background .3s ease;
+
+	&--arrow {
+		display: inline-block;
+		@include size(16px);
+		margin-left: 8px;
+		background: url(./img/icons/button__arrow.svg) center center no-repeat;
+		background-size: 16px 16px;
+	}
+
+	&--dashes {
+		@include position(absolute, 0 null null 0);
+		@include size(100%);
+		pointer-events: none;
+		animation: dashed_border_running 20s linear infinite both;
+		animation-play-state: paused;
+		stroke-width: 2;
+		stroke-dasharray: 9, 5;
+		stroke-dashoffset: 0;
+		stroke-linecap: round;
+		fill: none;
+		
+		&__white {
+			stroke: $color1;
+		}
+		&__pink {
+			stroke: $color5;
+		}
+	}
+	
+	&:hover, &:focus {
+		svg {
+			animation-play-state: running;
+		}
+	}
+
+	&--orange {
+		color: $color1;
+		background-color: $color7;
+		
+		&:hover, &:focus {
+			color: $color1;
+			background-color: $color11;
+		}
+	}
+}
+
+@keyframes dashed_border_running {
+	100% {
+		stroke-dashoffset: -1000;
+	}
+}
+
+@import 'slider'

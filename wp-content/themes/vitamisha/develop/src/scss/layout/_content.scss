@@ -76,6 +76,175 @@
 			font-size: 2.5rem;
 			line-height: 130%;
 		}
+
+		&__sun {
+			@include position(absolute, -50px 30% null null);
+			@include size(60px);
+			background: url(./img/icons/home__sun.svg) center center no-repeat;
+			animation: sunny 10s linear infinite;
+		}
+
+		&__balloon {
+			@include position(absolute, null null 0 0);
+			@include size(95px, 110px);
+			background: url(./img/icons/home__balloon.svg) center center no-repeat;
+			animation: fly 15s linear infinite;
+		}
+	}
+
+	&--beststayler {
+
+		.container {
+			padding: 0 60px;
+		}
+
+		.h {
+			font-size: 2.5rem;
+			margin: 24px 0 48px;
+			text-align: center;
+		}
+
+		.product_list_widget {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			
+			li {
+				a {
+					display: block;
+					position: relative;
+					padding: 48px 24px;
+					border-radius: 30px;
+					
+					img {
+						display: block;
+						margin: 0 auto 16px;
+					}
+
+					.product-title {
+						display: block;
+						font-size: 1.5rem;
+						font-weight: 900;
+						line-height: 120%;
+						color: $color9;
+						text-align: center;
+						max-width: 200px;
+						margin: 0 auto 16px;
+					}
+
+					.woocommerce-Price-amount {
+						display: block;
+						text-align: center;
+						margin-top: 36px;
+						font-size: 1.75rem;
+						font-weight: 900;
+						line-height: 1;
+						color: $color11;
+					}
+
+					&:hover, &:focus {
+						svg {
+							animation-play-state: running;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&--seo {
+		position: relative;
+		background-color: $color3;
+		margin: 100px 0 -160px;
+		padding: 125px 0 160px;
+		
+		@include p_el(before, 100%, 100px) {
+			@include position(absolute, -100px 0 null 0);
+			background: url(./img/backgrounds/home_seo_wave.png) center center no-repeat;
+		}
+
+		@include p_el(after, 244px, 183px) {
+			@include position(absolute, -125px 8% null null);
+			background: url(./img/backgrounds/cloud_footer.png) center center no-repeat;
+			background-size: cover;
+			pointer-events: none;
+		}
+
+		&__container {
+			@extend %flex--start__vertical;
+			padding: 0 60px;
+		}
+
+		&__col {
+			width: 50%;
+			padding: 0 16px 0 0;
+			
+			& + & {
+				padding: 0 0 0 24px;
+			}
+		}
+
+		&__photo {
+			position: relative;
+			@include p_el(before, 100%, 100%) {
+				@include position(absolute, -40px null null -40px);
+				background-color: $color1;
+				border: 2px dashed $color5;
+				border-radius: 30px;
+				z-index: 0;
+			}
+			img {
+				position: relative;
+				z-index: 1;
+				@include size(100%, auto);
+				border-radius: 30px;
+			}
+		}
+
+		&__text {
+			.h {
+				font-size: 2.5rem;
+				line-height: 120%;
+				margin: 0 0 24px;
+				
+				span.h--2row__orange {
+					background-image: linear-gradient(to top, rgba($color7, 0.5), rgba($color7, 0.5));
+				}
+			}
+
+			a {
+				font-size: 1rem;
+				font-weight: 900;
+				color: $color5;
+				
+				&:hover, &:focus {
+					color: $color8;
+				}
+			}
+		}
+
+		&__img {
+			@include position(absolute, 0);
+			pointer-events: none;
+			overflow: hidden;
+			z-index: 0;
+			&-balloon {
+				@include position(absolute, null null 200px 5vw);
+				@include size(58px, 173px);
+				background: url(./img/backgrounds/home_seo_ball.png) center center no-repeat;
+				background-size: cover;
+				pointer-events: none;
+				animation: fly 10s linear infinite;
+			}
+			&-rain {
+				@include position(absolute, 150px 5vw null null);
+				@include size(157px, 178px);
+				background: url(./img/backgrounds/home_seo_rain.png) center center no-repeat;
+				background-size: cover;
+				pointer-events: none;
+				animation: fly 20s linear infinite;
+			}
+		}
 	}
 }
 
@@ -90,5 +259,17 @@
 	50% {
 		opacity: 1;
 		transform: translate(0,24px) rotate(-15deg);
+	}
+}
+
+@keyframes sunny {
+	50% {
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes fly {
+	50% {
+		transform: translate(0,24px) rotate(10deg);
 	}
 }

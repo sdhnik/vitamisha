@@ -1,0 +1,22 @@
+0000.039 () Opened log file at time: Sun, 01 Mar 2020 18:40:06 +0000 on http://vitamisha.local
+0000.040 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.22 WP: 5.3.2 PHP: 7.4.1 (apache2handler, Windows NT DESKTOP-ND9U86A 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.11-MariaDB WPLANG: ru_RU Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 55.3M | 34M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.040 () Free space on disk containing Updraft's temporary directory: 270400 MB
+0000.044 () Opened log file at time: Sun, 01 Mar 2020 18:40:08 +0000 on http://vitamisha.local
+0000.045 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.22 WP: 5.3.2 PHP: 7.4.1 (apache2handler, Windows NT DESKTOP-ND9U86A 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.11-MariaDB WPLANG: ru_RU Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 53.6M | 6M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.045 () Free space on disk containing Updraft's temporary directory: 270400 MB
+0000.080 () Ensuring WP_Filesystem is setup for a restore
+0000.085 () WP_Filesystem is setup and ready for a restore
+0000.095 () Restore job started. Entities to restore: uploads. Restore options: {"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.104 () Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.111 () Entity: uploads
+0000.111 () restore_backup(backup_file=backup_2020-03-01-1923_Vitamisha_a8d4d24788d5-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:50:"C:\xampp\htdocs\vitamisha.local/wp-content/uploads";s:11:"description";s:16:"Загрузки";}, last_one=1)
+0000.111 () Распаковка резервной копии (backup_2020-03-01-1923_Vitamisha_a8d4d24788d5-uploads.zip, 5.2 MB)
+0000.114 () Unzipping backup_2020-03-01-1923_Vitamisha_a8d4d24788d5-uploads.zip to C:/xampp/htdocs/vitamisha.local/wp-content/upgrade/7719964b/ using UpdraftPlus_ZipArchive, starting index 0
+0000.351 () Unzip progress: 31 out of 31 files (5.2 MB, uploads/woocommerce_uploads/index.html)
+0000.352 () Moving old data: filesystem method / updraft_dir is potentially possible
+0000.353 () Moving old data: can potentially use wp_filesystem method / -old
+0000.353 () Удаление устаревших данных...
+0000.370 () Перемещение распакованной резервной копии на место...
+0000.400 () Очистка мусора...
+0000.471 () Restore successful!
+0000.472 () Restore successful

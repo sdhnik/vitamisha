@@ -10,14 +10,24 @@
 		height: calc(100vh - 90px);
 		min-height: 825px;
 		overflow: hidden;
-		
+
+		@media(max-width: 767px) {
+			background-position: 60% 25%;
+		}
+
 		@include p_el(after, 100%, 100px) {
 			@include position(absolute, null 0 -1px 0);
 			background: url(./img/backgrounds/home_first_wave.png) center center no-repeat;
 		}
 
 		&__blot {
-			
+
+			@media(max-width: 767px) {
+				&s {
+					display: none;
+				}
+			}
+
 			&-blue, &-red, &-orange {
 				background: center center no-repeat;
 				transform: translate(0,0);
@@ -30,6 +40,9 @@
 				background-image: url(./img/backgrounds/home_first_blot_blue.png);
 				@include size(248px, 212px);
 				animation: moving 15s linear infinite;
+				@media(max-width: 992px) {
+					display: none;
+				}
 			}
 
 			&-red {
@@ -59,6 +72,13 @@
 			width: 50%;
 			padding-bottom: 150px;
 			z-index: 1;
+
+			@media(max-width: 992px) {
+				width: 75%;
+			}
+			@media(max-width: 767px) {
+				width: 100%;
+			}
 		}
 
 		&__category {
@@ -75,6 +95,10 @@
 		&__title {
 			font-size: 2.5rem;
 			line-height: 130%;
+
+			@media(max-width: 767px) {
+				font-size: 2rem;
+			}
 		}
 
 		&__sun {
@@ -82,6 +106,9 @@
 			@include size(60px);
 			background: url(./img/icons/home__sun.svg) center center no-repeat;
 			animation: sunny 10s linear infinite;
+			@media(max-width: 767px) {
+				display: none;
+			}
 		}
 
 		&__balloon {
@@ -94,6 +121,10 @@
 
 	&--beststayler {
 
+		@media(max-width: 767px) {
+			margin: -50px 0;
+		}
+
 		.container {
 			padding: 0 60px;
 		}
@@ -102,22 +133,35 @@
 			font-size: 2.5rem;
 			margin: 24px 0 48px;
 			text-align: center;
+
+			@media(max-width: 1200px) {
+				font-size: 2.25rem;
+				margin: 24px -45px 48px;
+			}
+			@media(max-width: 767px) {
+				font-size: 2rem;
+			}
+		}
+
+		.glide {
+			z-index: 2;
 		}
 
 		.product_list_widget {
 			list-style: none;
 			margin: 0;
 			padding: 0;
-			
+
 			li {
 				a {
 					display: block;
 					position: relative;
 					padding: 48px 24px;
 					border-radius: 30px;
-					
+
 					img {
 						display: block;
+						@include size(100%, auto);
 						margin: 0 auto 16px;
 					}
 
@@ -157,7 +201,11 @@
 		background-color: $color3;
 		margin: 100px 0 -160px;
 		padding: 125px 0 160px;
-		
+
+		@media(max-width: 767px) {
+			padding: 125px 0 60px;
+		}
+
 		@include p_el(before, 100%, 100px) {
 			@include position(absolute, -100px 0 null 0);
 			background: url(./img/backgrounds/home_seo_wave.png) center center no-repeat;
@@ -173,14 +221,30 @@
 		&__container {
 			@extend %flex--start__vertical;
 			padding: 0 60px;
+
+			@media(max-width: 992px) {
+				display: block;
+				padding: 0 15px;
+			}
 		}
 
 		&__col {
 			width: 50%;
 			padding: 0 16px 0 0;
-			
+
 			& + & {
 				padding: 0 0 0 24px;
+			}
+
+			@media(max-width: 992px) {
+				width: 100%;
+				padding: 0;
+				max-width: 60ch;
+				margin: 0 auto;
+
+				& + & {
+					padding: 24px 0 0;
+				}
 			}
 		}
 
@@ -199,6 +263,9 @@
 				@include size(100%, auto);
 				border-radius: 30px;
 			}
+			@media(max-width: 767px) {
+				margin-left: 30px;
+			}
 		}
 
 		&__text {
@@ -206,9 +273,16 @@
 				font-size: 2.5rem;
 				line-height: 120%;
 				margin: 0 0 24px;
-				
+
 				span.h--2row__orange {
 					background-image: linear-gradient(to top, rgba($color7, 0.5), rgba($color7, 0.5));
+				}
+
+				@media(max-width: 1200px) {
+					font-size: 2.25rem;
+				}
+				@media(max-width: 767px) {
+					font-size: 2rem;
 				}
 			}
 
@@ -216,7 +290,7 @@
 				font-size: 1rem;
 				font-weight: 900;
 				color: $color5;
-				
+
 				&:hover, &:focus {
 					color: $color8;
 				}
@@ -228,6 +302,11 @@
 			pointer-events: none;
 			overflow: hidden;
 			z-index: 0;
+
+			@media(max-width: 992px) {
+				display: none;
+			}
+
 			&-balloon {
 				@include position(absolute, null null 200px 5vw);
 				@include size(58px, 173px);
@@ -235,6 +314,10 @@
 				background-size: cover;
 				pointer-events: none;
 				animation: fly 10s linear infinite;
+
+				@media(max-width: 1440px) {
+					left: 15px;
+				}
 			}
 			&-rain {
 				@include position(absolute, 150px 5vw null null);
@@ -243,6 +326,14 @@
 				background-size: cover;
 				pointer-events: none;
 				animation: fly 20s linear infinite;
+
+				@media(max-width: 1440px) {
+					right: -3.5vw;
+				}
+
+				@media(max-width: 1200px) {
+					right: -5vw;
+				}
 			}
 		}
 	}

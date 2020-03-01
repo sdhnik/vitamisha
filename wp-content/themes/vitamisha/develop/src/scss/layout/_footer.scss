@@ -17,12 +17,16 @@
 		background: url(./img/backgrounds/cloud_footer.png) center center no-repeat;
 		background-size: cover;
 		pointer-events: none;
+
+		@media(max-width: 767px) {
+			display: none;
+		}
 	}
 
 	&--container {
 		@extend %flex;
 		align-items: flex-start;
-		
+
 		@media(max-width: 600px) {
 			display: block;
 		}
@@ -30,7 +34,7 @@
 
 	&--col {
 		max-width: 320px;
-		
+
 		@media(max-width: 600px) {
 			& + & {
 				margin-top: 30px;

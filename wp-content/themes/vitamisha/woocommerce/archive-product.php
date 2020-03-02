@@ -19,31 +19,21 @@ defined( 'ABSPATH' ) || exit;
 
 get_header( 'shop' );
 
-/**
- * Hook: woocommerce_before_main_content.
- *
- * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
- * @hooked woocommerce_breadcrumb - 20
- * @hooked WC_Structured_Data::generate_website_data() - 30
- */
-do_action( 'woocommerce_before_main_content' );
-
 ?>
-<header class="woocommerce-products-header">
-	<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
-		<h1 class="woocommerce-products-header__title page-title"><?php woocommerce_page_title(); ?></h1>
-	<?php endif; ?>
+<div class="shop">
+	<div class="shop--header">
+		<?php if ( apply_filters( 'woocommerce_show_page_title', true ) ) : ?>
+			<h1 class="shop--header__title page-title"><?php woocommerce_page_title(); ?></h1>
+		<?php endif; ?>
 
-	<?php
-	/**
-	 * Hook: woocommerce_archive_description.
-	 *
-	 * @hooked woocommerce_taxonomy_archive_description - 10
-	 * @hooked woocommerce_product_archive_description - 10
-	 */
-	do_action( 'woocommerce_archive_description' );
-	?>
-</header>
+		<?php
+			do_action( 'woocommerce_archive_description' );
+			do_action( 'woocommerce_before_main_content' );
+		?>
+	</div>
+	<div class="shop--products">
+		<div class="container">
+			<div class="shop--products__list">
 <?php
 if ( woocommerce_product_loop() ) {
 
@@ -88,18 +78,18 @@ if ( woocommerce_product_loop() ) {
 	do_action( 'woocommerce_no_products_found' );
 }
 
-/**
- * Hook: woocommerce_after_main_content.
- *
- * @hooked woocommerce_output_content_wrapper_end - 10 (outputs closing divs for the content)
- */
 do_action( 'woocommerce_after_main_content' );
 
-/**
- * Hook: woocommerce_sidebar.
- *
- * @hooked woocommerce_get_sidebar - 10
- */
-do_action( 'woocommerce_sidebar' );
+?>
+
+		</div>
+			<div class="shop--products__filter">
+	<?php
+		if (is_active_sidebar('shop_filter')) : dynamic_sidebar('shop_filter'); endif;
+	?>
+			</div>
+		</div>
+	</div>
+<?php
 
 get_footer( 'shop' );

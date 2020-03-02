@@ -97,7 +97,7 @@ function vitamisha_widgets_init() {
 		'name'          => __('Beststayler', 'vitamisha'),
 		'id'            => 'beststayler',
 		'class'         => '',
-		'description'   => __('Widget added here are displayed in footer', 'vitamisha'),
+		'description'   => __('Widget added here are displayed in home page', 'vitamisha'),
 		'before_widget' => '',
 		'after_widget'  => '',
 		'before_title'  => '',
@@ -105,6 +105,19 @@ function vitamisha_widgets_init() {
 	);
 
 	register_sidebar($widget_beststayler);
+
+	$widget_shop_filter = array(
+		'name'          => __('Shop Filter', 'vitamisha'),
+		'id'            => 'shop_filter',
+		'class'         => '',
+		'description'   => __('Widget added here are displayed in sidebar', 'vitamisha'),
+		'before_widget' => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => ''
+	);
+
+	register_sidebar($widget_shop_filter);
 }
 add_action( 'widgets_init', 'vitamisha_widgets_init' );
 
@@ -193,31 +206,6 @@ function build_menu( $theme_location ) {
                 $parent = $menu_item->ID;
                 $menu_array = array();
 
-                if($menu_item->object === 'product_cat') {
-					$argsSubmenu = array(
-						'post_type' => 'product',
-						'posts_per_page' => 5,
-						'orderby' =>'meta_value_num',
-						'order' => 'DESC',
-						'meta_key' => 'total_sales',
-						'meta_query' => WC()->query->get_meta_query(),
-						'tax_query' => array(
-							array(
-								'taxonomy'	=> 'product_cat',
-								'field'		=> 'term_id',
-								'terms'		=> $menu_item->object_id,
-								'operator' => 'IN'
-							)
-						)
-					);
-					$loopSubmenu = new WP_Query( $argsSubmenu );
-					while ( $loopSubmenu->have_posts() ) : $loopSubmenu->the_post();
-						global $product;
-						$bool = true;
-						$menu_array[] = '<li><a href="' . get_permalink( get_the_ID() ) . '"' . (substr(get_permalink( get_the_ID() ), 0, -1)===$current_url?' class="active"':'') . '>' . $product->name . '</a></li>' ."\n";
-					endwhile; 
-                }
-
                 foreach( $menu_items as $submenu ) {
                     if( $submenu->menu_item_parent == $parent ) {
                         $bool = true;
@@ -252,3 +240,4 @@ function build_menu( $theme_location ) {
 
     echo $menu_list;
 }
+

@@ -1745,6 +1745,204 @@ textarea[disabled] {
   }
 }
 
+.shop--header {
+  background: url(./img/backgrounds/page_title_bg.png) center bottom no-repeat;
+  background-size: cover;
+  height: 348px;
+  margin-bottom: 40px;
+  padding-top: 12px;
+  padding-bottom: 88px;
+}
+
+.shop--header h1 {
+  color: #122659;
+  font-size: 2.5rem;
+  line-height: 120%;
+  text-align: center;
+  margin: 80px 0 30px;
+}
+
+.shop--header .breadcrumbs {
+  color: #2D4073;
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 24px;
+  text-align: center;
+}
+
+.shop--header .breadcrumbs a {
+  color: inherit;
+  transition: opacity .3s ease;
+}
+
+.shop--header .breadcrumbs a:hover {
+  opacity: 1;
+}
+
+.shop--header .breadcrumbs > * {
+  opacity: 0.7;
+}
+
+.shop--header .breadcrumbs > *.current {
+  opacity: 1;
+}
+
+.shop--header .breadcrumbs .divider:not(:last-child) {
+  color: inherit;
+  margin: 0 10px;
+  opacity: 1;
+}
+
+.shop--header .breadcrumbs .divider:not(:last-child):before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #89D4F3;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.shop--products .container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.shop--products__list {
+  width: 100%;
+}
+
+.shop--products__filter {
+  width: 350px;
+  padding-right: 30px;
+}
+
+.shop--products__filter .price_slider {
+  margin-bottom: 1em;
+}
+
+.shop--products__filter .price_slider_amount {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0;
+  font-size: 1rem;
+  line-height: 40px;
+  font-weight: 600;
+  text-transform: capitalize;
+  text-align: right;
+}
+
+.shop--products__filter .price_slider_amount .button {
+  display: inline-block;
+  height: auto;
+  margin: 0;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  font-size: 1.125rem;
+  line-height: 24px;
+  color: #FFC85B;
+  box-shadow: none;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.shop--products__filter .price_slider_amount .button:hover,
+.shop--products__filter .price_slider_amount .button:focus {
+  background-color: transparent;
+  color: #2D4073;
+}
+
+.shop--products__filter .price_slider_amount .price_label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.shop--products__filter .price_slider_amount span {
+  font-size: 1rem;
+}
+
+.shop--products__filter .price_slider_amount span.from {
+  margin-left: 10px;
+}
+
+.shop--products__filter .price_slider_amount .clear {
+  display: none;
+}
+
+.shop--products__filter .ui-widget-content {
+  border: 0;
+  border-radius: 10px;
+  background-color: rgba(112, 116, 127, 0.3);
+}
+
+.shop--products__filter .ui-slider {
+  position: relative;
+  text-align: left;
+  margin-left: .5em;
+  margin-right: .5em;
+}
+
+.shop--products__filter .ui-slider .ui-slider-handle {
+  position: absolute;
+  z-index: 2;
+  width: 1em;
+  height: 1em;
+  background-color: #FEB9CC;
+  cursor: ew-resize;
+  outline: 0;
+  top: calc(50% - 0.5em);
+  margin-left: -0.5em;
+  border-radius: 50%;
+  font-size: 1rem;
+}
+
+.shop--products__filter .ui-slider .ui-slider-handle:after {
+  content: '';
+  width: calc(1em - 4px);
+  height: calc(1em - 4px);
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  border-radius: inherit;
+  background: #fff;
+}
+
+.shop--products__filter .ui-slider .ui-slider-range {
+  position: absolute;
+  z-index: 1;
+  font-size: .7em;
+  display: block;
+  border: 0;
+  border-radius: 0;
+  background-color: #FEB9CC;
+}
+
+.shop--products__filter .ui-slider-horizontal {
+  height: 7px;
+  margin: 31px 0 21px;
+}
+
+.shop--products__filter .ui-slider-horizontal .ui-slider-range {
+  top: 0;
+  height: 100%;
+}
+
+.shop--products__filter .ui-slider-horizontal .ui-slider-range-min {
+  left: -1px;
+}
+
+.shop--products__filter .ui-slider-horizontal .ui-slider-range-max {
+  right: -1px;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;

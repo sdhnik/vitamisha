@@ -1,9 +1,0 @@
-0000.096 (R) [notice] Поиск архива uploads: Имя файла: backup_2020-03-01-1923_Vitamisha_a8d4d24788d5-uploads.zip
-0000.097 (R) [notice] Архив должен быть следующего размера: 5324 KB: О'кей
-0000.104 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
-0000.111 (R) [notice] Распаковка резервной копии (backup_2020-03-01-1923_Vitamisha_a8d4d24788d5-uploads.zip, 5.2 MB)
-0000.347 (R) [notice] Unzip progress: 31 out of 31 files (5.2 MB, uploads/woocommerce_uploads/index.html)
-0000.353 (R) [notice] Удаление устаревших данных...
-0000.370 (R) [notice] Перемещение распакованной резервной копии на место...
-0000.400 (R) [notice] Очистка мусора...
-0000.471 (R) [notice] Restore successful!

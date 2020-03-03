@@ -111,10 +111,10 @@ function vitamisha_widgets_init() {
 		'id'            => 'shop_filter',
 		'class'         => '',
 		'description'   => __('Widget added here are displayed in sidebar', 'vitamisha'),
-		'before_widget' => '',
-		'after_widget'  => '',
-		'before_title'  => '',
-		'after_title'   => ''
+		'before_widget' => '<div id="%1$s" class="%2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="h h--pink"><span>',
+		'after_title'   => '</span></h3>'
 	);
 
 	register_sidebar($widget_shop_filter);
@@ -241,3 +241,14 @@ function build_menu( $theme_location ) {
     echo $menu_list;
 }
 
+remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
+remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
+
+function my_woocommerce_widget_shopping_cart_button_view_cart() {
+    echo '<span class="button__wrapper"><a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward">' . esc_html__( 'View cart', 'woocommerce' ) . '</a><svg class="wgl-dashes" width="100%" height="100%"><rect x="5" y="5" rx="25" ry="25" width="calc(100% - 10px)" height="calc(100% - 10px)"></rect></svg></span>';
+}
+function my_woocommerce_widget_shopping_cart_proceed_to_checkout() {
+    echo '<span class="button__wrapper"><a href="' . esc_url( wc_get_checkout_url() ) . '" class="button checkout wc-forward">' . esc_html__( 'Checkout', 'woocommerce' ) . '</a><svg class="wgl-dashes" width="100%" height="100%"><rect x="5" y="5" rx="25" ry="25" width="calc(100% - 10px)" height="calc(100% - 10px)"></rect></svg></span>';
+}
+add_action( 'woocommerce_widget_shopping_cart_buttons', 'my_woocommerce_widget_shopping_cart_button_view_cart', 10 );
+add_action( 'woocommerce_widget_shopping_cart_buttons', 'my_woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );

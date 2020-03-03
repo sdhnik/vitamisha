@@ -66,116 +66,354 @@
         }
 
         &__filter {
-            width: 350px;
+            width: 400px;
             padding-right: 30px;
 
-            .price_slider {
-                margin-bottom: 1em;
+            h3 {
+                font-size: 1.5rem;
+                text-align: center;
+                margin: 0 0 25px;
+            }
 
-                &_amount {
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-direction: row-reverse;
-                    justify-content: space-between;
-                    align-items: center;
-                    margin-bottom: 0;
-                    font-size: 1rem;
-                    line-height: 40px;
-                    font-weight: 600;
-                    text-transform: capitalize;
-                    text-align: right;
-
-                    .button {
-                        display: inline-block;
-                        height: auto;
-                        margin: 0;
-                        background-color: transparent;
+            .widget_product_search {
+                margin-bottom: 30px;
+                form {
+                    position: relative;
+                    
+                    input[type=search] {
+                        @include size(100%, 50px);
+                        padding: 0px 50px 0 24px;
+                        outline: none;
+                        font-weight: 400;
+                        overflow: hidden;
+                        margin-bottom: 0;
+                        border-radius: 25px;
                         border: 0;
-                        border-radius: 0;
+                        background: $color3;
+                        box-sizing: border-box;
+                    }
+                    button {
+                        @include position(absolute, 0 0 null null);
+                        @include size(50px);
+                        border: 0;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        z-index: 1;
+                        text-indent: 50px;
                         padding: 0;
-                        font-size: 1.125rem;
-                        line-height: 24px;
-                        color: $color7;
-                        box-shadow: none;
                         cursor: pointer;
-                        transition: color .3s ease;
+                        
+                        background-color: $color7;
+                        box-shadow: 0 0 0 5px $color1;
+                        transition: background-color .3s ease;
                         
                         &:hover, &:focus {
+                            background-color: $color8;
+                        }
+                        
+                        @include p_el(both, null, null) {
+                            @include position(absolute, 14px null null 14px);
+                            border: 3px solid $color1;
+                        }
+                        &:before {
+                            @include size(18px);
+                            border-radius: 50%;
+                            border-width: 2px;
+                            transform: rotate(45deg);
+                            transition: all 0.3s, background-color 0s linear 0s;
+                        }
+                        &:after {
+                            border-width: 0.5px;
+                            @include size(0, 8px);
+                            left: 32px;
+                            top: 32px;
+                            margin-left: 0;
+                            margin-top: 0;
+                            background-color: $color1;
+                            transform: translate(-50%, -50%) rotate(-45deg);
+                            transition: all 0.3s;
+                        }
+                    }
+                }
+            }
+
+            .widget_price_filter {
+                margin-bottom: 30px;
+                .price_slider {
+                    margin-bottom: 1em;
+
+                    &_amount {
+                        display: flex;
+                        flex-wrap: wrap;
+                        flex-direction: row-reverse;
+                        justify-content: space-between;
+                        align-items: center;
+                        margin-bottom: 0;
+                        font-size: 1rem;
+                        line-height: 40px;
+                        font-weight: 600;
+                        text-transform: capitalize;
+                        text-align: right;
+
+                        .button {
+                            display: inline-block;
+                            height: auto;
+                            margin: 0;
                             background-color: transparent;
+                            border: 0;
+                            border-radius: 0;
+                            padding: 0;
+                            font-size: 1.125rem;
+                            line-height: 24px;
+                            color: $color7;
+                            box-shadow: none;
+                            cursor: pointer;
+                            transition: color .3s ease;
+                            
+                            &:hover, &:focus {
+                                background-color: transparent;
+                                color: $color8;
+                            }
+                        }
+
+                        .price_label {
+                            font-size: 1rem;
+                            font-weight: 600;
+                            color: $color2;
+                        }
+                        span {
+                            font-size: 1rem;
+                            &.from {
+                                margin-left: 10px;
+                            }
+                        }
+                        .clear {
+                            display: none;
+                        }
+                    }
+                }
+
+                .price_slider_wrapper .ui-widget-content {
+                    border: 0;
+                    border-radius: 10px;
+                    background-color: rgba($color2, .3);
+                }
+
+                .ui-slider {
+                    position: relative;
+                    text-align: left;
+                    margin-left: .5em;
+                    margin-right: .5em;
+                    
+                    .ui-slider-handle {
+                        position: absolute;
+                        z-index: 2;
+                        width: 1em;
+                        height: 1em;
+                        background-color: $color5;
+                        cursor: ew-resize;
+                        outline: 0;
+                        top: calc(50% - 0.5em);
+                        margin-left: -0.5em;
+                        border-radius: 50%;
+                        font-size: 1rem;
+                        
+                        @include p_el(after, calc(1em - 4px), calc(1em - 4px)) {
+                            @include position(absolute, 2px null null 2px);
+                            border-radius: inherit;
+                            background: $color1;
+                        }
+                    }
+
+                    .ui-slider-range {
+                        position: absolute;
+                        z-index: 1;
+                        font-size: .7em;
+                        display: block;
+                        border: 0;
+                        border-radius: 0;
+                        background-color: $color5
+                    }
+                }
+                .ui-slider-horizontal {
+                    height: 7px;
+                    margin: 31px 0 21px;
+                    .ui-slider-range {
+                        top: 0;
+                        height: 100%
+                    }
+                    .ui-slider-range-min {
+                        left: -1px
+                    }
+                    .ui-slider-range-max {
+                        right: -1px
+                    }
+                }
+            }
+
+            .widget_product_categories {
+                margin-bottom: 10px;
+
+                .product-categories {
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    
+                    li {
+                        @extend %flex;
+                        flex-wrap: wrap;
+                        font-size: 1.5rem;
+                        font-weight: 900;
+                        line-height: 120%;
+                    }
+
+                    a {
+                        color: $color8;
+                        
+                        &:hover, &:focus {
+                            color: $color11;
+                        }
+                    }
+
+                    .count {
+                        font-size: 1.125rem;
+                        color: $color11;
+                    }
+
+                    .children {
+                        width: 100%;
+                        list-style: none;
+                        padding-left: 20px;
+                        margin: 10px 0 20px;
+                        
+                        li {
+                            font-size: 1.125rem;
+                            line-height: 150%;
+                        }
+
+                        .count {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            .widget_shopping_cart {
+                ul.product_list_widget {
+                    padding-top: 16px;
+                    li {
+                        padding: 0 15px 16px 0;
+                        margin-bottom: 16px;
+                        
+                        a.remove {
+                            left: auto;
+                            right: 0;
+                            top: -16px;
+                            font-size: 1.5rem;
+                            line-height: 1em;
+                            color: $color4 !important;
+                            
+                            &:hover, &:focus {
+                                background-color: transparent !important;
+                                color: darken($color4, 25%) !important;
+                            }
+                        }
+
+                        img {
+                            float: left;
+                            width: 110px;
+                            margin-left: 0;
+                            margin-right: 10px;
+                            margin-top: -16px;
+                            border: 2px dashed $color5;
+                            border-radius: 20px;
+                        }
+
+                        a {
+                            font-size: 1.125rem;
+                            font-weight: 800;
+                            line-height: 120%;
                             color: $color8;
                         }
-                    }
-
-                    .price_label {
-                        font-size: 1rem;
-                        font-weight: 600;
-                    }
-                    span {
-                        font-size: 1rem;
-                        &.from {
-                            margin-left: 10px;
+                        .quantity {
+                            display: block;
+                            margin-top: 15px;
+                            font-size: 1rem;
+                            font-weight: 800;
+                            color: $color11;
                         }
                     }
-                    .clear {
-                        display: none;
-                    }
-                }
-            }
-
-            .ui-widget-content {
-                border: 0;
-                border-radius: 10px;
-                background-color: rgba($color2, .3);
-            }
-
-            .ui-slider {
-                position: relative;
-                text-align: left;
-                margin-left: .5em;
-                margin-right: .5em;
-                
-                .ui-slider-handle {
-                    position: absolute;
-                    z-index: 2;
-                    width: 1em;
-                    height: 1em;
-                    background-color: $color5;
-                    cursor: ew-resize;
-                    outline: 0;
-                    top: calc(50% - 0.5em);
-                    margin-left: -0.5em;
-                    border-radius: 50%;
-                    font-size: 1rem;
-                    
-                    @include p_el(after, calc(1em - 4px), calc(1em - 4px)) {
-                        @include position(absolute, 2px null null 2px);
-                        border-radius: inherit;
-                        background: $color1;
-                    }
                 }
 
-                .ui-slider-range {
-                    position: absolute;
-                    z-index: 1;
-                    font-size: .7em;
-                    display: block;
+                .blockUI.blockOverlay {
+                    background-color: transparent !important;
+                    top: -16px;
+                }
+
+                .woocommerce-mini-cart__empty-message {
+                    text-align: center;
+                }
+
+                .total {
+                    margin: 0 0 30px;
                     border: 0;
-                    border-radius: 0;
-                    background-color: $color5
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                    text-align: center;
+                    color: $color8;
+                    .woocommerce-Price-amount {
+                        color: $color11;
+                    }
                 }
-            }
-            .ui-slider-horizontal {
-                height: 7px;
-                margin: 31px 0 21px;
-                .ui-slider-range {
-                    top: 0;
-                    height: 100%
-                }
-                .ui-slider-range-min {
-                    left: -1px
-                }
-                .ui-slider-range-max {
-                    right: -1px
+
+                .buttons {
+                    .button__wrapper {
+                        display: block;
+                        position: relative;
+                        text-align: center;
+                        margin-bottom: 16px;
+
+                        a.button {
+                            display: block;
+                            margin: 0;
+                            border: 0;
+                            border-radius: 30px;
+                            padding: 15px 25px;
+                            font-size: 1.125rem;
+                            font-weight: 900;
+                            line-height: 1.5;
+                            text-align: center;
+                            cursor: pointer;
+                            width: 100%;
+                            background-color: $color5;
+                            color: $color1;
+                            
+                            &.checkout {
+                                background-color: $color7;
+                            }
+
+                            &:hover, &:focus {
+                                + svg {
+                                    stroke: $color1;
+                                    animation-play-state: running;
+                                }
+                            }
+                        }
+                        svg {
+                            @include position(absolute, 0 null null 0);
+                            @include size(100%);
+                            pointer-events: none;
+                            animation: dashed_border_running 20s linear infinite both;
+                            animation-play-state: paused;
+                            stroke-width: 2;
+                            stroke-dasharray: 9, 5;
+                            stroke-dashoffset: 0;
+                            stroke-linecap: round;
+                            fill: none;
+                            transition: 0.3s;
+                            stroke: transparent;
+                        }
+                    }
                 }
             }
         }

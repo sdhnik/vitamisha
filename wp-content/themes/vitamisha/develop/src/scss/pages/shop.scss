@@ -59,15 +59,232 @@
             flex-direction: row-reverse;
             justify-content: space-between;
             align-items: flex-start;
+            
+            @media(max-width: 992px) {
+                display: block;
+            }
         }
 
         &__list {
             width: 100%;
+            
+            &-sorting {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                
+                @media(max-width: 600px) {
+                    display: block;
+                }
+                
+                .woocommerce-notices-wrapper {
+                    margin-bottom: 20px;
+                    &:empty {
+                        display: none;
+                    }
+                }
+
+                .woocommerce-result-count {
+                    display: inline-block;
+                    width: 50%;
+                    margin: 0 0 30px;
+                    float: none;
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: $color2;
+                    
+                    @media(max-width: 600px) {
+                        width: 100%;
+                        text-align: right;
+                    }
+                }
+
+                .woocommerce-ordering {
+                    display: inline-block;
+                    width: 50%;
+                    margin: 0 0 30px;
+                    float: none;
+                    text-align: right;
+                    
+                    @media(max-width: 600px) {
+                        width: 100%;
+                    }
+                }
+            }
+
+            &-orderby {
+                display: inline-block;
+                position: relative;
+                
+                select {
+                    display: block;
+                    @include size(270px, 50px);
+                    max-width: 100%;
+                    margin: unset;
+                    border: unset;
+                    outline: unset;
+                    padding: 0 35px 0 20px;
+                    font-family: inherit;
+                    font-size: 1rem;
+                    line-height: 1.4;
+                    font-weight: 400;
+                    background-color: $color3;
+                    border-radius: 30px;
+                    appearance: none;
+                }
+
+                @include p_el(before, 0, 0) {
+                    @include position(absolute, 0 20px 0 null);
+                    z-index: 0;
+                    border-top: 6px solid $color2;
+                    border-left: 4px solid transparent;
+                    border-right: 4px solid transparent;
+                    margin: auto;
+                    pointer-events: none;
+                }
+            }
+
+            ul.products.columns-3 {
+                margin-right: -30px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-wrap: wrap;
+                
+                @media(max-width: 600px) {
+                    margin-right: 0;
+                }
+
+                li.product {
+                    position: relative;
+                    border-radius: 30px;
+                    border: 2px dashed $color5;
+                    padding: 0 0 36px;
+                    width: calc(33.33333% - 30px);
+                    margin: 0 30px 48px 0;
+                    float: none;
+                    
+                    @media(min-width: 993px) and (max-width: 1200px) {
+                        width: calc(50% - 30px);
+                    }
+
+                    @media(max-width: 767px) {
+                        width: calc(50% - 30px);
+                    }
+
+                    @media(max-width: 600px) {
+                        width: 100%;
+                        margin-right: 0;
+                    }
+                    
+                    &:hover {
+                        .button {
+                            transform: translateY(50%);
+                            opacity: 1;
+                        }
+                    }
+
+                    .woocommerce-loop-product__link {
+                        display: block;
+                        position: relative;
+                        padding: 36px 10px 10px;
+                        overflow: hidden;
+                        
+                        &:focus + .button {
+                            transform: translateY(50%);
+                            opacity: 1;
+                        }
+
+                        .woocommerce-loop-product__title {
+                            display: block;
+                            font-size: 1.5rem;
+                            font-weight: 900;
+                            line-height: 120%;
+                            color: $color9;
+                            text-align: center;
+                            max-width: 200px;
+                            min-height: 84px;
+                            margin: 0 auto 16px;
+                        }
+
+                        .price {
+                            display: block;
+                            text-align: center;
+                            margin: 0;
+                            font-size: 1.25rem;
+                            font-weight: 900;
+                        }
+
+                        .woocommerce-Price-amount {
+                            line-height: 1;
+                            color: $color11;
+                        }
+
+                        ins {
+                            .woocommerce-Price-amount {
+                                color: $color11;
+                            }
+                        }
+
+                        del {
+                            .woocommerce-Price-amount {
+                                color: $color4;
+                            }
+                        }
+                    }
+
+                    .button {
+                        @include position(absolute, null 0 0 0);
+                        display: inline-block;
+                        width: 180px;
+                        text-align: center;
+                        border-radius: 30px;
+                        padding: 15.5px 24.2px;
+                        font-size: 1rem;
+                        font-weight: 900;
+                        line-height: 20px;
+                        background-color: $color5;
+                        color: $color1;
+                        margin: auto;
+                        opacity: 0;
+                        transition: background-color .3s ease, transform .3s ease, opacity .3s ease;
+                        
+                        @include p_el(before, 20px, 20px) {
+                            background: url(./img/icons/cart.svg) center center no-repeat;
+                            background-size: 20px 20px;
+                            display: inline-block;
+                            vertical-align: top;
+                            margin-right: 8px;
+                        }
+                        
+                        &:hover, &:focus {
+                            background-color: $color7;
+                        }
+
+                        @media(max-width: 992px) {
+                            transform: translateY(50%);
+                            opacity: 1;
+                        }
+
+                        &:focus {
+                            transform: translateY(50%);
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+
         }
 
         &__filter {
             width: 400px;
             padding-right: 30px;
+
+            @media(max-width: 992px) {
+                width: 100%;
+                padding: 30px 0 0;
+            }
 
             h3 {
                 font-size: 1.5rem;

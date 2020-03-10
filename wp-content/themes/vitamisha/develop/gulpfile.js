@@ -11,6 +11,10 @@ gulp.task('styles', function() {
 		.pipe(plumber())
         .pipe(sass())
         .pipe(groupmedia())
+        .pipe(autoprefixer({
+			cascade: false,
+			grid: true
+        }))
 		.pipe(plumber.stop())
         .pipe(gulp.dest('./../'));
 });

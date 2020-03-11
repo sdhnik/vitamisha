@@ -21,15 +21,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header( 'shop' ); ?>
 
-	<?php
-		/**
-		 * woocommerce_before_main_content hook.
-		 *
-		 * @hooked woocommerce_output_content_wrapper - 10 (outputs opening divs for the content)
-		 * @hooked woocommerce_breadcrumb - 20
-		 */
-		do_action( 'woocommerce_before_main_content' );
-	?>
+<div class="shop">
+	<div class="shop--header">
+		<div class="shop--header__title page-title"><?php the_title(); ?></div>
+
+		<?php
+			do_action( 'woocommerce_before_main_content' );
+		?>
+	</div>
+	<div class="shop--product">
+		<div class="container">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
@@ -45,15 +46,8 @@ get_header( 'shop' ); ?>
 		 */
 		do_action( 'woocommerce_after_main_content' );
 	?>
-
-	<?php
-		/**
-		 * woocommerce_sidebar hook.
-		 *
-		 * @hooked woocommerce_get_sidebar - 10
-		 */
-		do_action( 'woocommerce_sidebar' );
-	?>
+	</div>
+</div>
 
 <?php get_footer( 'shop' );
 

@@ -1933,9 +1933,11 @@ textarea[disabled] {
   padding-bottom: 88px;
 }
 
-.shop--header h1 {
+.shop--header h1,
+.shop--header .shop--header__title {
   color: #122659;
   font-size: 2.5rem;
+  font-weight: 900;
   line-height: 120%;
   text-align: center;
   margin: 80px 0 30px;

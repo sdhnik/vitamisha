@@ -189,6 +189,7 @@
 				@include size(20px);
 				vertical-align: top;
 				cursor: pointer;
+				pointer-events: none;
 
 				@include p_el(before, 20px, 20px) {
 					@include position(absolute, 0);
@@ -212,6 +213,7 @@
 				text-align: center;
 				vertical-align: middle;
 				cursor: pointer;
+				pointer-events: none;
 				background-color: $color12;
 
 				@media(max-width: 1200px) {

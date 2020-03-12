@@ -167,6 +167,188 @@
 	}
 }
 
-.widget_shopping_cart {
+.dialog_shopping_cart {
 	display: none;
+
+	position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    visibility: hidden;
+    transition: all 0.4s;
+
+    .cart--body {
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		right: 0;
+		width: 400px;
+		min-height: 50%;
+		max-height: calc(100% - 40px);
+		margin-top: 20px;
+		border-radius: 20px;
+		padding: 60px 38px 22px;
+		box-shadow: none;
+		overflow-y: auto;
+		overflow-x: hidden;
+		transform: translate(100%);
+		scrollbar-width: none;
+		transition: 0.3s ease-in;
+
+		background-color: rgba(255,255,255,1);
+    	color: #12265a;
+    }
+
+    &.open {
+		background: rgba(#000000, .4);
+		visibility: visible;
+
+		.cart--body {
+			transform: translate(-20px);
+		}
+    }
+
+	.cart--close {
+		background-color: transparent;
+		font-size: 3.125rem;
+		font-weight: 800;
+		position: absolute;
+		color: $color4;
+		border: 0;
+		top: 10px;
+		padding: 0;
+		right: 10px;
+		transition: color .3s ease;
+
+		&:hover, &:focus {
+			color: darken($color4, 25%);
+		}
+	}
+
+	h2.cart--title {
+		display: none;
+	}
+
+    .widget_shopping_cart_content {
+        ul.product_list_widget {
+            padding-top: 16px;
+            li {
+                padding: 0 15px 16px 0;
+                margin-bottom: 16px;
+
+                a.remove {
+                    left: auto;
+                    right: 0;
+                    top: -16px;
+                    font-size: 1.5rem;
+                    line-height: 1em;
+                    color: $color4 !important;
+
+                    &:hover, &:focus {
+                        background-color: transparent !important;
+                        color: darken($color4, 25%) !important;
+                    }
+                }
+
+                img {
+                    float: left;
+                    width: 110px;
+                    margin-left: 0;
+                    margin-right: 10px;
+                    margin-top: -16px;
+                    border: 2px dashed $color5;
+                    border-radius: 20px;
+                }
+
+                a {
+                    font-size: 1.125rem;
+                    font-weight: 800;
+                    line-height: 120%;
+                    color: $color8;
+                }
+                .quantity {
+                    display: block;
+                    margin-top: 15px;
+                    font-size: 1rem;
+                    font-weight: 800;
+                    color: $color11;
+                }
+            }
+        }
+
+        .blockUI.blockOverlay {
+            background-color: transparent !important;
+            top: -16px;
+        }
+
+        .woocommerce-mini-cart__empty-message {
+            text-align: center;
+        }
+
+        .total {
+            margin: 0 0 30px;
+            border: 0;
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-align: center;
+            color: $color8;
+            .woocommerce-Price-amount {
+                color: $color11;
+            }
+        }
+
+        .buttons {
+        	margin: 0;
+            .button__wrapper {
+                display: block;
+                position: relative;
+                text-align: center;
+                margin-bottom: 16px;
+
+                a.button {
+                    display: block;
+                    margin: 0;
+                    border: 0;
+                    border-radius: 30px;
+                    padding: 15px 25px;
+                    font-size: 1.125rem;
+                    font-weight: 900;
+                    line-height: 1.5;
+                    text-align: center;
+                    cursor: pointer;
+                    width: 100%;
+                    background-color: $color5;
+                    color: $color1;
+
+                    &.checkout {
+                        background-color: $color7;
+                    }
+
+                    &:hover, &:focus {
+                        + svg {
+                            stroke: $color1;
+                            animation-play-state: running;
+                        }
+                    }
+                }
+                svg {
+                    @include position(absolute, 0 null null 0);
+                    @include size(100%);
+                    pointer-events: none;
+                    animation: dashed_border_running 20s linear infinite both;
+                    animation-play-state: paused;
+                    stroke-width: 2;
+                    stroke-dasharray: 9, 5;
+                    stroke-dashoffset: 0;
+                    stroke-linecap: round;
+                    fill: none;
+                    transition: 0.3s;
+                    stroke: transparent;
+                }
+            }
+        }
+    }
 }

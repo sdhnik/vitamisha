@@ -1,6 +1,34 @@
 
 (function () {
 
+	document.addEventListener('click',function(e){
+		if(e.target && e.target.classList.contains('header--buttons__cart')){
+			e.preventDefault();
+
+			var cartWidget = document.querySelector('.dialog_shopping_cart');
+			if(!cartWidget.classList.contains('open')) {
+				cartWidget.classList.add('open');
+				cartWidget.style.display = 'block';
+			} else {
+				cartWidget.classList.remove('open')
+				cartWidget.style.display = 'none'
+			}
+		}
+		if(e.target && e.target.classList.contains('cart--close')){
+			e.preventDefault();
+
+			var cartWidget = document.querySelector('.dialog_shopping_cart');
+			if(!cartWidget.classList.contains('open')) {
+				cartWidget.classList.add('open');
+				cartWidget.style.display = 'block';
+			} else {
+				cartWidget.classList.remove('open')
+				cartWidget.style.display = 'none'
+			}
+		}
+
+	});
+
 	if(document.querySelector('.glide')) {
 		var glide = new Glide('.glide', {
 			type: 'carousel',

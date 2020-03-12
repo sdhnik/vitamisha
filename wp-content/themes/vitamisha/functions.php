@@ -85,9 +85,9 @@ function vitamisha_widgets_init() {
 		'id'            => 'cart_widget',
 		'class'         => '',
 		'description'   => __('Widget added here are displayed in footer', 'vitamisha'),
-		'before_widget' => '<div id="%1$s" class="cart %2$s"><div class="cart--body">',
+		'before_widget' => '<div id="%1$s" class="cart dialog_shopping_cart %2$s"><div class="cart--body">',
 		'after_widget'  => '</div></div>',
-		'before_title'  => '<button class="cart--close"></button><h2 class="cart--title">',
+		'before_title'  => '<button class="cart--close">×</button><h2 class="cart--title">',
 		'after_title'   => '</h2>'
 	);
 

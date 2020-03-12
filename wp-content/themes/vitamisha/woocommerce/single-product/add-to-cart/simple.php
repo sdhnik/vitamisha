@@ -32,19 +32,27 @@ if ( $product->is_in_stock() ) : ?>
 	<form class="cart" action="<?php echo esc_url( apply_filters( 'woocommerce_add_to_cart_form_action', $product->get_permalink() ) ); ?>" method="post" enctype='multipart/form-data'>
 		<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
-		<?php
-		do_action( 'woocommerce_before_add_to_cart_quantity' );
+		<div class="qty-wrapper">
+			<button type="button" class="qtyminus_stat">-</button>
+			<?php
+			do_action( 'woocommerce_before_add_to_cart_quantity' );
 
-		woocommerce_quantity_input( array(
-			'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
-			'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
-			'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
-		) );
+			woocommerce_quantity_input( array(
+				'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+				'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+				'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( wp_unslash( $_POST['quantity'] ) ) : $product->get_min_purchase_quantity(), // WPCS: CSRF ok, input var ok.
+			) );
 
-		do_action( 'woocommerce_after_add_to_cart_quantity' );
-		?>
+			do_action( 'woocommerce_after_add_to_cart_quantity' );
+			?>
 
-		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
+			<button type="button" class="qtyplus_stat">+</button>
+		</div>
+
+		<button type="submit" name="add-to-cart" value="<?php echo esc_attr( $product->get_id() ); ?>" class="single_add_to_cart_button button alt">
+			<?php echo esc_html( $product->single_add_to_cart_text() ); ?>
+			<svg class="button--dashes button--dashes__white"><rect x="5px" y="5px" rx="30px" ry="30px" width="calc(100% - 10px)" height="calc(100% - 10px)"></rect></svg>		
+		</button>
 
 		<?php do_action( 'woocommerce_after_add_to_cart_button' ); ?>
 	</form>

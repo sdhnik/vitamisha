@@ -1,5 +1,9 @@
 .main {
 	padding: 90px 0;
+	
+	@media(max-width: 767px) {
+		padding: 90px 0 0;
+	}
 }
 
 .home {
@@ -159,6 +163,7 @@
 					display: block;
 					position: relative;
 					padding: 48px 24px;
+					height: 100%;
 					border-radius: 30px;
 
 					img {
@@ -179,10 +184,44 @@
 						margin: 0 auto 16px;
 					}
 
+					.star-rating {
+					    overflow: hidden;
+					    position: relative;
+					    height: 1em;
+					    line-height: 1;
+					    font-size: 1em;
+					    width: 5.4em;
+					    font-family: star;
+					    color: $color7;
+					    margin: -16px auto 16px;
+					    &:before {
+						    content: "\73\73\73\73\73";
+						    color: #d3ced2;
+						    float: left;
+						    top: 0;
+						    left: 0;
+						    position: absolute
+						}
+						span {
+						    overflow: hidden;
+						    float: left;
+						    top: 0;
+						    left: 0;
+						    position: absolute;
+						    padding-top: 1.5em;
+						    &:before {
+							    content: "\53\53\53\53\53";
+							    top: 0;
+							    position: absolute;
+							    left: 0
+							}
+						}
+					}
+
 					.woocommerce-Price-amount {
 						display: block;
 						text-align: center;
-						margin-top: 36px;
+						margin-top: 26px;
 						font-size: 1.75rem;
 						font-weight: 900;
 						line-height: 1;

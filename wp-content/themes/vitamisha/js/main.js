@@ -1,3 +1,4 @@
+
 (function () {
 
 	if(document.querySelector('.glide')) {
@@ -36,54 +37,51 @@
 		});
 
 		glide.mount();
+
+		var currentBlock = document.querySelector('.product_list_widget'),
+			currentWidth = currentBlock.querySelector('.glide__slide--active'),
+			currentSvg = currentBlock.querySelectorAll('.button--dashes');
+
+		for (var i = 0; i < currentSvg.length; i++) {
+			var currentRect = currentSvg[i].querySelector('rect');
+			currentRect.setAttribute('width', currentWidth.offsetWidth-10);
+			currentRect.setAttribute('height', currentWidth.offsetHeight-10);
+		};
+
 	}
 
-	$(document).on("click", ".qtyminus, .qtyplus", function(t) {
-	    t.stopPropagation();
+	var qtyminusButtons = document.querySelectorAll('.qtyminus_stat'),
+		qtyplusButtons = document.querySelectorAll('.qtyplus_stat');
 
-	    var a, n = $(this),
-	        o = n.siblings(".quantity").find('.qty'),
-	        d = parseFloat(o.attr("step")),
-	        i = parseFloat(o.attr("max")),
-	        s = !1,
-	        r = parseFloat(o.val());
+		for (var i = 0; i < qtyminusButtons.length; i++) {
+			qtyminusButtons[i].addEventListener('click', function(e) {
+				e.stopPropagation();
 
-	    n.hasClass("qtyminus") && (s = !0), s ? (a = r - d, a >= 1 ? o.val(a) : o.val(0)) : (a = r + d, void 0 === i ? o.val(a) : a >= i ? o.val(i) : o.val(a));
+			    var a, n = this.parentNode,
+			        o = n.querySelector(".quantity").querySelector('.qty'),
+			        d = parseFloat(o.getAttribute("step")),
+			        m = parseFloat(o.getAttribute("max")),
+			        s = !0,
+			        r = parseFloat(o.value);
 
-	    o.trigger("change");
+			    s ? (a = r - d, a >= 1 ? o.value = a : o.value = 0) : (a = r + d, void 0 === m ? o.value = a : a >= m ? o.value = m : o.value = a);
 
-	    var $form = $('.woocommerce-cart-form');
-	    block($form);
-	    $('<input />').attr('type', 'hidden')
-	        .attr('name', 'update_cart')
-	        .attr('value', 'Update Cart')
-	        .appendTo($form);
-	    $('input[name="_wp_http_referer"]').val('/cart/');
-	    $.ajax({
-	        type: $form.attr('method'),
-	        url: $form.attr('action'),
-	        data: $form.serialize(),
-	        dataType: 'html',
-	        success: function(response) {
-	            $form.find('input[name="update_cart"]').remove();
-	            $(document.body).trigger('wc_fragment_refresh');
-	        }
-	    });
-	});
+			});
+		}
+		for (var i = 0; i < qtyplusButtons.length; i++) {
+			qtyplusButtons[i].addEventListener('click', function(e) {
+				e.stopPropagation();
 
-	$(document).on("click", ".qtyminus_stat, .qtyplus_stat", function(t) {
-	    t.stopPropagation();
+			    var a, n = this.parentNode,
+			        o = n.querySelector(".quantity").querySelector('.qty'),
+			        d = parseFloat(o.getAttribute("step")),
+			        m = parseFloat(o.getAttribute("max")),
+			        s = !1,
+			        r = parseFloat(o.value);
 
-	    var a, n = $(this),
-	        o = n.siblings(".quantity").find('.qty'),
-	        d = parseFloat(o.attr("step")),
-	        i = parseFloat(o.attr("max")),
-	        s = !1,
-	        r = parseFloat(o.val());
+			    s ? (a = r - d, a >= 1 ? o.value = a : o.value = 0) : (a = r + d, void 0 === m ? o.value = a : a >= m ? o.value = m : o.value = a);
 
-	    n.hasClass("qtyminus_stat") && (s = !0), s ? (a = r - d, a >= 1 ? o.val(a) : o.val(0)) : (a = r + d, void 0 === i ? o.val(a) : a >= i ? o.val(i) : o.val(a));
-
-	    o.trigger("change");
-	});
+			});
+		}
 
 })();

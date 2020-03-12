@@ -12,6 +12,10 @@ defined( 'ABSPATH' ) || exit;
 global $product;
 ?>
 <div class="woocommerce-variation-add-to-cart variations_button">
+
+	<div class="qty-wrapper">
+		<button type="button" class="qtyminus_stat">-</button>
+
 	<?php do_action( 'woocommerce_before_add_to_cart_button' ); ?>
 
 	<?php
@@ -25,6 +29,8 @@ global $product;
 
 	do_action( 'woocommerce_after_add_to_cart_quantity' );
 	?>
+		<button type="button" class="qtyplus_stat">+</button>
+	</div>
 
 	<button type="submit" class="single_add_to_cart_button button alt"><?php echo esc_html( $product->single_add_to_cart_text() ); ?></button>
 

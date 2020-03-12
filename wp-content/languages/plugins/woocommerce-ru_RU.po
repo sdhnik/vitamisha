@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WooCommerce - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2020-03-10 17:24:54+0000\n"
+"PO-Revision-Date: 2020-03-12 13:29:51+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -1040,6 +1040,10 @@ msgid "We’ll add some products that will make it easier to see what your store
 msgstr "Мы добавим несколько продуктов, которые помогут вам увидеть, как выглядит ваш магазин"
 
 #: packages/woocommerce-admin/dist/app/index.js:27
+msgid "Please select a country / region"
+msgstr "Выберите страну/регион"
+
+#: packages/woocommerce-admin/dist/app/index.js:27
 msgid "Customize"
 msgstr "Настроить"
 
@@ -1701,6 +1705,22 @@ msgstr "Удалить фильтр продукта"
 msgctxt "A sentence describing filters for Downloads. See screen shot for context: https://cloudup.com/ccxhyH2mEDg"
 msgid "Downloads Match {{select /}} Filters"
 msgstr "Загрузки соответствуют фильтрам {{select /}}"
+
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "Select country / region"
+msgstr "Выберите страну/регион"
+
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "Select a country / region filter match"
+msgstr "Выберите страну/регион по фильтрам"
+
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "Remove country / region filter"
+msgstr "Удалить фильтр страны/региона"
+
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "{{title}}Country / Region{{/title}} {{rule /}} {{filter /}}"
+msgstr "{{title}}Страна/регион{{/title}} {{rule /}} {{filter /}}"
 
 #: packages/woocommerce-admin/dist/date/index.js:1
 msgid "Week of %B %-d, %Y"
@@ -2529,10 +2549,6 @@ msgstr "Название заметки."
 msgid "ID of the note record."
 msgstr "Идентификатор записи заметки."
 
-#: packages/woocommerce-admin/src/API/Notes.php:370
-msgid "Status of note."
-msgstr "Статус заметки."
-
 #: packages/woocommerce-admin/src/API/Notes.php:360
 msgid "Type of note."
 msgstr "Тип заметки."
@@ -2813,6 +2829,15 @@ msgstr "Неверная тема."
 #: packages/woocommerce-admin/src/API/OnboardingThemes.php:76
 msgid "Sorry, you cannot manage themes."
 msgstr "Вы не можете управлять темами."
+
+#: packages/woocommerce-admin/src/API/Reports/Customers/Controller.php:581
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "AOV"
+msgstr "Средний чек"
+
+#: packages/woocommerce-admin/src/API/Notes.php:370
+msgid "Status of note."
+msgstr "Статус заметки."
 
 #: packages/woocommerce-admin/src/API/Reports/Customers/Controller.php:311
 msgid "Avg order value."
@@ -3329,6 +3354,11 @@ msgstr "Число %s товаров."
 #: packages/woocommerce-admin/src/API/Reports/Stock/Stats/Controller.php:94
 msgid "Number of low stock products."
 msgstr "Количество продуктов с низким запасом."
+
+#: packages/woocommerce-admin/src/API/Reports/Taxes/Controller.php:178
+#: packages/woocommerce-admin/src/API/Reports/Customers/Controller.php:251
+msgid "Country / Region."
+msgstr "Страна/регион."
 
 #: packages/woocommerce-admin/src/API/Reports/Revenue/Stats/Controller.php:452
 #: packages/woocommerce-admin/dist/app/index.js:27
@@ -4573,6 +4603,16 @@ msgstr "Сборы:"
 msgid "Coupon(s):"
 msgstr "Купоны:"
 
+#. translators: %s: Version number of wc-admin package
+#: includes/admin/views/html-admin-page-status-report.php:144
+msgid "Inactive %s"
+msgstr "Неактивно %s"
+
+#. translators: Link to WooCommerce Docs.
+#: includes/admin/settings/class-wc-settings-products.php:235
+msgid "If you are using X-Accel-Redirect download method along with NGINX server, make sure that you have applied settings as described in <a href='%s'>Digital/Downloadable Product Handling</a> guide."
+msgstr "Если вы используете метод загрузки X-Accel-Redirect вместе с сервером NGINX, убедитесь, что применены настройки, как описано в руководстве <a href='%s'>Digital/Downloadable Product Handling</a>."
+
 #: includes/admin/notes/class-wc-notes-run-db-update.php:209
 msgid "WooCommerce database update done"
 msgstr "Обновление базы данных WooCommerce завершено"
@@ -4673,6 +4713,18 @@ msgstr "Последний внутренний блок будет выровн
 #: packages/woocommerce-blocks/build/product-tag.js:1
 msgid "Align Last Block"
 msgstr "Выровнять последний блок"
+
+#: packages/woocommerce-blocks/src/BlockTypes/ProductCategories.php:170
+msgid "List of categories"
+msgstr "Список категорий"
+
+#: packages/woocommerce-blocks/src/BlockTypes/ProductCategories.php:171
+msgid "List of categories with their product counts"
+msgstr "Список категорий с указанием количества продуктов"
+
+#: packages/woocommerce-blocks/src/BlockTypes/AbstractProductGrid.php:432
+msgid "Product on sale"
+msgstr "Продаваемый товар"
 
 #: includes/shortcodes/class-wc-shortcode-checkout.php:111
 msgid "You are paying for a guest order. Please continue with payment only if you recognize this order."
@@ -6296,18 +6348,6 @@ msgstr "Серверу не соответствует требованиям, �
 msgid "Most recent"
 msgstr "Свежие"
 
-#: packages/woocommerce-blocks/assets/js/base/components/review-list-item/index.js:66
-#: packages/woocommerce-blocks/build/all-reviews-legacy.js:1
-#: packages/woocommerce-blocks/build/reviews-by-category-legacy.js:1
-#: packages/woocommerce-blocks/build/reviews-by-category.js:1
-#: packages/woocommerce-blocks/build/all-reviews.js:1
-#: packages/woocommerce-blocks/build/reviews-by-product-legacy.js:1
-#: packages/woocommerce-blocks/build/reviews-by-product.js:1
-#: packages/woocommerce-blocks/build/reviews-frontend-legacy.js:6
-#: packages/woocommerce-blocks/build/reviews-frontend.js:6
-msgid "Read full review"
-msgstr "Читать весь отзыв"
-
 #: packages/woocommerce-blocks/assets/js/base/components/review-list-item/index.js:50
 #: packages/woocommerce-blocks/assets/js/base/components/review-list-item/index.js:55
 #: packages/woocommerce-blocks/build/all-reviews-legacy.js:1
@@ -6320,6 +6360,18 @@ msgstr "Читать весь отзыв"
 #: packages/woocommerce-blocks/build/reviews-frontend.js:6
 msgid "Verified buyer"
 msgstr "Проверенный покупатель"
+
+#: packages/woocommerce-blocks/assets/js/base/components/review-list-item/index.js:66
+#: packages/woocommerce-blocks/build/all-reviews-legacy.js:1
+#: packages/woocommerce-blocks/build/reviews-by-category-legacy.js:1
+#: packages/woocommerce-blocks/build/reviews-by-category.js:1
+#: packages/woocommerce-blocks/build/all-reviews.js:1
+#: packages/woocommerce-blocks/build/reviews-by-product-legacy.js:1
+#: packages/woocommerce-blocks/build/reviews-by-product.js:1
+#: packages/woocommerce-blocks/build/reviews-frontend-legacy.js:6
+#: packages/woocommerce-blocks/build/reviews-frontend.js:6
+msgid "Read full review"
+msgstr "Читать весь отзыв"
 
 #: packages/woocommerce-blocks/assets/js/base/components/review-list-item/index.js:70
 #: packages/woocommerce-blocks/build/all-reviews-legacy.js:1
@@ -7740,24 +7792,6 @@ msgstr "Все выбранные категории"
 msgid "Any selected categories"
 msgstr "Любые выбранные категории"
 
-#: packages/woocommerce-blocks/assets/js/components/product-category-control/index.js:156
-#: packages/woocommerce-blocks/build/reviews-by-category-legacy.js:1
-#: packages/woocommerce-blocks/build/product-category-legacy.js:1
-#: packages/woocommerce-blocks/build/product-on-sale-legacy.js:1
-#: packages/woocommerce-blocks/build/product-on-sale.js:1
-#: packages/woocommerce-blocks/build/reviews-by-category.js:1
-#: packages/woocommerce-blocks/build/product-new.js:1
-#: packages/woocommerce-blocks/build/product-category.js:1
-#: packages/woocommerce-blocks/build/product-top-rated.js:1
-#: packages/woocommerce-blocks/build/product-top-rated-legacy.js:1
-#: packages/woocommerce-blocks/build/product-best-sellers-legacy.js:1
-#: packages/woocommerce-blocks/build/featured-category-legacy.js:1
-#: packages/woocommerce-blocks/build/product-new-legacy.js:1
-#: packages/woocommerce-blocks/build/product-best-sellers.js:1
-#: packages/woocommerce-blocks/build/featured-category.js:1
-msgid "Pick at least two categories to use this setting."
-msgstr "Выберите по крайней мере две категории для использования этого параметра."
-
 #: packages/woocommerce-blocks/assets/js/blocks/product-tag/block.js:293
 #: packages/woocommerce-blocks/build/product-tag-legacy.js:1
 #: packages/woocommerce-blocks/build/product-tag.js:1
@@ -7776,6 +7810,24 @@ msgstr "Этот блок отображает товары, имеющие с �
 #: packages/woocommerce-blocks/build/product-tag.js:1
 msgid "Showing Products by Tag block preview."
 msgstr "Предпросмотр отображения блока товаров по метке."
+
+#: packages/woocommerce-blocks/assets/js/components/product-category-control/index.js:156
+#: packages/woocommerce-blocks/build/reviews-by-category-legacy.js:1
+#: packages/woocommerce-blocks/build/product-category-legacy.js:1
+#: packages/woocommerce-blocks/build/product-on-sale-legacy.js:1
+#: packages/woocommerce-blocks/build/product-on-sale.js:1
+#: packages/woocommerce-blocks/build/reviews-by-category.js:1
+#: packages/woocommerce-blocks/build/product-new.js:1
+#: packages/woocommerce-blocks/build/product-category.js:1
+#: packages/woocommerce-blocks/build/product-top-rated.js:1
+#: packages/woocommerce-blocks/build/product-top-rated-legacy.js:1
+#: packages/woocommerce-blocks/build/product-best-sellers-legacy.js:1
+#: packages/woocommerce-blocks/build/featured-category-legacy.js:1
+#: packages/woocommerce-blocks/build/product-new-legacy.js:1
+#: packages/woocommerce-blocks/build/product-best-sellers.js:1
+#: packages/woocommerce-blocks/build/featured-category.js:1
+msgid "Pick at least two categories to use this setting."
+msgstr "Выберите по крайней мере две категории для использования этого параметра."
 
 #: packages/woocommerce-blocks/assets/js/components/product-category-control/index.js:119
 #: packages/woocommerce-blocks/build/reviews-by-category-legacy.js:1
@@ -7852,6 +7904,15 @@ msgstr "Поиск категорий товаров"
 msgid "Your store doesn't have any product categories."
 msgstr "В этом магазине отсутствуют категории товаров."
 
+#: packages/woocommerce-blocks/assets/js/blocks/product-tag/index.js:19
+#: packages/woocommerce-blocks/assets/js/blocks/product-tag/block.js:181
+#: packages/woocommerce-blocks/assets/js/blocks/product-tag/block.js:234
+#: packages/woocommerce-blocks/assets/js/blocks/product-tag/block.js:287
+#: packages/woocommerce-blocks/build/product-tag-legacy.js:1
+#: packages/woocommerce-blocks/build/product-tag.js:1
+msgid "Products by Tag"
+msgstr "Товары по метке"
+
 #: packages/woocommerce-blocks/assets/js/components/product-category-control/index.js:96
 #: packages/woocommerce-blocks/build/reviews-by-category-legacy.js:1
 #: packages/woocommerce-blocks/build/product-category-legacy.js:1
@@ -7869,15 +7930,6 @@ msgstr "В этом магазине отсутствуют категории �
 #: packages/woocommerce-blocks/build/featured-category.js:1
 msgid "Clear all product categories"
 msgstr "Очистить все категории товаров"
-
-#: packages/woocommerce-blocks/assets/js/blocks/product-tag/index.js:19
-#: packages/woocommerce-blocks/assets/js/blocks/product-tag/block.js:181
-#: packages/woocommerce-blocks/assets/js/blocks/product-tag/block.js:234
-#: packages/woocommerce-blocks/assets/js/blocks/product-tag/block.js:287
-#: packages/woocommerce-blocks/build/product-tag-legacy.js:1
-#: packages/woocommerce-blocks/build/product-tag.js:1
-msgid "Products by Tag"
-msgstr "Товары по метке"
 
 #: packages/woocommerce-blocks/assets/js/blocks/reviews/reviews-by-category/edit.js:60
 #: packages/woocommerce-blocks/assets/js/components/product-category-control/index.js:55
@@ -7900,6 +7952,18 @@ msgid_plural "%s, has %d products"
 msgstr[0] "%s, %d товар"
 msgstr[1] "%s, %d товара"
 msgstr[2] "%s, %d товаров"
+
+#: packages/woocommerce-blocks/assets/js/blocks/handpicked-products/block.js:71
+#: packages/woocommerce-blocks/build/handpicked-products.js:1
+#: packages/woocommerce-blocks/build/handpicked-products-legacy.js:1
+msgid "Buttons follow content."
+msgstr "Кнопки следуют за содержимым."
+
+#: packages/woocommerce-blocks/assets/js/blocks/handpicked-products/block.js:67
+#: packages/woocommerce-blocks/build/handpicked-products.js:1
+#: packages/woocommerce-blocks/build/handpicked-products-legacy.js:1
+msgid "Buttons are aligned vertically."
+msgstr "Кнопки выравнены по вертикали."
 
 #: packages/woocommerce-blocks/assets/js/blocks/attribute-filter/edit.js:321
 #: packages/woocommerce-blocks/assets/js/blocks/reviews/reviews-by-product/edit.js:144
@@ -7929,18 +7993,6 @@ msgstr[2] "%s, %d товаров"
 #: packages/woocommerce-blocks/build/product-tag.js:1
 msgid "Done"
 msgstr "Готово"
-
-#: packages/woocommerce-blocks/assets/js/blocks/handpicked-products/block.js:71
-#: packages/woocommerce-blocks/build/handpicked-products.js:1
-#: packages/woocommerce-blocks/build/handpicked-products-legacy.js:1
-msgid "Buttons follow content."
-msgstr "Кнопки следуют за содержимым."
-
-#: packages/woocommerce-blocks/assets/js/blocks/handpicked-products/block.js:67
-#: packages/woocommerce-blocks/build/handpicked-products.js:1
-#: packages/woocommerce-blocks/build/handpicked-products-legacy.js:1
-msgid "Buttons are aligned vertically."
-msgstr "Кнопки выравнены по вертикали."
 
 #: packages/woocommerce-blocks/assets/js/blocks/product-on-sale/block.js:56
 #: packages/woocommerce-blocks/assets/js/blocks/handpicked-products/block.js:94
@@ -8164,22 +8216,6 @@ msgstr "Заголовку - по алфавиту"
 msgid "Sales - most first"
 msgstr "Продажам - сперва самые продаваемые"
 
-#: packages/woocommerce-blocks/assets/js/blocks/products/edit.js:61
-#: packages/woocommerce-blocks/assets/js/components/product-orderby-control/index.js:39
-#: packages/woocommerce-blocks/build/product-category-legacy.js:1
-#: packages/woocommerce-blocks/build/handpicked-products.js:1
-#: packages/woocommerce-blocks/build/handpicked-products-legacy.js:1
-#: packages/woocommerce-blocks/build/product-on-sale-legacy.js:1
-#: packages/woocommerce-blocks/build/product-on-sale.js:1
-#: packages/woocommerce-blocks/build/product-tag-legacy.js:1
-#: packages/woocommerce-blocks/build/product-category.js:1
-#: packages/woocommerce-blocks/build/all-products.js:1
-#: packages/woocommerce-blocks/build/products-by-attribute.js:1
-#: packages/woocommerce-blocks/build/products-by-attribute-legacy.js:1
-#: packages/woocommerce-blocks/build/product-tag.js:1
-msgid "Rating - highest first"
-msgstr "Рейтингу - сперва рейтинговые"
-
 #: packages/woocommerce-blocks/assets/js/components/product-tag-control/index.js:118
 #: packages/woocommerce-blocks/build/product-tag-legacy.js:1
 #: packages/woocommerce-blocks/build/product-tag.js:1
@@ -8221,6 +8257,22 @@ msgid_plural "%d products tagged as %s"
 msgstr[0] "%d товар маркирован как %s"
 msgstr[1] "%d товара маркировано как %s"
 msgstr[2] "%d товаров маркировано как %s"
+
+#: packages/woocommerce-blocks/assets/js/blocks/products/edit.js:61
+#: packages/woocommerce-blocks/assets/js/components/product-orderby-control/index.js:39
+#: packages/woocommerce-blocks/build/product-category-legacy.js:1
+#: packages/woocommerce-blocks/build/handpicked-products.js:1
+#: packages/woocommerce-blocks/build/handpicked-products-legacy.js:1
+#: packages/woocommerce-blocks/build/product-on-sale-legacy.js:1
+#: packages/woocommerce-blocks/build/product-on-sale.js:1
+#: packages/woocommerce-blocks/build/product-tag-legacy.js:1
+#: packages/woocommerce-blocks/build/product-category.js:1
+#: packages/woocommerce-blocks/build/all-products.js:1
+#: packages/woocommerce-blocks/build/products-by-attribute.js:1
+#: packages/woocommerce-blocks/build/products-by-attribute-legacy.js:1
+#: packages/woocommerce-blocks/build/product-tag.js:1
+msgid "Rating - highest first"
+msgstr "Рейтингу - сперва рейтинговые"
 
 #: packages/woocommerce-blocks/assets/js/blocks/products/edit.js:54
 #: packages/woocommerce-blocks/assets/js/components/product-orderby-control/index.js:32
@@ -9141,10 +9193,6 @@ msgstr "Спасибо, что используете {site_address}!"
 msgid "Generate coupon code"
 msgstr "Генерировать код купона"
 
-#: includes/admin/views/html-admin-page-status-report.php:580
-msgid "Unable to retrieve database information. Usually, this is not a problem, and it only means that your install is using a class that replaces the WordPress database class (e.g., HyperDB) and WooCommerce is unable to get database information."
-msgstr "Не удается получить сведения о базе данных. Обычно это не проблема, и это означает, что ваша установка использует класс, который заменяет класс базы данных WordPress (например, HyperDB), и WooCommerce не может получить доступ к информацию о базе данных."
-
 #: includes/admin/views/html-admin-page-status-report.php:576
 msgid "Database information:"
 msgstr "Информация о базе данных:"
@@ -9162,6 +9210,10 @@ msgstr "Невозможно обнаружить пакет REST API."
 #: includes/admin/views/html-admin-page-status-report.php:72
 msgid "The WooCommerce REST API package running on your site."
 msgstr "Пакет WooCommerce REST API работает на этом сайте."
+
+#: includes/admin/views/html-admin-page-status-report.php:580
+msgid "Unable to retrieve database information. Usually, this is not a problem, and it only means that your install is using a class that replaces the WordPress database class (e.g., HyperDB) and WooCommerce is unable to get database information."
+msgstr "Не удается получить сведения о базе данных. Обычно это не проблема, и это означает, что ваша установка использует класс, который заменяет класс базы данных WordPress (например, HyperDB), и WooCommerce не может получить доступ к информацию о базе данных."
 
 #: includes/admin/views/html-admin-page-status-report.php:71
 msgid "WooCommerce REST API package"
@@ -9303,6 +9355,10 @@ msgstr "Узнайте как произвести обновление"
 msgid "Order fully refunded."
 msgstr "Заказ полностью возвращен."
 
+#: includes/admin/class-wc-admin-settings.php:146
+msgid "Selecting no country / region to sell to prevents from completing the checkout. Continue anyway?"
+msgstr "Без указания страны/региона продаж невозможно завершить процесс оформления заказа. Продолжить всё равно?"
+
 #: includes/admin/notes/class-wc-notes-run-db-update.php:170
 #: includes/admin/views/html-notice-updating.php:16
 #: includes/admin/views/html-notice-regenerating-lookup-table.php:14
@@ -9342,10 +9398,6 @@ msgstr "Самая ранняя назначенная дата"
 #: packages/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:110
 msgid "Count"
 msgstr "Количество"
-
-#: packages/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:108
-msgid "Action Status"
-msgstr "Статус действия"
 
 #: packages/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:101
 msgid "This section shows scheduled action counts."
@@ -9459,6 +9511,15 @@ msgstr "[{site_title}]: Заказ № {order_number} отменен"
 msgid "Stock: %d"
 msgstr "В наличии: %d"
 
+#. translators: 1: action ID 2: hook name
+#: packages/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_QueueRunner.php:155
+msgid "Completed processing action %1$s with hook: %2$s"
+msgstr "Завершена обработка действия %1$s, сработавший перехватчик: %2$s"
+
+#: packages/action-scheduler/classes/ActionScheduler_wcSystemStatus.php:108
+msgid "Action Status"
+msgstr "Статус действия"
+
 #: includes/admin/settings/class-wc-settings-advanced.php:364
 msgid "Leave this box unchecked if you do not want to see suggested extensions."
 msgstr "Не устанавливайте этот флажок, если не хотите, чтобы вам показывали рекомендуемые расширения."
@@ -9561,6 +9622,10 @@ msgstr "Плагины \"вкраплений\""
 msgid "Dismiss this suggestion"
 msgstr "Закрыть"
 
+#: includes/admin/settings/class-wc-settings-accounts.php:124
+msgid "Adds an option to the orders screen for removing personal data in bulk. Note that removing personal data cannot be undone."
+msgstr "Добавляет возможность полного удаления личных данных из заказов. Обратите внимание, удаление личных данных невозможно отменить."
+
 #: includes/admin/marketplace-suggestions/templates/html-product-data-extensions.php:27
 #: includes/admin/class-wc-admin-assets.php:467
 msgid "Manage suggestions"
@@ -9616,10 +9681,6 @@ msgstr "Все продукты Facebook в одном расширении: п�
 #: includes/admin/class-wc-admin-setup-wizard.php:2112
 msgid "Facebook"
 msgstr "Facebook"
-
-#: includes/admin/class-wc-admin-dashboard.php:45
-msgid "WooCommerce Status"
-msgstr "Статус WooCommerce"
 
 #: includes/admin/meta-boxes/views/html-order-item.php:96
 #: includes/admin/meta-boxes/views/html-order-item.php:144
@@ -9705,6 +9766,10 @@ msgstr "Документация WooCommerce.com по отслеживанию �
 #: includes/admin/settings/class-wc-settings-advanced.php:335
 msgid "Usage Tracking"
 msgstr "Отслеживание использования"
+
+#: includes/admin/class-wc-admin-dashboard.php:45
+msgid "WooCommerce Status"
+msgstr "Статус WooCommerce"
 
 #: templates/myaccount/form-login.php:99
 msgid "A password will be sent to your email address."
@@ -10234,6 +10299,19 @@ msgstr "Успешно отменено действие: %s"
 msgid "Successfully executed action: %s"
 msgstr "Успешно выполнено действие: %s"
 
+#. translators: %s: action ID
+#: packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:457
+#: packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:468
+#: packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:495
+#: packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:773
+#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:457
+#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:547
+#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:579
+#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:776
+#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:818
+msgid "Unidentified action %s"
+msgstr "Неизвестное действие %s"
+
 #. translators: %d refers to the total number of taskes completed
 #: packages/action-scheduler/classes/WP_CLI/ActionScheduler_WPCLI_Scheduler_command.php:153
 msgid "%d scheduled task completed."
@@ -10254,19 +10332,6 @@ msgid_plural "%d batches executed."
 msgstr[0] "%d пакет выполнен."
 msgstr[1] "%d пакета выполнено."
 msgstr[2] "%d пакетов выполнено."
-
-#. translators: %s: action ID
-#: packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:457
-#: packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:468
-#: packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:495
-#: packages/action-scheduler/classes/data-stores/ActionScheduler_wpPostStore.php:773
-#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:457
-#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:547
-#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:579
-#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:776
-#: packages/action-scheduler/classes/data-stores/ActionScheduler_DBStore.php:818
-msgid "Unidentified action %s"
-msgstr "Неизвестное действие %s"
 
 #: packages/action-scheduler/classes/ActionScheduler_ListTable.php:243
 msgid "Non-repeating"
@@ -10467,6 +10532,29 @@ msgstr "В корзине действий не найдено"
 #: includes/emails/class-wc-email-failed-order.php:68
 msgid "Order Failed: #{order_number}"
 msgstr "Заказ не удался: № {order_number}"
+
+#. translators: %s: amount of claims
+#: packages/action-scheduler/classes/ActionScheduler_ListTable.php:331
+msgid "Maximum simultaneous queues already in progress (%s queue). No additional queues will begin processing until the current queues are complete."
+msgid_plural "Maximum simultaneous queues already in progress (%s queues). No additional queues will begin processing until the current queues are complete."
+msgstr[0] "Максимальное число одновременных очередей, которые уже выполняются (%s). Обработка дополнительных очередей не начнется, пока не будут завершены текущие очереди."
+msgstr[1] "Максимальное число одновременных очередей, которые уже выполняются (%s очередей). Никакие дополнительные очереди не начнут обрабатываться, пока текущие очереди не будут завершены."
+msgstr[2] "Максимальное число одновременных очередей, которые уже выполняются (%s очередей). Обработка дополнительных очередей не начнется, пока не будут завершены текущие очереди."
+
+#. translators: 1: action ID 2: arguments
+#: packages/action-scheduler/classes/ActionScheduler_InvalidActionException.php:40
+msgid "Action [%1$s] has invalid arguments. It cannot be JSON decoded to an array. $args = %2$s"
+msgstr "Действие [%1$s] имеет некорректные аргументы. Оно не может быть декодировано из JSON в массив. $args = %2$s"
+
+#. translators: 1: error message 2: filename 3: line
+#: packages/action-scheduler/classes/abstracts/ActionScheduler_Logger.php:118
+msgid "unexpected shutdown: PHP Fatal error %1$s in %2$s on line %3$s"
+msgstr "непредвиденное выключение: Критическая ошибка PHP %1$s в %2$s в строке %3$s"
+
+#. translators: 1: action HTML 2: action ID 3: error message
+#: packages/action-scheduler/classes/ActionScheduler_ListTable.php:386
+msgid "Could not process change for action: \"%1$s\" (ID: %2$d). Error: %3$s"
+msgstr "Не удалось обработать изменение для действия: \"%1$s\" (ID: %2$d). Ошибка: %3$s"
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-reports-controller.php:67
 msgid "Attributes totals."
@@ -10683,10 +10771,6 @@ msgstr "К сожалению, у нас недостаточно позиций
 msgid "An identifier for the group this setting belongs to."
 msgstr "Идентификатор для группы, к которой относится эта настройка."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:485
-msgid "Variation status."
-msgstr "Статус вариации."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-reviews-controller.php:1043
 msgid "Invalid review ID."
 msgstr "Недействительный ID отзыва."
@@ -10862,6 +10946,10 @@ msgstr "Обновление отзыва не удалось."
 msgid "Limit response to resources created after a given ISO8601 compliant date."
 msgstr "Ограничить ответ отзывами, опубликованными после заданной ISO8601 совместимой даты."
 
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:485
+msgid "Variation status."
+msgstr "Статус вариации."
+
 #. Translators: %s Payment gateway name.
 #: includes/admin/settings/class-wc-settings-payment-gateways.php:186
 msgid "The \"%s\" payment method is currently enabled"
@@ -10923,14 +11011,14 @@ msgstr "Какую категорию товаров нужно экспорти
 msgid "Export all categories"
 msgstr "Экспортировать все категории"
 
+#: includes/admin/class-wc-admin-setup-wizard.php:1111
+msgid "WooCommerce Services icon"
+msgstr "Значок WooCommerce Services"
+
 #. translators: %s: theme name
 #: includes/admin/views/html-notice-template-check.php:19
 msgid "<strong>Your theme (%s) contains outdated copies of some WooCommerce template files.</strong> These files may need updating to ensure they are compatible with the current version of WooCommerce. Suggestions to fix this:"
 msgstr "<strong>В вашей теме (%s) содержатся устаревшие копии нескольких шаблонов WooCommerce.</strong> Возможно, эти шаблоны потребуется обновить, чтобы обеспечить совместимость с текущей версией WooCommerce. Предлагаем выполнить следующее:"
-
-#: includes/admin/class-wc-admin-setup-wizard.php:1111
-msgid "WooCommerce Services icon"
-msgstr "Значок WooCommerce Services"
 
 #. translators: %1$s: live rates tooltip text, %2$s: shipping extensions URL
 #: includes/admin/class-wc-admin-setup-wizard.php:1180
@@ -12844,11 +12932,6 @@ msgstr "Дата создания:"
 msgid "Paid on %1$s @ %2$s"
 msgstr "Оплачено %1$s @ %2$s"
 
-#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:246
-#: packages/woocommerce-admin/dist/app/index.js:27
-msgid "Status:"
-msgstr "Статус:"
-
 #: includes/admin/meta-boxes/views/html-order-download-permission.php:48
 msgid "Copy link"
 msgstr "Скопировать ссылку"
@@ -12973,6 +13056,11 @@ msgstr "Фильтровать по статусу товара"
 msgid "On backorder"
 msgstr "Предзаказ"
 
+#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:246
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "Status:"
+msgstr "Статус:"
+
 #: includes/admin/list-tables/class-wc-admin-list-table-orders.php:259
 msgid "M j, Y"
 msgstr "M j, Y"
@@ -13074,14 +13162,14 @@ msgstr "Адрес электронной почты для приёма пла�
 msgid "Direct payments to email address:"
 msgstr "Прямые платежи на адрес электронной почты:"
 
-#: packages/woocommerce-admin/dist/app/index.js:27
-msgid "Square"
-msgstr "Square"
-
 #. translators: %s: URL
 #: includes/admin/class-wc-admin-setup-wizard.php:1549
 msgid "Securely accept credit and debit cards with one low rate, no surprise fees (custom rates available). Sell online and in store and track sales and inventory in one place. <a href=\"%s\" target=\"_blank\">Learn more about Square</a>."
 msgstr "Безопасно принимайте кредитные и дебетовые карты с единой низкой ставкой, без неожиданных комиссионных сборов (доступны настраиваемые ставки). Продавайте онлайн и в магазине. Отслеживайте продажи и складские запасы в одной точке. <a href=\"%s\" target=\"_blank\">Дополнительные сведения о Square</a>."
+
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "Square"
+msgstr "Square"
 
 #. translators: %s: URL
 #: includes/admin/class-wc-admin-setup-wizard.php:1544
@@ -14582,14 +14670,6 @@ msgstr "Заказ воссстановлен"
 msgid "Coupon restored"
 msgstr "Купон восстановлен"
 
-#: includes/admin/meta-boxes/views/html-product-data-variations.php:76
-msgid "Set Status - Out of stock"
-msgstr "Установить статус - нет в наличии"
-
-#: includes/admin/meta-boxes/views/html-product-data-variations.php:75
-msgid "Set Status - In stock"
-msgstr "Установить статус - в наличии"
-
 #: includes/admin/settings/views/html-admin-page-shipping-zones.php:28
 msgid "Manage shipping methods"
 msgstr "Сохранить методы доставки"
@@ -14611,6 +14691,14 @@ msgstr "Отзывы могут быть оставлены только \"пр�
 #: includes/admin/settings/class-wc-settings-products.php:426
 msgid "Enable star rating on reviews"
 msgstr "Включить в отзывах рейтинг в звездах"
+
+#: includes/admin/meta-boxes/views/html-product-data-variations.php:76
+msgid "Set Status - Out of stock"
+msgstr "Назначить статус - Нет в наличии"
+
+#: includes/admin/meta-boxes/views/html-product-data-variations.php:75
+msgid "Set Status - In stock"
+msgstr "Назначить статус - В наличии"
 
 #: includes/admin/helper/views/html-section-account.php:12
 msgid "Disconnect"
@@ -15459,6 +15547,10 @@ msgstr "URL автора родительской темы"
 msgid "Increase existing price by (fixed amount or %):"
 msgstr "Увеличить существующие цены на (фиксированную величину или %):"
 
+#: includes/class-wc-ajax.php:901 includes/class-wc-order-item-product.php:72
+msgid "Invalid product ID"
+msgstr "Неверный ID ресурса"
+
 #: packages/woocommerce-admin/src/API/Reports/Import/Controller.php:113
 #: packages/woocommerce-admin/src/API/Notes.php:238
 #: packages/woocommerce-admin/src/API/OnboardingProfile.php:90
@@ -15468,10 +15560,6 @@ msgstr "Увеличить существующие цены на (фиксир�
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-reviews-v1-controller.php:179
 msgid "Sorry, you cannot edit this resource."
 msgstr "Сожалеем, вы не можете редактировать этот ресурс."
-
-#: includes/class-wc-ajax.php:901 includes/class-wc-order-item-product.php:72
-msgid "Invalid product ID"
-msgstr "Неверный ID ресурса"
 
 #: includes/admin/settings/class-wc-settings-general.php:240
 #: includes/admin/views/html-admin-page-status-report.php:832
@@ -16637,14 +16725,6 @@ msgstr "Количество дней до истечения срока дос�
 msgid "The date the review was created, as GMT."
 msgstr "Дата создания рецензии (в формате GMT)."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-payment-gateways-controller.php:190
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-setting-options-controller.php:230
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-shipping-zone-methods-v2-controller.php:505
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-setting-options-v2-controller.php:561
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-payment-gateways-v2-controller.php:418
-msgid "Type of setting."
-msgstr "Тип настройки."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-payment-gateways-controller.php:208
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-setting-options-controller.php:212
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-shipping-zone-methods-v2-controller.php:523
@@ -16652,6 +16732,14 @@ msgstr "Тип настройки."
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-payment-gateways-v2-controller.php:436
 msgid "Additional help text shown to the user about the setting."
 msgstr "Дополнительный текст с описанием настройки в помощь пользователю."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-payment-gateways-controller.php:190
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-setting-options-controller.php:230
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-shipping-zone-methods-v2-controller.php:505
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-setting-options-v2-controller.php:561
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-payment-gateways-v2-controller.php:418
+msgid "Type of setting."
+msgstr "Тип настройки."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-payment-gateways-controller.php:184
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-setting-options-controller.php:192
@@ -16682,14 +16770,6 @@ msgstr "Краткое понятное описание настройки дл
 msgid "Number of times downloadable files can be downloaded after purchase."
 msgstr "Сколько раз файлы могут быть скачаны после покупки."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-payment-gateways-controller.php:214
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-setting-options-controller.php:221
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-shipping-zone-methods-v2-controller.php:529
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-setting-options-v2-controller.php:552
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-payment-gateways-v2-controller.php:442
-msgid "Placeholder text to be displayed in text inputs."
-msgstr "Заполняющий текст, который будет отображаться в поле ввода текста."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-payment-gateways-controller.php:202
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-setting-options-controller.php:206
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-shipping-zone-methods-v2-controller.php:517
@@ -16705,6 +16785,14 @@ msgstr "Значение настройки по умолчанию."
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-payment-gateways-v2-controller.php:425
 msgid "Setting value."
 msgstr "Значение настройки."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-payment-gateways-controller.php:214
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-setting-options-controller.php:221
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-shipping-zone-methods-v2-controller.php:529
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-setting-options-v2-controller.php:552
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-payment-gateways-v2-controller.php:442
+msgid "Placeholder text to be displayed in text inputs."
+msgstr "Заполняющий текст, который будет отображаться в поле ввода текста."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:2136
 #: packages/woocommerce-blocks/src/RestApi/StoreApi/Controllers/Products.php:348
@@ -16819,11 +16907,6 @@ msgstr "С какой версии WooCommerce заказ был обновле�
 msgid "When true, the payment gateway API is used to generate the refund."
 msgstr "Когда этот параметр имеет значение TRUE, возмещение производится через API-интерфейс платежной системы."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-order-notes-controller.php:151
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-notes-v2-controller.php:152
-msgid "If true, the note will be shown to customers and they will be notified. If false, the note will be for admin reference only."
-msgstr "Если этот параметр имеет значение TRUE, заметка будет показана клиентам и им будет отправлено уведомление. Если этот параметр имеет значение FALSE, заметка будет отображаться только для администратора."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-order-notes-controller.php:140
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-notes-v2-controller.php:141
 msgid "The date the order note was created, as GMT."
@@ -16838,6 +16921,11 @@ msgstr "Список идентификаторов пользователей (
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-coupons-v1-controller.php:525
 msgid "If true, this coupon will not be applied to items that have sale prices."
 msgstr "Если этот параметр имеет значение TRUE, купон не будет применяться к товарам при распродаже."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-order-notes-controller.php:151
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-notes-v2-controller.php:152
+msgid "If true, the note will be shown to customers and they will be notified. If false, the note will be for admin reference only."
+msgstr "Если этот параметр имеет значение TRUE, заметка будет показана клиентам и им будет отправлено уведомление. Если этот параметр имеет значение FALSE, заметка будет отображаться только для администратора."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-coupons-v2-controller.php:440
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-coupons-v1-controller.php:503
@@ -17857,6 +17945,15 @@ msgstr "Вексфорд"
 msgid "Email of the reviewer."
 msgstr "Email рецензента."
 
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:109
+msgid "ID to reassign posts to."
+msgstr "ID, на который передается сообщение."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-reviews-controller.php:947
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:874
+msgid "Limit result set to specific IDs."
+msgstr "Ограничение результирующего набора данных для конкретных IDs."
+
 #: packages/woocommerce-admin/src/API/Reports/Stock/Controller.php:447
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:704
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-reviews-controller.php:939
@@ -17867,15 +17964,6 @@ msgstr "Email рецензента."
 #: packages/woocommerce-blocks/src/RestApi/StoreApi/Controllers/Products.php:258
 msgid "Ensure result set excludes specific IDs."
 msgstr "Убедитесь, что результирующий набор исключает конкретные идентификаторы."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:109
-msgid "ID to reassign posts to."
-msgstr "ID, на который передается сообщение."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-reviews-controller.php:947
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:874
-msgid "Limit result set to specific IDs."
-msgstr "Ограничение результирующего набора данных для конкретных IDs."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:55
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:63
@@ -18056,13 +18144,13 @@ msgstr "Вперёд"
 msgid "No order has been made yet."
 msgstr "Заказов ещё не создано."
 
-#: templates/myaccount/lost-password-confirmation.php:25
-msgid "A password reset email has been sent to the email address on file for your account, but may take several minutes to show up in your inbox. Please wait at least 10 minutes before attempting another reset."
-msgstr "Письмо со ссылкой для сброса пароля было направлено на адрес электронной почты, привязанный к вашей учетной записи, доставка сообщения может занять несколько минут. Пожалуйста, подождите не менее 10 минут, прежде чем инициировать ещё один запрос."
-
 #: templates/myaccount/payment-methods.php:70
 msgid "No saved methods found."
 msgstr "Сохранённых методов не обнаружено."
+
+#: templates/myaccount/lost-password-confirmation.php:25
+msgid "A password reset email has been sent to the email address on file for your account, but may take several minutes to show up in your inbox. Please wait at least 10 minutes before attempting another reset."
+msgstr "Письмо со ссылкой для сброса пароля было направлено на адрес электронной почты, привязанный к вашей учетной записи, доставка сообщения может занять несколько минут. Пожалуйста, подождите не менее 10 минут, прежде чем инициировать ещё один запрос."
 
 #: templates/order/order-downloads.php:56
 msgid "&infin;"
@@ -18580,11 +18668,6 @@ msgstr "Белизский доллар"
 msgid "Current page of the collection."
 msgstr "Текущая страница коллекции."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:529
-#: packages/woocommerce-blocks/src/RestApi/StoreApi/Controllers/Products.php:224
-msgid "Limit results to those matching a string."
-msgstr "Лимитировать результаты, которые совпадают со строкой."
-
 #: packages/woocommerce-admin/src/API/Leaderboards.php:446
 #: packages/woocommerce-admin/src/API/Reports/Coupons/Controller.php:236
 #: packages/woocommerce-admin/src/API/Reports/Coupons/Stats/Controller.php:282
@@ -18607,6 +18690,11 @@ msgstr "Лимитировать результаты, которые совпа
 #: packages/woocommerce-blocks/src/RestApi/StoreApi/Controllers/Products.php:214
 msgid "Maximum number of items to be returned in result set."
 msgstr "Максимальное количество элементов, возвращаемых в наборе результатов."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:529
+#: packages/woocommerce-blocks/src/RestApi/StoreApi/Controllers/Products.php:224
+msgid "Limit results to those matching a string."
+msgstr "Лимитировать результаты, которые совпадают со строкой."
 
 #: includes/shipping/flat-rate/class-wc-shipping-flat-rate.php:32
 msgid "Lets you charge a fixed rate for shipping."
@@ -18762,16 +18850,6 @@ msgstr "Список отчётов по продажам."
 msgid "List of top sellers products."
 msgstr "Список товаров, являющихся лидерами продаж."
 
-#: packages/woocommerce-admin/src/API/Reports/Controller.php:257
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-orders-totals-controller.php:105
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-coupons-totals-controller.php:121
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-customers-totals-controller.php:132
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-products-totals-controller.php:111
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-reviews-totals-controller.php:110
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-reports-v1-controller.php:157
-msgid "An alphanumeric identifier for the resource."
-msgstr "Буквенно-цифровой идентификатор ресурса."
-
 #: packages/woocommerce-admin/src/API/Reports/Controller.php:263
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-reports-v1-controller.php:163
 msgid "A human-readable description of the resource."
@@ -18802,6 +18880,16 @@ msgstr "Название налоговой ставки."
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-taxes-v1-controller.php:612
 msgid "Tax priority."
 msgstr "Приоритет налога."
+
+#: packages/woocommerce-admin/src/API/Reports/Controller.php:257
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-orders-totals-controller.php:105
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-coupons-totals-controller.php:121
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-customers-totals-controller.php:132
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-products-totals-controller.php:111
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-reviews-totals-controller.php:110
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-reports-v1-controller.php:157
+msgid "An alphanumeric identifier for the resource."
+msgstr "Буквенно-цифровой идентификатор ресурса."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-taxes-v1-controller.php:618
 msgid "Whether or not this is a compound rate."
@@ -19164,6 +19252,28 @@ msgstr "Текущая цена вариации."
 msgid "Variation URL."
 msgstr "URL вариации."
 
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:145
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-categories-v2-controller.php:145
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-categories-v1-controller.php:216
+msgid "Image data."
+msgstr "Данные изображения."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1653
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1579
+msgid "Refund total."
+msgstr "Всего возвращено."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1647
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1573
+msgid "Refund reason."
+msgstr "Причина возврата."
+
+#: includes/cli/class-wc-cli-runner.php:113
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1641
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1567
+msgid "Refund ID."
+msgstr "ID возврата."
+
 #: includes/cli/class-wc-cli-runner.php:114
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:697
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1186
@@ -19186,28 +19296,6 @@ msgstr "ID атрибута."
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2544
 msgid "Selected attribute term name."
 msgstr "Название выбранного значения атрибута."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:145
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-categories-v2-controller.php:145
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-categories-v1-controller.php:216
-msgid "Image data."
-msgstr "Данные изображения."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1653
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1579
-msgid "Refund total."
-msgstr "Всего возвращено."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1647
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1573
-msgid "Refund reason."
-msgstr "Причина возврата."
-
-#: includes/cli/class-wc-cli-runner.php:113
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1641
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1567
-msgid "Refund ID."
-msgstr "ID возврата."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1633
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1559
@@ -19465,10 +19553,6 @@ msgstr "Фильтрация заказов по по содержанию оп�
 msgid "Term name."
 msgstr "Название значения."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:478
-msgid "Type of attribute."
-msgstr "Тип атрибута."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:117
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-categories-v2-controller.php:117
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:470
@@ -19478,6 +19562,31 @@ msgstr "Тип атрибута."
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-shipping-classes-v1-controller.php:108
 msgid "An alphanumeric identifier for the resource unique to its type."
 msgstr "Буквенно-цифровой идентификатор ресурса, уникальный для своего типа."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:478
+msgid "Type of attribute."
+msgstr "Тип атрибута."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:485
+msgid "Default sort order."
+msgstr "Стандартный порядок сортировки"
+
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:492
+msgid "Enable/Disable attribute archives."
+msgstr "Включить/Выключить архивы атрибутов."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:138
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-categories-v2-controller.php:138
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-categories-v1-controller.php:209
+msgid "Category archive display type."
+msgstr "Тип отображения архива категории."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-reviews-controller.php:837
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-reviews-v2-controller.php:164
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-reviews-v1-controller.php:537
+#: packages/woocommerce-blocks/src/RestApi/Controllers/ProductReviews.php:275
+msgid "The date the review was created, in the site's timezone."
+msgstr "Дата создания отзыва в часовом поясе сайта."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:202
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-categories-v2-controller.php:202
@@ -19503,14 +19612,6 @@ msgstr "Количество опубликованных товаров для 
 msgid "Attribute name."
 msgstr "Название атрибута."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:485
-msgid "Default sort order."
-msgstr "Стандартный порядок сортировки"
-
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:492
-msgid "Enable/Disable attribute archives."
-msgstr "Включить/Выключить архивы атрибутов."
-
 #: packages/woocommerce-admin/src/API/Reports/Categories/Controller.php:204
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1082
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:109
@@ -19530,26 +19631,6 @@ msgstr "Название категории."
 msgid "HTML description of the resource."
 msgstr "HTML описание ресурса."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:138
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-categories-v2-controller.php:138
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-categories-v1-controller.php:209
-msgid "Category archive display type."
-msgstr "Тип отображения архива категории."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-reviews-controller.php:837
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-reviews-v2-controller.php:164
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-reviews-v1-controller.php:537
-#: packages/woocommerce-blocks/src/RestApi/Controllers/ProductReviews.php:275
-msgid "The date the review was created, in the site's timezone."
-msgstr "Дата создания отзыва в часовом поясе сайта."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-reviews-controller.php:880
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-reviews-v2-controller.php:174
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-reviews-v1-controller.php:542
-#: packages/woocommerce-blocks/src/RestApi/Controllers/ProductReviews.php:332
-msgid "Review rating (0 to 5)."
-msgstr "Оценка отзыва (0 - 5)"
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:672
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1160
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:179
@@ -19563,6 +19644,13 @@ msgstr "Оценка отзыва (0 - 5)"
 #: packages/woocommerce-blocks/src/RestApi/StoreApi/Schemas/ProductSchema.php:186
 msgid "Image URL."
 msgstr "URL изображения."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-reviews-controller.php:880
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-reviews-v2-controller.php:174
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-reviews-v1-controller.php:542
+#: packages/woocommerce-blocks/src/RestApi/Controllers/ProductReviews.php:332
+msgid "Review rating (0 to 5)."
+msgstr "Оценка отзыва (0 - 5)"
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-reviews-controller.php:861
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-reviews-v2-controller.php:179
@@ -19658,18 +19746,6 @@ msgstr "Описание товара."
 msgid "Product short description."
 msgstr "Короткое описание товара."
 
-#: packages/woocommerce-admin/src/API/Reports/Stock/Controller.php:391
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:438
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:783
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1576
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:679
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1811
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2295
-#: packages/woocommerce-blocks/src/RestApi/StoreApi/Schemas/ProductSchema.php:69
-#: packages/woocommerce-blocks/src/RestApi/Controllers/Products.php:331
-msgid "Unique identifier."
-msgstr "Уникальный идентификатор."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:788
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1581
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1816
@@ -19690,6 +19766,18 @@ msgstr "Обычная цена товара."
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1827
 msgid "Product sale price."
 msgstr "Распродажная цена товара."
+
+#: packages/woocommerce-admin/src/API/Reports/Stock/Controller.php:391
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:438
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:783
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1576
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:679
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1811
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2295
+#: packages/woocommerce-blocks/src/RestApi/StoreApi/Schemas/ProductSchema.php:69
+#: packages/woocommerce-blocks/src/RestApi/Controllers/Products.php:331
+msgid "Unique identifier."
+msgstr "Уникальный идентификатор."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1832
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2316
@@ -19792,6 +19880,15 @@ msgstr "Количество в запасе."
 msgid "If managing stock, this controls if backorders are allowed."
 msgstr "Если включено управление запасами, эта опция разрешает приём предзаказов."
 
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:584
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:945
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1737
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:823
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1969
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2428
+msgid "Shows if backorders are allowed."
+msgstr "Отображает, что предзаказы принимаются."
+
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:951
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1743
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1975
@@ -19816,15 +19913,6 @@ msgstr "Вес товара (%s)."
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1993
 msgid "Product dimensions."
 msgstr "Габариты товара."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:584
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:945
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1737
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:823
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1969
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2428
-msgid "Shows if backorders are allowed."
-msgstr "Отображает, что предзаказы принимаются."
 
 #. translators: %s: dimension unit
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:975
@@ -19980,28 +20068,6 @@ msgstr "ID изображения."
 msgid "The date the image was created, in the site's timezone."
 msgstr "Дата создания изображения в часовом поясе сайта."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1968
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:927
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2188
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2520
-msgid "Image position. 0 means that the image is featured."
-msgstr "Положение изображения. 0 означает, что используется рекомендуемое изображение."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:690
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1179
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1976
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:934
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2196
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2527
-msgid "List of attributes."
-msgstr "Список атрибутов."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1196
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1993
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2213
-msgid "Attribute position."
-msgstr "Положение атрибута."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:660
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1148
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:167
@@ -20029,6 +20095,34 @@ msgstr "Дата последнего изменения изображения 
 msgid "Image name."
 msgstr "Название изображения."
 
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1968
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:927
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2188
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2520
+msgid "Image position. 0 means that the image is featured."
+msgstr "Положение изображения. 0 означает, что используется рекомендуемое изображение."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:690
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1179
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1976
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:934
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2196
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2527
+msgid "List of attributes."
+msgstr "Список атрибутов."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1196
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1993
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2213
+msgid "Attribute position."
+msgstr "Положение атрибута."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1207
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:2004
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2224
+msgid "Define if the attribute can be used as variation."
+msgstr "Определить, могут ли атрибуты быть использованы как вариации."
+
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:683
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1171
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-categories-controller.php:190
@@ -20043,12 +20137,6 @@ msgstr "Название изображения."
 #: packages/woocommerce-blocks/src/RestApi/Controllers/Products.php:404
 msgid "Image alternative text."
 msgstr "Альтернативный текст изображения."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1207
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:2004
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2224
-msgid "Define if the attribute can be used as variation."
-msgstr "Определить, могут ли атрибуты быть использованы как вариации."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1213
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:2010
@@ -20227,6 +20315,15 @@ msgstr "Строка подытога (до применения скидок)."
 msgid "Line subtotal tax (before discounts)."
 msgstr "Строка налогов подытога (до применения скидок)."
 
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1258
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1537
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:508
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:466
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1302
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1515
+msgid "Tax subtotal."
+msgstr "Подытог налогов."
+
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1229
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1414
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1506
@@ -20249,19 +20346,41 @@ msgstr "Строка итоговой суммы (после применени�
 msgid "Line total tax (after discounts)."
 msgstr "Строка итоговых налогов (после применения скидок)."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1258
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1537
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:508
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:466
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1302
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1515
-msgid "Tax subtotal."
-msgstr "Подытог налогов."
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1253
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1439
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1531
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:502
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:460
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1296
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1444
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1509
+msgid "Tax total."
+msgstr "Итого налогов."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:475
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1311
 msgid "Line item meta data."
 msgstr "Метаданные позиции."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:733
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1285
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:290
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:2081
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-coupons-v2-controller.php:508
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:347
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1167
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1279
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1370
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1461
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1559
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1617
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:977
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:407
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:531
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:483
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1319
+msgid "Meta key."
+msgstr "Ключ мета."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:489
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1325
@@ -20285,36 +20404,10 @@ msgstr "Количество знаков после запятой для ис�
 msgid "Customer ID is invalid."
 msgstr "ID пользователя неверный."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1253
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1439
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1531
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:502
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:460
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1296
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1444
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1509
-msgid "Tax total."
-msgstr "Итого налогов."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:733
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1285
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:290
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:2081
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-coupons-v2-controller.php:508
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:347
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1167
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1279
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1370
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1461
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1559
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1617
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:977
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:407
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:531
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:483
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1319
-msgid "Meta key."
-msgstr "Ключ мета."
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:607
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:623
+msgid "Product ID or SKU is required."
+msgstr "Необходим ID или артикул заказа."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:738
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:1290
@@ -20335,11 +20428,6 @@ msgstr "Ключ мета."
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1331
 msgid "Meta value."
 msgstr "Значение мета."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:607
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:623
-msgid "Product ID or SKU is required."
-msgstr "Необходим ID или артикул заказа."
 
 #: includes/legacy/api/v2/class-wc-api-orders.php:900
 #: includes/legacy/api/v3/class-wc-api-orders.php:944
@@ -20671,6 +20759,30 @@ msgstr "Ключ заказа."
 msgid "Number of downloads remaining."
 msgstr "Количество оставшихся загрузок."
 
+#: packages/woocommerce-admin/src/API/Reports/Downloads/Controller.php:194
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:522
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:872
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1665
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:762
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customer-downloads-v2-controller.php:147
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customer-downloads-v1-controller.php:223
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1890
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2367
+msgid "File name."
+msgstr "Название файла."
+
+#: packages/woocommerce-admin/src/API/Reports/Downloads/Controller.php:200
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:527
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:877
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1670
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:767
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customer-downloads-v2-controller.php:153
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customer-downloads-v1-controller.php:229
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1895
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2372
+msgid "File URL."
+msgstr "URL файла."
+
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:327
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-taxes-v1-controller.php:364
 msgid "Cannot create existing resource."
@@ -20703,97 +20815,17 @@ msgstr "Дата создания пользователя в часовом п�
 msgid "The date the customer was last modified, in the site's timezone."
 msgstr "Дата последнего изменения пользователя в часовом поясе сайта."
 
-#: packages/woocommerce-admin/src/API/Reports/Downloads/Controller.php:194
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:522
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:872
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1665
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:762
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customer-downloads-v2-controller.php:147
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customer-downloads-v1-controller.php:223
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1890
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2367
-msgid "File name."
-msgstr "Название файла."
-
-#: packages/woocommerce-admin/src/API/Reports/Downloads/Controller.php:200
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:527
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:877
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1670
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:767
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customer-downloads-v2-controller.php:153
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customer-downloads-v1-controller.php:229
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1895
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:2372
-msgid "File URL."
-msgstr "URL файла."
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:109
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:154
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:650
+msgid "The email address for the customer."
+msgstr "Email для пользователя."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:115
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:160
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:656
 msgid "Customer first name."
 msgstr "Имя клиента."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:123
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:168
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:664
-msgid "Customer last name."
-msgstr "Фамилия клиента."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:137
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:182
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:672
-msgid "Customer login name."
-msgstr "Имя пользователя клиента."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:145
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:190
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:680
-msgid "Customer password."
-msgstr "Пароль клиента."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:685
-msgid "Last order data."
-msgstr "Данные последнего заказа."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:691
-msgid "Last order ID."
-msgstr "ID последнего заказа."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:316
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:705
-msgid "Quantity of orders made by the customer."
-msgstr "Количество заказов, сделанных клиентом."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:322
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:711
-msgid "Total amount spent."
-msgstr "Потраченная сумма."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:271
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:328
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:717
-msgid "Avatar URL."
-msgstr "URL аватара."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:150
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:195
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:723
-msgid "List of billing address data."
-msgstr "Список данных платёжного адреса."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:743
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:806
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1050
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1113
-msgid "Address line 1."
-msgstr "Адресная строка 1."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:748
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:811
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1055
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1118
-msgid "Address line 2."
-msgstr "Адресная строка 2."
 
 #: packages/woocommerce-admin/src/API/Reports/PerformanceIndicators/Controller.php:433
 #: packages/woocommerce-admin/src/API/Reports/Stock/Controller.php:373
@@ -20869,11 +20901,53 @@ msgstr "Адресная строка 2."
 msgid "Unique identifier for the resource."
 msgstr "Уникальный идентификатор для ресурса."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:109
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:154
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:650
-msgid "The email address for the customer."
-msgstr "Email для пользователя."
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:123
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:168
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:664
+msgid "Customer last name."
+msgstr "Фамилия клиента."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:137
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:182
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:672
+msgid "Customer login name."
+msgstr "Имя пользователя клиента."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:145
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:190
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:680
+msgid "Customer password."
+msgstr "Пароль клиента."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:685
+msgid "Last order data."
+msgstr "Данные последнего заказа."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:691
+msgid "Last order ID."
+msgstr "ID последнего заказа."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:316
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:705
+msgid "Quantity of orders made by the customer."
+msgstr "Количество заказов, сделанных клиентом."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:322
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:711
+msgid "Total amount spent."
+msgstr "Потраченная сумма."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:271
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:328
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:717
+msgid "Avatar URL."
+msgstr "URL аватара."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:150
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:195
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:723
+msgid "List of billing address data."
+msgstr "Список данных платёжного адреса."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:155
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:218
@@ -20900,6 +20974,29 @@ msgstr "Имя."
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1103
 msgid "Last name."
 msgstr "Фамилия."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:743
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:806
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1050
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1113
+msgid "Address line 1."
+msgstr "Адресная строка 1."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:748
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:811
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1055
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1118
+msgid "Address line 2."
+msgstr "Адресная строка 2."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:195
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:258
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:240
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:303
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:768
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:831
+msgid "ISO code of the country."
+msgstr "Код ISO страны."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:165
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:228
@@ -20941,23 +21038,6 @@ msgstr "Название населённого пункта."
 msgid "ISO code or name of the state, province or district."
 msgstr "Код ISO или название области, провинции или региона."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:195
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:258
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:240
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:303
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:768
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:831
-msgid "ISO code of the country."
-msgstr "Код ISO страны."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:200
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:245
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1041
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:773
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1080
-msgid "Email address."
-msgstr "Email."
-
 #: packages/woocommerce-admin/src/API/Reports/Customers/Controller.php:269
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:190
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:253
@@ -20971,6 +21051,14 @@ msgstr "Email."
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1133
 msgid "Postal code."
 msgstr "Почтовый индекс."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:200
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:245
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-orders-v2-controller.php:1041
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:773
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-orders-v1-controller.php:1080
+msgid "Email address."
+msgstr "Email."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-customers-controller.php:206
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-customers-v2-controller.php:251
@@ -21015,6 +21103,21 @@ msgstr "Заметка к заказу."
 msgid "Shows/define if the note is only for reference or for the customer (the user will be notified)."
 msgstr "Показывает/определяет предназначена заметка для внутреннего пользования или для уведомления клиента (пользователь получит сообщение)."
 
+#: includes/wc-core-functions.php:148 includes/wc-order-functions.php:507
+#: includes/wc-order-functions.php:1061
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-order-refunds-controller.php:40
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-order-notes-controller.php:79
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-notes-v2-controller.php:39
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:191
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:273
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-notes-v1-controller.php:186
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-notes-v1-controller.php:226
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-notes-v1-controller.php:268
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-notes-v1-controller.php:301
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:127
+msgid "Invalid order ID."
+msgstr "Неверный ID заказа."
+
 #: includes/legacy/api/v2/class-wc-api-orders.php:1512
 #: includes/legacy/api/v2/class-wc-api-orders.php:1674
 #: includes/legacy/api/v2/class-wc-api-orders.php:1735
@@ -21043,21 +21146,6 @@ msgstr "Сумма возврата должна быть больше нуля.
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:308
 msgid "Cannot create order refund, please try again."
 msgstr "Не удалось создать возврат заказа. Пожалуйста попробуйте ещё раз."
-
-#: includes/wc-core-functions.php:148 includes/wc-order-functions.php:507
-#: includes/wc-order-functions.php:1061
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-order-refunds-controller.php:40
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-order-notes-controller.php:79
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-notes-v2-controller.php:39
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:191
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:273
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-notes-v1-controller.php:186
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-notes-v1-controller.php:226
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-notes-v1-controller.php:268
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-notes-v1-controller.php:301
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-order-refunds-v1-controller.php:127
-msgid "Invalid order ID."
-msgstr "Неверный ID заказа."
 
 #: includes/wc-order-functions.php:664
 #: includes/legacy/api/v2/class-wc-api-orders.php:1628
@@ -21402,6 +21490,21 @@ msgstr "Этот метод доставки не имеет настраива�
 msgid "Edit failed. Please try again."
 msgstr "Редактирование не удалось. Попробуйте ещё раз."
 
+#: templates/order/order-downloads.php:24
+#: templates/emails/email-downloads.php:22
+#: templates/emails/plain/email-downloads.php:20
+#: includes/admin/importers/class-wc-product-csv-importer-controller.php:719
+#: includes/admin/settings/class-wc-settings-advanced.php:265
+#: includes/admin/views/html-admin-page-product-export.php:40
+#: includes/class-wc-query.php:118 includes/wc-account-functions.php:101
+#: packages/woocommerce-admin/src/ReportCSVEmail.php:40
+#: packages/woocommerce-admin/src/API/Reports/Downloads/Stats/Controller.php:146
+#: packages/woocommerce-admin/src/Features/Analytics.php:124
+#: packages/woocommerce-admin/src/Features/Onboarding.php:246
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "Downloads"
+msgstr "Загрузки"
+
 #: includes/admin/settings/class-wc-settings-advanced.php:292
 #: includes/admin/settings/class-wc-settings-payment-gateways.php:37
 #: includes/admin/settings/class-wc-settings-payment-gateways.php:56
@@ -21433,21 +21536,6 @@ msgstr "Доставлять в определённые страны"
 #: includes/admin/settings/class-wc-settings-general.php:173
 msgid "This option determines a customers default location. The MaxMind GeoLite Database will be periodically downloaded to your wp-content directory if using geolocation."
 msgstr "Эта опция определяет местоположение клиентов по умолчанию. База данных MaxMind GeoLite будет периодически загружаться в вашу директорию wp-content, если геолокация используется."
-
-#: templates/order/order-downloads.php:24
-#: templates/emails/email-downloads.php:22
-#: templates/emails/plain/email-downloads.php:20
-#: includes/admin/importers/class-wc-product-csv-importer-controller.php:719
-#: includes/admin/settings/class-wc-settings-advanced.php:265
-#: includes/admin/views/html-admin-page-product-export.php:40
-#: includes/class-wc-query.php:118 includes/wc-account-functions.php:101
-#: packages/woocommerce-admin/src/ReportCSVEmail.php:40
-#: packages/woocommerce-admin/src/API/Reports/Downloads/Stats/Controller.php:146
-#: packages/woocommerce-admin/src/Features/Analytics.php:124
-#: packages/woocommerce-admin/src/Features/Onboarding.php:246
-#: packages/woocommerce-admin/dist/app/index.js:27
-msgid "Downloads"
-msgstr "Загрузки"
 
 #: includes/admin/settings/class-wc-settings-general.php:178
 msgid "No location by default"
@@ -21690,19 +21778,6 @@ msgstr "У вас недостаточно прав для создания ре
 msgid "Sorry, you cannot view this resource."
 msgstr "Вы не можете просматривать этот ресурс."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1639
-msgid "Invalid post ID."
-msgstr "Неверный ID записи."
-
-#. translators: %s: post type
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:435
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-posts-controller.php:438
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1387
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:512
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1656
-msgid "Sorry, you are not allowed to delete %s."
-msgstr "У вас недостаточно прав для того, чтобы удалить %s."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:190
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-shipping-zones-controller-base.php:101
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:72
@@ -21727,6 +21802,28 @@ msgstr "У вас недостаточно прав для редактиров�
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-taxes-v1-controller.php:173
 msgid "Sorry, you are not allowed to delete this resource."
 msgstr "У вас недостаточно прав для удаления этого ресурса."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1639
+msgid "Invalid post ID."
+msgstr "Неверный ID записи."
+
+#. translators: %s: post type
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:435
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-posts-controller.php:438
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1387
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:512
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1656
+msgid "Sorry, you are not allowed to delete %s."
+msgstr "У вас недостаточно прав для того, чтобы удалить %s."
+
+#. translators: %s: post type
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:456
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-posts-controller.php:457
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1438
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:541
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1694
+msgid "The %s has already been deleted."
+msgstr "%s уже удалили до этого."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:140
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:235
@@ -21764,28 +21861,6 @@ msgid "ID is invalid."
 msgstr "ID неверный."
 
 #. translators: %s: post type
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:456
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-posts-controller.php:457
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1438
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-product-variations-v2-controller.php:541
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-products-v1-controller.php:1694
-msgid "The %s has already been deleted."
-msgstr "%s уже удалили до этого."
-
-#: packages/woocommerce-admin/src/API/Reports/Stock/Controller.php:456
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:713
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:556
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-posts-controller.php:645
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-webhooks-v1-controller.php:720
-#: packages/woocommerce-blocks/src/RestApi/StoreApi/Controllers/Products.php:268
-msgid "Limit result set to specific ids."
-msgstr "Фильтрация ресурсов по определённым ID."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-posts-controller.php:706
-msgid "Use WP Query arguments to modify the response; private query vars require appropriate authorization."
-msgstr "Использовать аргументы WP Query для модификации отклика; приватные варианты запросов требуют соответствующих разрешений."
-
-#. translators: %s: post type
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:466
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-posts-controller.php:467
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1454
@@ -21817,6 +21892,23 @@ msgstr "%s не может быть удалено."
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-webhooks-v1-controller.php:699
 msgid "Limit response to resources published after a given ISO8601 compliant date."
 msgstr "Ограничить ответ на ресурсы, опубликованные после указанной даты, в формате, совместимом с ISO 8601."
+
+#: packages/woocommerce-admin/src/API/Reports/Stock/Controller.php:456
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:713
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-crud-controller.php:556
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-posts-controller.php:645
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-webhooks-v1-controller.php:720
+#: packages/woocommerce-blocks/src/RestApi/StoreApi/Controllers/Products.php:268
+msgid "Limit result set to specific ids."
+msgstr "Фильтрация ресурсов по определённым ID."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-posts-controller.php:706
+msgid "Use WP Query arguments to modify the response; private query vars require appropriate authorization."
+msgstr "Использовать аргументы WP Query для модификации отклика; приватные варианты запросов требуют соответствующих разрешений."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:141
+msgid "Sorry, you cannot create new resource."
+msgstr "Вы не можете создать новый ресурс."
 
 #: packages/woocommerce-admin/src/API/Leaderboards.php:461
 #: packages/woocommerce-admin/src/API/Reports/Coupons/Controller.php:251
@@ -21852,27 +21944,6 @@ msgstr "Ограничить ответ на ресурсы, опубликов�
 msgid "Offset the result set by a specific number of items."
 msgstr "Смещение итогового набора на определённое количество позиций."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:141
-msgid "Sorry, you cannot create new resource."
-msgstr "Вы не можете создать новый ресурс."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-tools-v2-controller.php:113
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:177
-msgid "Sorry, you cannot update resource."
-msgstr "Вы не можете обновить ресурс."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:393
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:490
-msgid "Can not set resource parent, taxonomy is not hierarchical."
-msgstr "Не удалось установить родителя ресурса. Таксономия не иерархическая."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:556
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:372
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:495
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-taxes-v1-controller.php:472
-msgid "The resource cannot be deleted."
-msgstr "Этот ресурс не может быть удалён."
-
 #: packages/woocommerce-admin/src/API/Reports/Coupons/Controller.php:257
 #: packages/woocommerce-admin/src/API/Reports/Coupons/Stats/Controller.php:303
 #: packages/woocommerce-admin/src/API/Reports/Revenue/Stats/Controller.php:389
@@ -21902,6 +21973,31 @@ msgstr "Этот ресурс не может быть удалён."
 msgid "Order sort attribute ascending or descending."
 msgstr "Порядок сортировки атрибутов по возрастанию или по убыванию."
 
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-tools-v2-controller.php:113
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:177
+msgid "Sorry, you cannot update resource."
+msgstr "Вы не можете обновить ресурс."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:393
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:490
+msgid "Can not set resource parent, taxonomy is not hierarchical."
+msgstr "Не удалось установить родителя ресурса. Таксономия не иерархическая."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:556
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:372
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-customers-v1-controller.php:495
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-taxes-v1-controller.php:472
+msgid "The resource cannot be deleted."
+msgstr "Этот ресурс не может быть удалён."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:741
+msgid "Sort collection by resource attribute."
+msgstr "Сортировка коллекции по атрибутам ресурсов."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:757
+msgid "Whether to hide resources not assigned to any products."
+msgstr "Скрывать ли ресурсы, не относящиеся ни к одному из товаров."
+
 #: packages/woocommerce-admin/src/API/Reports/Coupons/Controller.php:264
 #: packages/woocommerce-admin/src/API/Reports/Coupons/Stats/Controller.php:310
 #: packages/woocommerce-admin/src/API/Reports/Revenue/Stats/Controller.php:396
@@ -21929,14 +22025,6 @@ msgstr "Порядок сортировки атрибутов по возрас
 #: packages/woocommerce-blocks/src/RestApi/Controllers/ProductReviews.php:397
 msgid "Sort collection by object attribute."
 msgstr "Сортировка коллекции по атрибуту объекта."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:741
-msgid "Sort collection by resource attribute."
-msgstr "Сортировка коллекции по атрибутам ресурсов."
-
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:757
-msgid "Whether to hide resources not assigned to any products."
-msgstr "Скрывать ли ресурсы, не относящиеся ни к одному из товаров."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:764
 msgid "Limit result set to resources assigned to a specific parent."
@@ -22075,11 +22163,6 @@ msgstr "Чековые платежи"
 msgid "The %s does not support trashing."
 msgstr "%s не поддерживают удаление в корзину."
 
-#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:539
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:357
-msgid "Resource does not support trashing."
-msgstr "Ресурс не поддерживают удаление в корзину."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:97
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-order-refunds-v2-controller.php:112
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:101
@@ -22092,6 +22175,11 @@ msgstr "Ресурс не поддерживают удаление в корз�
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attribute-terms-v1-controller.php:105
 msgid "Required to be true, as resource does not support trashing."
 msgstr "Необходимо признать истиной, поскольку ресурс не поддерживает удаление в корзину."
+
+#: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:539
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-product-attributes-v1-controller.php:357
+msgid "Resource does not support trashing."
+msgstr "Ресурс не поддерживают удаление в корзину."
 
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-terms-controller.php:777
 msgid "Limit result set to resources with a specific slug."
@@ -22806,6 +22894,18 @@ msgstr[2] "%s отзывов клиентов"
 msgid "Related products"
 msgstr "Похожие товары"
 
+#: templates/single-product/review-meta.php:27
+msgid "Your review is awaiting approval"
+msgstr "Ваш комментарий ожидает одобрения"
+
+#: templates/single-product/review-meta.php:37
+msgid "verified owner"
+msgstr "проверенный владелец"
+
+#: templates/single-product-reviews.php:64
+msgid "There are no reviews yet."
+msgstr "Отзывов пока нет."
+
 #: packages/woocommerce-blocks/assets/js/base/components/review-list-item/index.js:139
 #: packages/woocommerce-blocks/assets/js/atomic/components/product/rating/index.js:34
 #: packages/woocommerce-blocks/build/all-reviews-legacy.js:1
@@ -22820,18 +22920,6 @@ msgstr "Похожие товары"
 #: packages/woocommerce-blocks/build/all-products-frontend.js:6
 msgid "Rated %d out of 5"
 msgstr "Рейтинг %d из 5"
-
-#: templates/single-product/review-meta.php:27
-msgid "Your review is awaiting approval"
-msgstr "Ваш комментарий ожидает одобрения"
-
-#: templates/single-product/review-meta.php:37
-msgid "verified owner"
-msgstr "проверенный владелец"
-
-#: templates/single-product-reviews.php:64
-msgid "There are no reviews yet."
-msgstr "Отзывов пока нет."
 
 #. translators: %s is product title
 #: templates/single-product-reviews.php:75
@@ -24030,6 +24118,17 @@ msgstr "Скрыть шаблон"
 msgid "Are you sure you want to delete this template file?"
 msgstr "Вы точно хотите удалить этот файл шаблона?"
 
+#: includes/gateways/cod/class-wc-gateway-cod.php:90
+#: includes/gateways/cheque/class-wc-gateway-cheque.php:78
+#: includes/gateways/bacs/class-wc-gateway-bacs.php:102
+msgid "Instructions"
+msgstr "Инструкции"
+
+#: includes/gateways/cheque/class-wc-gateway-cheque.php:80
+#: includes/gateways/bacs/class-wc-gateway-bacs.php:104
+msgid "Instructions that will be added to the thank you page and emails."
+msgstr "Инструкции, которые будут добавлены на страницу благодарности и в письмо."
+
 #: includes/gateways/cheque/class-wc-gateway-cheque.php:66
 #: includes/gateways/paypal/includes/settings-paypal.php:20
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:90
@@ -24042,17 +24141,6 @@ msgstr "Вы точно хотите удалить этот файл шабло
 #: includes/shipping/legacy-flat-rate/includes/settings-flat-rate.php:27
 msgid "This controls the title which the user sees during checkout."
 msgstr "Заголовок, который видит пользователь в процессе оформления заказа."
-
-#: includes/gateways/cod/class-wc-gateway-cod.php:90
-#: includes/gateways/cheque/class-wc-gateway-cheque.php:78
-#: includes/gateways/bacs/class-wc-gateway-bacs.php:102
-msgid "Instructions"
-msgstr "Инструкции"
-
-#: includes/gateways/cheque/class-wc-gateway-cheque.php:80
-#: includes/gateways/bacs/class-wc-gateway-bacs.php:104
-msgid "Instructions that will be added to the thank you page and emails."
-msgstr "Инструкции, которые будут добавлены на страницу благодарности и в письмо."
 
 #: includes/gateways/bacs/class-wc-gateway-bacs.php:141
 msgid "Bank name"
@@ -24209,13 +24297,13 @@ msgstr "Дополнительные настройки"
 msgid "If your main PayPal email differs from the PayPal email entered above, input your main receiver email for your PayPal account here. This is used to validate IPN requests."
 msgstr "Если ваш основной email PayPal отличается от введенного выше, то введите ваш основной получатель email здесь. Используется для подтверждения запросов IPN."
 
-#: includes/gateways/paypal/includes/settings-paypal.php:86
-msgid "Please enter a prefix for your invoice numbers. If you use your PayPal account for multiple stores ensure this prefix is unique as PayPal will not allow orders with the same invoice number."
-msgstr "Пожалуйста, введите префикс для номеров счетов. Если вы используете ваш PayPal аккаунт для нескольких магазинов этот префикс должен быть уникальным, так как PayPal не позволит делать заказы с тем же номером счета."
-
 #: includes/gateways/paypal/includes/settings-paypal.php:78
 msgid "Optionally enable \"Payment Data Transfer\" (Profile > Profile and Settings > My Selling Tools > Website Preferences) and then copy your identity token here. This will allow payments to be verified without the need for PayPal IPN."
 msgstr "Опционально можно включить \"Передачу данных об оплате\" (Профиль > Профиль и настройки > Мои инструменты продаж > Установки сайта) и вставить идентификационный маркер сюда. Это позволит подтверждать платежи без использования PayPal IPN."
+
+#: includes/gateways/paypal/includes/settings-paypal.php:86
+msgid "Please enter a prefix for your invoice numbers. If you use your PayPal account for multiple stores ensure this prefix is unique as PayPal will not allow orders with the same invoice number."
+msgstr "Пожалуйста, введите префикс для номеров счетов. Если вы используете ваш PayPal аккаунт для нескольких магазинов этот префикс должен быть уникальным, так как PayPal не позволит делать заказы с тем же номером счета."
 
 #: includes/gateways/paypal/includes/settings-paypal.php:93
 msgid "Send shipping details to PayPal instead of billing."
@@ -24333,14 +24421,14 @@ msgstr "Процент от стоимости заказа"
 msgid "Fixed amount per product"
 msgstr "Фиксированная сумма за единицу товара"
 
+#: includes/shortcodes/class-wc-shortcode-cart.php:55
+msgid "Shipping costs updated."
+msgstr "Затраты на доставку обновлены."
+
 #: includes/shipping/legacy-local-pickup/class-wc-shipping-legacy-local-pickup.php:113
 #: includes/shipping/legacy-local-delivery/class-wc-shipping-legacy-local-delivery.php:155
 msgid "Separate codes with a comma. Accepts wildcards, e.g. <code>P*</code> will match a postcode of PE30. Also accepts a pattern, e.g. <code>NG1___</code> would match NG1 1AA but not NG10 1AA"
 msgstr "Разделяйте код запятой. допустимы знаки подстановки, например: <code>P*</code> будет соответствовать почтовому индексу PE30. Также допустимы шаблоны, например: <code>NG1___</code> будет соответствовать NG1 1AA, но не NG10 1AA."
-
-#: includes/shortcodes/class-wc-shortcode-cart.php:55
-msgid "Shipping costs updated."
-msgstr "Затраты на доставку обновлены."
 
 #: includes/emails/class-wc-email-new-order.php:32
 msgid "New order emails are sent to chosen recipient(s) when a new order is received."
@@ -25885,10 +25973,6 @@ msgstr "Наибольший размер файла, который может 
 msgid "The default timezone for your server."
 msgstr "Временная зона по умолчанию для вашего сервера."
 
-#: includes/admin/views/html-admin-page-status-report.php:334
-msgid "Suhosin is an advanced protection system for PHP installations. It was designed to protect your servers on the one hand against a number of well known problems in PHP applications and on the other hand against potential unknown vulnerabilities within these applications or the PHP core itself. If enabled on your server, Suhosin may need to be configured to increase its data submission limits."
-msgstr "Suhosin это мощная система защиты для приложений на языке PHP. Эта система разработана для защиты серверов, во-первых, от широкого набора проблем в PHP приложениях и, во-вторых, от неизвестных уязвимостей как в приложениях, так и в ядре PHP. Если защита включена на вашем сервере, то Suhosin требует дополнительной настройки в увеличении допускаемых данных."
-
 #. Translators: %s: default timezone..
 #: includes/admin/views/html-admin-page-status-report.php:370
 msgid "Default timezone is %s - it should be UTC"
@@ -25901,6 +25985,10 @@ msgstr "Ваш сервер не имеет включенных fsockopen ил�
 #: includes/admin/views/html-admin-page-status-report.php:392
 msgid "Some webservices like shipping use SOAP to get information from remote servers, for example, live shipping quotes from FedEx require SOAP to be installed."
 msgstr "Некоторые веб-сервисы, такие как служба доставки, используют технологию SOAP для получения информации с удаленных серверов. Например, отслеживание тарифов FedEx в режиме реального времени требует установки SOAP."
+
+#: includes/admin/views/html-admin-page-status-report.php:334
+msgid "Suhosin is an advanced protection system for PHP installations. It was designed to protect your servers on the one hand against a number of well known problems in PHP applications and on the other hand against potential unknown vulnerabilities within these applications or the PHP core itself. If enabled on your server, Suhosin may need to be configured to increase its data submission limits."
+msgstr "Suhosin это мощная система защиты для приложений на языке PHP. Эта система разработана для защиты серверов, во-первых, от широкого набора проблем в PHP приложениях и, во-вторых, от неизвестных уязвимостей как в приложениях, так и в ядре PHP. Если защита включена на вашем сервере, то Suhosin требует дополнительной настройки в увеличении допускаемых данных."
 
 #: includes/admin/views/html-admin-page-status-report.php:406
 msgid "HTML/Multipart emails use DOMDocument to generate inline CSS in templates."
@@ -26217,6 +26305,21 @@ msgstr "У вас нет прав на просмотр количества к�
 msgid "Invalid coupon code"
 msgstr "Неверный код купона"
 
+#: includes/legacy/api/v2/class-wc-api-coupons.php:219
+#: includes/legacy/api/v3/class-wc-api-coupons.php:217
+msgid "You do not have permission to create coupons"
+msgstr "У вас нет прав на создание купонов"
+
+#: includes/legacy/api/class-wc-rest-legacy-coupons-controller.php:129
+#: includes/legacy/api/v2/class-wc-api-coupons.php:233
+#: includes/legacy/api/v2/class-wc-api-coupons.php:344
+#: includes/legacy/api/v3/class-wc-api-coupons.php:231
+#: includes/legacy/api/v3/class-wc-api-coupons.php:342
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-coupons-v2-controller.php:286
+#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-coupons-v1-controller.php:269
+msgid "The coupon code already exists"
+msgstr "Код купона уже существует"
+
 #: includes/legacy/api/v2/class-wc-api-products.php:214
 #: includes/legacy/api/v2/class-wc-api-products.php:1967
 #: includes/legacy/api/v2/class-wc-api-orders.php:365
@@ -26242,11 +26345,6 @@ msgstr "Неверный код купона"
 msgid "No %1$s data specified to create %1$s"
 msgstr "Недостаёт %1$s данных, чтобы создать %1$s"
 
-#: includes/legacy/api/v2/class-wc-api-coupons.php:219
-#: includes/legacy/api/v3/class-wc-api-coupons.php:217
-msgid "You do not have permission to create coupons"
-msgstr "У вас нет прав на создание купонов"
-
 #. translators: %s: parameter
 #: includes/class-wc-auth.php:171
 #: includes/legacy/api/v2/class-wc-api-products.php:228
@@ -26265,22 +26363,36 @@ msgstr "У вас нет прав на создание купонов"
 msgid "Missing parameter %s"
 msgstr "Утерян параметр %s"
 
-#: includes/legacy/api/class-wc-rest-legacy-coupons-controller.php:129
-#: includes/legacy/api/v2/class-wc-api-coupons.php:233
-#: includes/legacy/api/v2/class-wc-api-coupons.php:344
-#: includes/legacy/api/v3/class-wc-api-coupons.php:231
-#: includes/legacy/api/v3/class-wc-api-coupons.php:342
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-coupons-v2-controller.php:286
-#: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-coupons-v1-controller.php:269
-msgid "The coupon code already exists"
-msgstr "Код купона уже существует"
-
 #: includes/legacy/api/v2/class-wc-api-coupons.php:261
 #: includes/legacy/api/v2/class-wc-api-coupons.php:365
 #: includes/legacy/api/v3/class-wc-api-coupons.php:259
 #: includes/legacy/api/v3/class-wc-api-coupons.php:363
 msgid "Invalid coupon type - the coupon type must be any of these: %s"
 msgstr "Неправильный тип купона — тип купона должен быть любым из этих: %s"
+
+#: includes/legacy/api/v2/class-wc-api-products.php:323
+#: includes/legacy/api/v2/class-wc-api-products.php:2051
+#: includes/legacy/api/v2/class-wc-api-orders.php:504
+#: includes/legacy/api/v2/class-wc-api-orders.php:1344
+#: includes/legacy/api/v2/class-wc-api-orders.php:1658
+#: includes/legacy/api/v2/class-wc-api-webhooks.php:242
+#: includes/legacy/api/v2/class-wc-api-customers.php:404
+#: includes/legacy/api/v2/class-wc-api-coupons.php:324
+#: includes/legacy/api/v3/class-wc-api-products.php:377
+#: includes/legacy/api/v3/class-wc-api-products.php:784
+#: includes/legacy/api/v3/class-wc-api-products.php:1004
+#: includes/legacy/api/v3/class-wc-api-products.php:2605
+#: includes/legacy/api/v3/class-wc-api-products.php:2913
+#: includes/legacy/api/v3/class-wc-api-products.php:3249
+#: includes/legacy/api/v3/class-wc-api-orders.php:542
+#: includes/legacy/api/v3/class-wc-api-orders.php:1389
+#: includes/legacy/api/v3/class-wc-api-orders.php:1703
+#: includes/legacy/api/v3/class-wc-api-webhooks.php:242
+#: includes/legacy/api/v3/class-wc-api-customers.php:405
+#: includes/legacy/api/v3/class-wc-api-taxes.php:254
+#: includes/legacy/api/v3/class-wc-api-coupons.php:322
+msgid "No %1$s data specified to edit %1$s"
+msgstr "Недостаёт %1$s данных, чтобы редактировать %1$s"
 
 #: includes/legacy/api/v2/class-wc-api-coupons.php:350
 #: includes/legacy/api/v2/class-wc-api-coupons.php:358
@@ -26324,30 +26436,6 @@ msgstr "Неверный ID клиента"
 #: includes/legacy/api/v3/class-wc-api-customers.php:716
 msgid "Invalid customer"
 msgstr "Недопустимый клиент"
-
-#: includes/legacy/api/v2/class-wc-api-products.php:323
-#: includes/legacy/api/v2/class-wc-api-products.php:2051
-#: includes/legacy/api/v2/class-wc-api-orders.php:504
-#: includes/legacy/api/v2/class-wc-api-orders.php:1344
-#: includes/legacy/api/v2/class-wc-api-orders.php:1658
-#: includes/legacy/api/v2/class-wc-api-webhooks.php:242
-#: includes/legacy/api/v2/class-wc-api-customers.php:404
-#: includes/legacy/api/v2/class-wc-api-coupons.php:324
-#: includes/legacy/api/v3/class-wc-api-products.php:377
-#: includes/legacy/api/v3/class-wc-api-products.php:784
-#: includes/legacy/api/v3/class-wc-api-products.php:1004
-#: includes/legacy/api/v3/class-wc-api-products.php:2605
-#: includes/legacy/api/v3/class-wc-api-products.php:2913
-#: includes/legacy/api/v3/class-wc-api-products.php:3249
-#: includes/legacy/api/v3/class-wc-api-orders.php:542
-#: includes/legacy/api/v3/class-wc-api-orders.php:1389
-#: includes/legacy/api/v3/class-wc-api-orders.php:1703
-#: includes/legacy/api/v3/class-wc-api-webhooks.php:242
-#: includes/legacy/api/v3/class-wc-api-customers.php:405
-#: includes/legacy/api/v3/class-wc-api-taxes.php:254
-#: includes/legacy/api/v3/class-wc-api-coupons.php:322
-msgid "No %1$s data specified to edit %1$s"
-msgstr "Недостаёт %1$s данных, чтобы редактировать %1$s"
 
 #: includes/legacy/api/v2/class-wc-api-customers.php:734
 #: includes/legacy/api/v1/class-wc-api-customers.php:449
@@ -26573,24 +26661,6 @@ msgstr "У вас недостаточно прав для удаления ат
 msgid "Could not delete the attribute"
 msgstr "Невозможно удалить атрибут"
 
-#. translators: %s item name.
-#: includes/legacy/api/v2/class-wc-api-products.php:468
-#: includes/legacy/api/v2/class-wc-api-products.php:2176
-#: includes/legacy/api/v2/class-wc-api-resource.php:390
-#: includes/legacy/api/v1/class-wc-api-resource.php:333
-#: includes/legacy/api/v3/class-wc-api-products.php:527
-#: includes/legacy/api/v3/class-wc-api-products.php:866
-#: includes/legacy/api/v3/class-wc-api-products.php:1058
-#: includes/legacy/api/v3/class-wc-api-products.php:2732
-#: includes/legacy/api/v3/class-wc-api-products.php:2994
-#: includes/legacy/api/v3/class-wc-api-products.php:3305
-#: includes/legacy/api/v3/class-wc-api-resource.php:394
-#: includes/legacy/api/v3/class-wc-api-taxes.php:354
-#: includes/legacy/api/v3/class-wc-api-taxes.php:623
-#: includes/class-wc-ajax.php:1282
-msgid "Deleted %s"
-msgstr "%s удалён"
-
 #: includes/legacy/api/v2/class-wc-api-reports.php:322
 #: includes/legacy/api/v1/class-wc-api-reports.php:475
 #: includes/legacy/api/v3/class-wc-api-reports.php:326
@@ -26610,6 +26680,24 @@ msgstr "Некорректный ID %s"
 #: includes/legacy/api/v3/class-wc-api-resource.php:113
 msgid "Invalid %s"
 msgstr "Некорректный %s"
+
+#. translators: %s item name.
+#: includes/legacy/api/v2/class-wc-api-products.php:468
+#: includes/legacy/api/v2/class-wc-api-products.php:2176
+#: includes/legacy/api/v2/class-wc-api-resource.php:390
+#: includes/legacy/api/v1/class-wc-api-resource.php:333
+#: includes/legacy/api/v3/class-wc-api-products.php:527
+#: includes/legacy/api/v3/class-wc-api-products.php:866
+#: includes/legacy/api/v3/class-wc-api-products.php:1058
+#: includes/legacy/api/v3/class-wc-api-products.php:2732
+#: includes/legacy/api/v3/class-wc-api-products.php:2994
+#: includes/legacy/api/v3/class-wc-api-products.php:3305
+#: includes/legacy/api/v3/class-wc-api-resource.php:394
+#: includes/legacy/api/v3/class-wc-api-taxes.php:354
+#: includes/legacy/api/v3/class-wc-api-taxes.php:623
+#: includes/class-wc-ajax.php:1282
+msgid "Deleted %s"
+msgstr "%s удалён"
 
 #: includes/legacy/api/v2/class-wc-api-resource.php:119
 #: includes/legacy/api/v2/class-wc-api-webhooks.php:490
@@ -27264,6 +27352,18 @@ msgstr "Код страны"
 msgid "Method"
 msgstr "Метод"
 
+#: includes/admin/settings/views/html-webhooks-edit.php:83
+msgid "Action"
+msgstr "Действие"
+
+#: includes/customizer/class-wc-shop-customizer.php:656
+#: packages/woocommerce-admin/dist/date/index.js:1
+#: packages/woocommerce-admin/dist/components/index.js:34
+#: packages/woocommerce-blocks/build/vendors-legacy.js:6
+#: packages/woocommerce-blocks/build/vendors.js:6
+msgid "Custom"
+msgstr "Произвольно"
+
 #: packages/woocommerce-blocks/assets/js/atomic/blocks/product/image/index.js:55
 #: packages/woocommerce-blocks/assets/js/atomic/blocks/product/title/index.js:50
 #: packages/woocommerce-blocks/assets/js/blocks/attribute-filter/edit.js:68
@@ -27315,18 +27415,6 @@ msgstr "Метод"
 #: packages/woocommerce-blocks/build/product-tag.js:1
 msgid "Content"
 msgstr "Содержание"
-
-#: includes/admin/settings/views/html-webhooks-edit.php:83
-msgid "Action"
-msgstr "Действие"
-
-#: includes/customizer/class-wc-shop-customizer.php:656
-#: packages/woocommerce-admin/dist/date/index.js:1
-#: packages/woocommerce-admin/dist/components/index.js:34
-#: packages/woocommerce-blocks/build/vendors-legacy.js:6
-#: packages/woocommerce-blocks/build/vendors.js:6
-msgid "Custom"
-msgstr "Произвольно"
 
 #: includes/admin/settings/views/html-webhooks-edit.php:122
 msgid "Secret"
@@ -27979,6 +28067,22 @@ msgstr "Произвольное упорядочивание позиций."
 msgid "Enable reviews"
 msgstr "Включить отзывы"
 
+#: includes/admin/meta-boxes/views/html-product-data-variations.php:19
+#: includes/admin/plugin-updates/views/html-notice-untested-extensions-modal.php:44
+#: packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Facebook_Extension.php:71
+#: packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php:241
+#: packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Mobile_App.php:56
+#: packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Welcome_Message.php:49
+#: packages/woocommerce-admin/dist/app/index.js:27
+#: packages/woocommerce-blocks/assets/js/blocks/attribute-filter/edit.js:204
+#: packages/woocommerce-blocks/assets/js/blocks/products/utils.js:48
+#: packages/woocommerce-blocks/assets/js/blocks/price-filter/edit.js:150
+#: packages/woocommerce-blocks/build/price-filter.js:1
+#: packages/woocommerce-blocks/build/attribute-filter.js:1
+#: packages/woocommerce-blocks/build/all-products.js:1
+msgid "Learn more"
+msgstr "Узнать больше"
+
 #: includes/admin/meta-boxes/views/html-product-data-variations.php:26
 msgid "Default Form Values"
 msgstr "Значения форм по умолчанию"
@@ -28014,22 +28118,6 @@ msgstr "Задать базовую цену"
 #: includes/admin/meta-boxes/views/html-product-data-variations.php:65
 msgid "Increase regular prices (fixed amount or percentage)"
 msgstr "Увеличить базовые цены (фиксированное значение или %)"
-
-#: includes/admin/meta-boxes/views/html-product-data-variations.php:19
-#: includes/admin/plugin-updates/views/html-notice-untested-extensions-modal.php:44
-#: packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Facebook_Extension.php:71
-#: packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Order_Milestones.php:241
-#: packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Mobile_App.php:56
-#: packages/woocommerce-admin/src/Notes/WC_Admin_Notes_Welcome_Message.php:49
-#: packages/woocommerce-admin/dist/app/index.js:27
-#: packages/woocommerce-blocks/assets/js/blocks/attribute-filter/edit.js:204
-#: packages/woocommerce-blocks/assets/js/blocks/products/utils.js:48
-#: packages/woocommerce-blocks/assets/js/blocks/price-filter/edit.js:150
-#: packages/woocommerce-blocks/build/price-filter.js:1
-#: packages/woocommerce-blocks/build/attribute-filter.js:1
-#: packages/woocommerce-blocks/build/all-products.js:1
-msgid "Learn more"
-msgstr "Узнать больше"
 
 #: includes/admin/meta-boxes/views/html-product-data-variations.php:66
 msgid "Decrease regular prices (fixed amount or percentage)"
@@ -28760,6 +28848,11 @@ msgstr "Дата начала распродажи"
 msgid "Sale end date"
 msgstr "Дата окончания распродажи"
 
+#. translators: %s: coupons amount
+#: includes/admin/reports/class-wc-report-coupon-usage.php:121
+msgid "%s coupons used in total"
+msgstr "Всего использовано купонов: %d"
+
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-product-variations-controller.php:554
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-products-controller.php:915
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-products-v2-controller.php:1708
@@ -28769,11 +28862,6 @@ msgstr "Дата окончания распродажи"
 #: packages/woocommerce-rest-api/src/Controllers/Version1/class-wc-rest-taxes-v1-controller.php:635
 msgid "Tax class."
 msgstr "Налоговый класс."
-
-#. translators: %s: coupons amount
-#: includes/admin/reports/class-wc-report-coupon-usage.php:121
-msgid "%s coupons used in total"
-msgstr "Всего использовано купонов: %d"
 
 #: includes/admin/meta-boxes/views/html-product-data-inventory.php:117
 msgid "Sold individually"
@@ -29741,10 +29829,6 @@ msgstr "Этот инструмент сбросит параметры прав
 msgid "This tool will recount product terms - useful when changing your settings in a way which hides products from the catalog."
 msgstr "Этот инструмент пересчитает значения товаров — полезно при изменении настроек, в результате которых товары скрываются из каталога."
 
-#: includes/admin/class-wc-admin-taxonomies.php:356
-msgid "Attribute terms can be assigned to products and variations.<br/><br/><b>Note</b>: Deleting a term will remove it from all products and variations to which it has been assigned. Recreating a term will not automatically assign it back to products."
-msgstr "Атрибуты могут быть назначены товарам и вариациям.<br/><br/><b>Внимание</b>: При удаление атрибута вы удаляете его из всех товаров и вариаций, которым он был назначен. Повторное создание атрибута не приведет к его появлению в товарах."
-
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-tools-v2-controller.php:500
 msgid "Terms successfully recounted"
 msgstr "Значения успешно пересчитаны"
@@ -29756,6 +29840,10 @@ msgstr "Счетчики значений"
 #: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-system-status-tools-v2-controller.php:153
 msgid "Recount terms"
 msgstr "Пересчитать значения"
+
+#: includes/admin/class-wc-admin-taxonomies.php:356
+msgid "Attribute terms can be assigned to products and variations.<br/><br/><b>Note</b>: Deleting a term will remove it from all products and variations to which it has been assigned. Recreating a term will not automatically assign it back to products."
+msgstr "Атрибуты могут быть назначены товарам и вариациям.<br/><br/><b>Внимание</b>: При удаление атрибута вы удаляете его из всех товаров и вариаций, которым он был назначен. Повторное создание атрибута не приведет к его появлению в товарах."
 
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:317
 msgid "Load billing address"
@@ -29830,14 +29918,6 @@ msgstr "Разрешить предзаказы?"
 #: packages/woocommerce-admin/src/API/Reports/Customers/Controller.php:227
 msgid "Customer ID."
 msgstr "ID клиента."
-
-#: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:53
-msgid "Usage restriction"
-msgstr "Ограничения Использования"
-
-#: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:58
-msgid "Usage limits"
-msgstr "Лимиты Использования"
 
 #: templates/checkout/form-billing.php:28
 #: includes/admin/list-tables/class-wc-admin-list-table-orders.php:375
@@ -29937,11 +30017,6 @@ msgstr "Это поле позволяет установить максимал
 msgid "Order Date"
 msgstr "Дата заказа:"
 
-#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-network-orders-v2-controller.php:76
-#: packages/woocommerce-admin/dist/app/index.js:27
-msgid "Order Status"
-msgstr "Статус заказа:"
-
 #: includes/admin/meta-boxes/views/html-product-data-general.php:31
 msgid "This text will be shown on the button linking to the external product."
 msgstr "Будет показан на кнопке, связанной с внешним товаром"
@@ -30008,6 +30083,19 @@ msgstr "Подробнее"
 #: includes/admin/meta-boxes/class-wc-meta-box-order-actions.php:66
 msgid "Move to Trash"
 msgstr "Удалить в корзину"
+
+#: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:58
+msgid "Usage limits"
+msgstr "Лимиты использования"
+
+#: includes/admin/meta-boxes/class-wc-meta-box-coupon-data.php:53
+msgid "Usage restriction"
+msgstr "Ограничения использования"
+
+#: packages/woocommerce-rest-api/src/Controllers/Version2/class-wc-rest-network-orders-v2-controller.php:76
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "Order Status"
+msgstr "Статус заказа:"
 
 #: includes/admin/class-wc-admin-pointers.php:74
 msgid "This is your products main body of content. Here you should describe your product in detail."
@@ -30370,25 +30458,6 @@ msgstr "Виртуальный"
 msgid "Yes"
 msgstr "Да"
 
-#: templates/myaccount/my-orders.php:16
-#: includes/admin/class-wc-admin-dashboard.php:359
-#: includes/admin/class-wc-admin-menus.php:141
-#: includes/admin/meta-boxes/views/html-product-data-variations.php:58
-#: includes/admin/settings/views/html-webhooks-edit.php:36
-#: includes/admin/class-wc-admin-webhooks-table-list.php:49
-#: includes/admin/list-tables/class-wc-admin-list-table-orders.php:123
-#: includes/wc-account-functions.php:198
-#: packages/action-scheduler/classes/ActionScheduler_AdminView.php:128
-#: packages/action-scheduler/classes/ActionScheduler_ListTable.php:97
-#: packages/woocommerce-admin/src/API/Reports/Variations/Controller.php:365
-#: packages/woocommerce-admin/src/API/Reports/Stock/Controller.php:529
-#: packages/woocommerce-admin/src/API/Reports/Orders/Controller.php:479
-#: packages/woocommerce-admin/src/API/Reports/Products/Controller.php:399
-#: packages/woocommerce-admin/includes/connect-existing-pages.php:37
-#: packages/woocommerce-admin/dist/app/index.js:27
-msgid "Status"
-msgstr "Статус"
-
 #. Translators: %s Payment gateway name.
 #: includes/admin/settings/class-wc-settings-shipping.php:275
 #: includes/admin/settings/class-wc-settings-payment-gateways.php:189
@@ -30503,6 +30572,15 @@ msgstr "Видимость в каталоге:"
 msgid "OK"
 msgstr "OK"
 
+#: templates/myaccount/form-edit-account.php:27
+#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:45
+#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:97
+#: includes/admin/class-wc-admin-profile.php:46
+#: includes/admin/class-wc-admin-profile.php:106
+#: includes/class-wc-countries.php:657 includes/class-wc-form-handler.php:252
+msgid "First name"
+msgstr "Имя"
+
 #: includes/admin/meta-boxes/views/html-order-items.php:290
 #: includes/admin/meta-boxes/views/html-order-items.php:356
 #: includes/admin/meta-boxes/views/html-product-data-general.php:68
@@ -30520,15 +30598,6 @@ msgstr "OK"
 #: packages/woocommerce-blocks/build/product-tag.js:1
 msgid "Cancel"
 msgstr "Отмена"
-
-#: templates/myaccount/form-edit-account.php:27
-#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:45
-#: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:97
-#: includes/admin/class-wc-admin-profile.php:46
-#: includes/admin/class-wc-admin-profile.php:106
-#: includes/class-wc-countries.php:657 includes/class-wc-form-handler.php:252
-msgid "First name"
-msgstr "Имя"
 
 #: templates/myaccount/form-edit-account.php:31
 #: includes/admin/meta-boxes/class-wc-meta-box-order-data.php:49
@@ -31026,6 +31095,25 @@ msgstr "Метка товара"
 #: packages/woocommerce-blocks/build/featured-product.js:1
 msgid "Featured Product"
 msgstr "Рекомендуемый товар"
+
+#: templates/myaccount/my-orders.php:16
+#: includes/admin/class-wc-admin-dashboard.php:359
+#: includes/admin/class-wc-admin-menus.php:141
+#: includes/admin/meta-boxes/views/html-product-data-variations.php:58
+#: includes/admin/settings/views/html-webhooks-edit.php:36
+#: includes/admin/class-wc-admin-webhooks-table-list.php:49
+#: includes/admin/list-tables/class-wc-admin-list-table-orders.php:123
+#: includes/wc-account-functions.php:198
+#: packages/action-scheduler/classes/ActionScheduler_AdminView.php:128
+#: packages/action-scheduler/classes/ActionScheduler_ListTable.php:97
+#: packages/woocommerce-admin/src/API/Reports/Variations/Controller.php:365
+#: packages/woocommerce-admin/src/API/Reports/Stock/Controller.php:529
+#: packages/woocommerce-admin/src/API/Reports/Orders/Controller.php:479
+#: packages/woocommerce-admin/src/API/Reports/Products/Controller.php:399
+#: packages/woocommerce-admin/includes/connect-existing-pages.php:37
+#: packages/woocommerce-admin/dist/app/index.js:27
+msgid "Status"
+msgstr "Статус"
 
 #: templates/single-product/tabs/description.php:22
 #: includes/gateways/cod/class-wc-gateway-cod.php:83
@@ -31849,6 +31937,21 @@ msgstr "ММ / ГГ"
 msgid "CVC"
 msgstr "CVC"
 
+#: includes/class-wc-product-simple.php:60
+#: includes/abstracts/abstract-wc-product.php:1828
+#: includes/class-wc-embed.php:106 includes/class-wc-product-variable.php:60
+#: packages/woocommerce-blocks/assets/js/base/components/read-more/index.js:164
+#: packages/woocommerce-blocks/build/all-reviews-legacy.js:1
+#: packages/woocommerce-blocks/build/reviews-by-category-legacy.js:1
+#: packages/woocommerce-blocks/build/reviews-by-category.js:1
+#: packages/woocommerce-blocks/build/all-reviews.js:1
+#: packages/woocommerce-blocks/build/reviews-by-product-legacy.js:1
+#: packages/woocommerce-blocks/build/reviews-by-product.js:1
+#: packages/woocommerce-blocks/build/reviews-frontend-legacy.js:6
+#: packages/woocommerce-blocks/build/reviews-frontend.js:6
+msgid "Read more"
+msgstr "Подробнее"
+
 #. translators: %s: stock amount
 #: includes/wc-formatting-functions.php:1188
 msgid "Only %s left in stock"
@@ -31867,21 +31970,6 @@ msgstr "%s в наличии"
 #: packages/woocommerce-rest-api/src/Controllers/Version3/class-wc-rest-report-reviews-totals-controller.php:57
 msgid "Rated %s out of 5"
 msgstr "Оценка %s из 5"
-
-#: includes/class-wc-product-simple.php:60
-#: includes/abstracts/abstract-wc-product.php:1828
-#: includes/class-wc-embed.php:106 includes/class-wc-product-variable.php:60
-#: packages/woocommerce-blocks/assets/js/base/components/read-more/index.js:164
-#: packages/woocommerce-blocks/build/all-reviews-legacy.js:1
-#: packages/woocommerce-blocks/build/reviews-by-category-legacy.js:1
-#: packages/woocommerce-blocks/build/reviews-by-category.js:1
-#: packages/woocommerce-blocks/build/all-reviews.js:1
-#: packages/woocommerce-blocks/build/reviews-by-product-legacy.js:1
-#: packages/woocommerce-blocks/build/reviews-by-product.js:1
-#: packages/woocommerce-blocks/build/reviews-frontend-legacy.js:6
-#: packages/woocommerce-blocks/build/reviews-frontend.js:6
-msgid "Read more"
-msgstr "Подробнее"
 
 #. translators: 1: first name 2: last name
 #: includes/admin/list-tables/class-wc-admin-list-table-orders.php:178
@@ -31990,11 +32078,6 @@ msgstr "Определяет порядок сортировки значени�
 msgid "Are you sure you want to link all variations? This will create a new variation for each and every possible combination of variation attributes (max %d per run)."
 msgstr "Вы уверены, что хотите подключить все вариации? Эта операция создаст новые вариации для каждого из всех возможных комбинаций атрибутов вариаций (максимум %d за один заход)."
 
-#: includes/admin/class-wc-admin-attributes.php:228
-#: includes/admin/class-wc-admin-attributes.php:407
-msgid "Enable this if you want this attribute to have product archives in your store."
-msgstr "Включите, если хотите, чтобы можно было просматривать список товаров с этим атрибутом."
-
 #: templates/single-product-reviews.php:89
 #: includes/widgets/class-wc-widget-product-categories.php:52
 #: includes/admin/meta-boxes/views/html-variation-admin.php:370
@@ -32018,6 +32101,11 @@ msgstr "Включите, если хотите, чтобы можно было 
 #: packages/woocommerce-admin/dist/app/index.js:27
 msgid "Name"
 msgstr "Имя"
+
+#: includes/admin/class-wc-admin-attributes.php:228
+#: includes/admin/class-wc-admin-attributes.php:407
+msgid "Enable this if you want this attribute to have product archives in your store."
+msgstr "Включите, если хотите, чтобы можно было просматривать список товаров с этим атрибутом."
 
 #: includes/admin/class-wc-admin-help.php:103
 msgid "Official extensions"
@@ -32086,10 +32174,6 @@ msgstr "Эндпоинты WooCommerce"
 #: includes/admin/views/html-bulk-edit-product.php:15
 msgid "Product data"
 msgstr "Данные Товара"
-
-#: includes/admin/class-wc-admin-meta-boxes.php:135
-msgid "Coupon data"
-msgstr "Данные Купона"
 
 #: includes/admin/class-wc-admin-permalink-settings.php:133
 msgid "Custom base"
@@ -32305,6 +32389,10 @@ msgstr "Пожалуйста, введите число в денежном де
 #: packages/woocommerce-admin/dist/app/index.js:27
 msgid "Single Product"
 msgstr "Отдельный товар"
+
+#: includes/admin/class-wc-admin-meta-boxes.php:135
+msgid "Coupon data"
+msgstr "Данные купона"
 
 #: i18n/states.php:943
 msgid "Albay"

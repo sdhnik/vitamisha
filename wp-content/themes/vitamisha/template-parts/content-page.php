@@ -9,44 +9,43 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+<div id="post-<?php the_ID(); ?>" class="page">
+	<div class="page--header">
+		<h1 class="page--header__title page-title"><?php the_title(); ?></h1>
+		<?php woocommerce_breadcrumb(); ?>
+	</div>
+	<div class="page--content">
+		<div class="container">
 
-	<?php vitamisha_post_thumbnail(); ?>
+			<?php vitamisha_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content();
+			<?php the_content(); ?>
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'vitamisha' ),
-			'after'  => '</div>',
-		) );
-		?>
-	</div><!-- .entry-content -->
-
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-			edit_post_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: Name of current post. Only visible to screen readers */
-						__( 'Edit <span class="screen-reader-text">%s</span>', 'vitamisha' ),
-						array(
-							'span' => array(
-								'class' => array(),
+			<?php if ( get_edit_post_link() ) : ?>
+				<div class="page--footer entry-footer">
+					<?php
+					edit_post_link(
+						sprintf(
+							wp_kses(
+								/* translators: %s: Name of current post. Only visible to screen readers */
+								__( 'Edit <span class="screen-reader-text">%s</span>', 'vitamisha' ),
+								array(
+									'span' => array(
+										'class' => array(),
+									),
+								)
 							),
-						)
-					),
-					get_the_title()
-				),
-				'<span class="edit-link">',
-				'</span>'
-			);
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
-</article><!-- #post-<?php the_ID(); ?> -->
+							get_the_title()
+						),
+						'<span class="edit-link">',
+						'</span>'
+					);
+					?>
+				</div>
+			<?php endif; ?>
+
+		</div>
+	</div>
+</div>
+
+

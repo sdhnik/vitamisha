@@ -26,8 +26,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 		<thead>
 			<tr>
 				<th class="product-remove">&nbsp;</th>
-				<th class="product-thumbnail">&nbsp;</th>
 				<th class="product-name"><?php esc_html_e( 'Product', 'woocommerce' ); ?></th>
+				<th class="product-thumbnail">&nbsp;</th>
 				<th class="product-price"><?php esc_html_e( 'Price', 'woocommerce' ); ?></th>
 				<th class="product-quantity"><?php esc_html_e( 'Quantity', 'woocommerce' ); ?></th>
 				<th class="product-subtotal"><?php esc_html_e( 'Subtotal', 'woocommerce' ); ?></th>
@@ -101,8 +101,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</td>
 
 						<td class="product-quantity" data-title="<?php esc_attr_e( 'Quantity', 'woocommerce' ); ?>">
-							<div class="qty">
-								<button type="button" class="qtyminus_stat">&mdash;</button>
+							<div class="qty-wrapper">
+								<button type="button" class="qtyminus_stat">-</button>
 
 								<?php
 								if ( $_product->is_sold_individually() ) {
@@ -151,7 +151,7 @@ do_action( 'woocommerce_before_cart' ); ?>
 						</div>
 					<?php } ?>
 
-					<button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+					<span class="button__wrapper"><button type="submit" class="button" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button><svg class="wgl-dashes" width="100%" height="100%"><rect x="5" y="5" rx="25" ry="25" width="calc(100% - 10px)" height="calc(100% - 10px)"></rect></svg></span>
 
 					<?php do_action( 'woocommerce_cart_actions' ); ?>
 

@@ -421,7 +421,10 @@ textarea[disabled] {
 .shop--products .woocommerce-message .button,
 .shop--product .woocommerce-error .button,
 .shop--product .woocommerce-info .button,
-.shop--product .woocommerce-message .button {
+.shop--product .woocommerce-message .button,
+.page--content .woocommerce-error .button,
+.page--content .woocommerce-info .button,
+.page--content .woocommerce-message .button {
   display: -webkit-inline-box;
   display: inline-flex;
   -webkit-box-pack: start;
@@ -480,13 +483,19 @@ textarea[disabled] {
 .shop--product .woocommerce-error .button:hover svg,
 .shop--product .woocommerce-info .button:hover svg,
 .shop--product .woocommerce-message .button:hover svg,
+.page--content .woocommerce-error .button:hover svg,
+.page--content .woocommerce-info .button:hover svg,
+.page--content .woocommerce-message .button:hover svg,
 .button:focus svg,
 .shop--products .woocommerce-error .button:focus svg,
 .shop--products .woocommerce-info .button:focus svg,
 .shop--products .woocommerce-message .button:focus svg,
 .shop--product .woocommerce-error .button:focus svg,
 .shop--product .woocommerce-info .button:focus svg,
-.shop--product .woocommerce-message .button:focus svg {
+.shop--product .woocommerce-message .button:focus svg,
+.page--content .woocommerce-error .button:focus svg,
+.page--content .woocommerce-info .button:focus svg,
+.page--content .woocommerce-message .button:focus svg {
   -webkit-animation-play-state: running;
   animation-play-state: running;
 }
@@ -1748,13 +1757,19 @@ textarea[disabled] {
 .dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--product .woocommerce-error a.button:hover + svg,
 .dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--product .woocommerce-info a.button:hover + svg,
 .dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--product .woocommerce-message a.button:hover + svg,
+.dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .page--content .woocommerce-error a.button:hover + svg,
+.dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .page--content .woocommerce-info a.button:hover + svg,
+.dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .page--content .woocommerce-message a.button:hover + svg,
 .dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper a.button:focus + svg,
 .dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--products .woocommerce-error a.button:focus + svg,
 .dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--products .woocommerce-info a.button:focus + svg,
 .dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--products .woocommerce-message a.button:focus + svg,
 .dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--product .woocommerce-error a.button:focus + svg,
 .dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--product .woocommerce-info a.button:focus + svg,
-.dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--product .woocommerce-message a.button:focus + svg {
+.dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .shop--product .woocommerce-message a.button:focus + svg,
+.dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .page--content .woocommerce-error a.button:focus + svg,
+.dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .page--content .woocommerce-info a.button:focus + svg,
+.dialog_shopping_cart .widget_shopping_cart_content .buttons .button__wrapper .page--content .woocommerce-message a.button:focus + svg {
   stroke: #fff;
   -webkit-animation-play-state: running;
   animation-play-state: running;
@@ -2295,6 +2310,9 @@ textarea[disabled] {
 .shop ul.products.columns-3 li.product .shop--product .woocommerce-error .woocommerce-loop-product__link:focus ~ .button,
 .shop ul.products.columns-3 li.product .shop--product .woocommerce-info .woocommerce-loop-product__link:focus ~ .button,
 .shop ul.products.columns-3 li.product .shop--product .woocommerce-message .woocommerce-loop-product__link:focus ~ .button,
+.shop ul.products.columns-3 li.product .page--content .woocommerce-error .woocommerce-loop-product__link:focus ~ .button,
+.shop ul.products.columns-3 li.product .page--content .woocommerce-info .woocommerce-loop-product__link:focus ~ .button,
+.shop ul.products.columns-3 li.product .page--content .woocommerce-message .woocommerce-loop-product__link:focus ~ .button,
 .shop ul.products.columns-3 li.product .woocommerce-loop-product__link:focus ~ .added_to_cart {
   -webkit-transform: translateY(50%);
   transform: translateY(50%);
@@ -2953,13 +2971,19 @@ textarea[disabled] {
 .shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--product .woocommerce-error a.button:hover + svg,
 .shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--product .woocommerce-info a.button:hover + svg,
 .shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--product .woocommerce-message a.button:hover + svg,
+.shop--products__filter .widget_shopping_cart .buttons .button__wrapper .page--content .woocommerce-error a.button:hover + svg,
+.shop--products__filter .widget_shopping_cart .buttons .button__wrapper .page--content .woocommerce-info a.button:hover + svg,
+.shop--products__filter .widget_shopping_cart .buttons .button__wrapper .page--content .woocommerce-message a.button:hover + svg,
 .shop--products__filter .widget_shopping_cart .buttons .button__wrapper a.button:focus + svg,
 .shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--products .woocommerce-error a.button:focus + svg,
 .shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--products .woocommerce-info a.button:focus + svg,
 .shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--products .woocommerce-message a.button:focus + svg,
 .shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--product .woocommerce-error a.button:focus + svg,
 .shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--product .woocommerce-info a.button:focus + svg,
-.shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--product .woocommerce-message a.button:focus + svg {
+.shop--products__filter .widget_shopping_cart .buttons .button__wrapper .shop--product .woocommerce-message a.button:focus + svg,
+.shop--products__filter .widget_shopping_cart .buttons .button__wrapper .page--content .woocommerce-error a.button:focus + svg,
+.shop--products__filter .widget_shopping_cart .buttons .button__wrapper .page--content .woocommerce-info a.button:focus + svg,
+.shop--products__filter .widget_shopping_cart .buttons .button__wrapper .page--content .woocommerce-message a.button:focus + svg {
   stroke: #fff;
   -webkit-animation-play-state: running;
   animation-play-state: running;
@@ -3512,6 +3536,354 @@ textarea[disabled] {
   }
 }
 
+.page--header {
+  background: url(./img/backgrounds/page_title_bg.png) center bottom no-repeat;
+  background-size: cover;
+  height: 348px;
+  margin-bottom: 40px;
+  padding-top: 12px;
+  padding-bottom: 88px;
+}
+
+.page--header h1,
+.page--header .shop--header__title {
+  color: #122659;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 120%;
+  text-align: center;
+  margin: 80px 0 30px;
+}
+
+.page--header .breadcrumbs {
+  color: #2D4073;
+  font-size: 1.125rem;
+  font-weight: 800;
+  line-height: 24px;
+  text-align: center;
+}
+
+.page--header .breadcrumbs a {
+  color: inherit;
+  -webkit-transition: opacity .3s ease;
+  transition: opacity .3s ease;
+}
+
+.page--header .breadcrumbs a:hover {
+  opacity: 1;
+}
+
+.page--header .breadcrumbs > * {
+  opacity: 0.7;
+}
+
+.page--header .breadcrumbs > *.current {
+  opacity: 1;
+}
+
+.page--header .breadcrumbs .divider:not(:last-child) {
+  color: inherit;
+  margin: 0 10px;
+  opacity: 1;
+}
+
+.page--header .breadcrumbs .divider:not(:last-child):before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #89D4F3;
+  border-radius: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.page--content .woocommerce-error,
+.page--content .woocommerce-info,
+.page--content .woocommerce-message {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  flex-direction: row-reverse;
+  -webkit-box-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  align-items: center;
+  background-color: transparent;
+  border: 1px solid #E5E5E5;
+  border-radius: 30px;
+  font-weight: 800;
+}
+
+.page--content .woocommerce-error:before,
+.page--content .woocommerce-info:before,
+.page--content .woocommerce-message:before {
+  height: 22px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.page--content .woocommerce-error .button,
+.page--content .woocommerce-info .button,
+.page--content .woocommerce-message .button {
+  float: none;
+  padding: 10px 20px;
+  background-color: #FEB9CC;
+  color: #fff;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.page--content .woocommerce-error .button:hover,
+.page--content .woocommerce-error .button:focus,
+.page--content .woocommerce-info .button:hover,
+.page--content .woocommerce-info .button:focus,
+.page--content .woocommerce-message .button:hover,
+.page--content .woocommerce-message .button:focus {
+  background-color: #FFC85B;
+  color: #fff;
+}
+
+.page--content table.shop_table {
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  font-size: 1.125rem;
+  border-collapse: collapse;
+}
+
+.page--content table.shop_table thead tr {
+  border: 0;
+}
+
+.page--content table.shop_table thead tr th {
+  padding: 6px 0;
+  border: 0;
+  font-size: 1.125rem;
+  font-weight: 900;
+  line-height: 2;
+  background-color: #FEB9CC;
+  color: #fff;
+}
+
+.page--content table.shop_table thead tr th:first-child {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+}
+
+.page--content table.shop_table thead tr th:last-child {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.page--content table.shop_table thead tr th.product-name {
+  padding-left: 10px;
+  text-align: left;
+}
+
+.page--content table.shop_table thead tr th.product-thumbnail {
+  min-width: 32px;
+}
+
+.page--content table.shop_table tbody tr:first-child td {
+  border-top: 0;
+}
+
+.page--content table.shop_table tbody tr td {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 0;
+  padding-right: 0;
+  border: 0;
+  vertical-align: middle;
+  border-top: 1px solid #f7f7f7;
+}
+
+.page--content table.shop_table tbody tr td.product-remove {
+  padding-left: 2px;
+  padding-right: 2px;
+  text-align: center;
+}
+
+.page--content table.shop_table tbody tr td.product-thumbnail {
+  white-space: nowrap;
+  width: 12%;
+  padding-left: 10px;
+}
+
+.page--content table.shop_table tbody tr td.product-thumbnail img {
+  width: 80px;
+  border: 2px dashed #FEB9CC;
+  border-radius: 20px;
+  height: auto;
+  max-width: 100%;
+}
+
+.page--content table.shop_table tbody tr td.product-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.page--content table.shop_table tbody tr td.product-name a {
+  color: #2D4073;
+}
+
+.page--content table.shop_table tbody tr td.product-name a:hover,
+.page--content table.shop_table tbody tr td.product-name a:focus {
+  color: #FFC85B;
+}
+
+.page--content table.shop_table tbody tr td .woocommerce-Price-amount {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #45B3DF;
+}
+
+.page--content table.shop_table tbody tr td .qty-wrapper {
+  display: inline-block;
+  position: relative;
+  border: 1px solid #ebe9e5;
+  border-radius: 28px;
+  padding: 0 30px;
+  font-weight: 900;
+}
+
+.page--content table.shop_table tbody tr td .qty-wrapper input[type=number] {
+  display: inline-block;
+  height: 58px;
+  width: 60px;
+  border: 0;
+  padding: 0 0 0 15px;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #2D4073;
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+  appearance: textfield;
+  vertical-align: middle;
+  background: transparent;
+}
+
+.page--content table.shop_table tbody tr td .qty-wrapper button {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 39px;
+  background: none;
+  border: 0;
+  font-size: 1.75rem;
+  color: #45B3DF;
+  -webkit-transition: color .3s ease;
+  transition: color .3s ease;
+}
+
+.page--content table.shop_table tbody tr td .qty-wrapper button:hover,
+.page--content table.shop_table tbody tr td .qty-wrapper button:focus {
+  color: #FEB9CC;
+}
+
+.page--content table.shop_table tbody tr td .qty-wrapper button.qtyminus_stat {
+  left: 0;
+}
+
+.page--content table.shop_table tbody tr td .qty-wrapper button.qtyplus_stat {
+  right: 0;
+}
+
+.page--content table.shop_table .actions .button__wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.page--content table.shop_table .actions .button__wrapper .button {
+  display: block;
+  margin: 0;
+  border: 0;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-size: 1.125rem;
+  font-weight: 900;
+  line-height: 1.5;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  background-color: #FFC85B;
+  color: #fff;
+}
+
+.page--content table.shop_table .actions .button__wrapper .button.checkout {
+  background-color: #FEB9CC;
+}
+
+.page--content table.shop_table .actions .button__wrapper .button:hover + svg,
+.page--content table.shop_table .actions .button__wrapper .woocommerce-error .button:hover + svg,
+.page--content table.shop_table .actions .button__wrapper .woocommerce-info .button:hover + svg,
+.page--content table.shop_table .actions .button__wrapper .woocommerce-message .button:hover + svg,
+.page--content table.shop_table .actions .button__wrapper .button:focus + svg,
+.page--content table.shop_table .actions .button__wrapper .woocommerce-error .button:focus + svg,
+.page--content table.shop_table .actions .button__wrapper .woocommerce-info .button:focus + svg,
+.page--content table.shop_table .actions .button__wrapper .woocommerce-message .button:focus + svg {
+  stroke: #fff;
+  -webkit-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.page--content table.shop_table .actions .button__wrapper .button[disabled] {
+  pointer-events: none;
+  color: #fff;
+  padding: 12px 25px;
+  cursor: not-allowed;
+}
+
+.page--content table.shop_table .actions .button__wrapper svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  -webkit-animation: dashed_border_running 20s linear infinite both;
+  animation: dashed_border_running 20s linear infinite both;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+  stroke-width: 2;
+  stroke-dasharray: 9, 5;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  fill: none;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  stroke: transparent;
+}
+
+.page--content a.remove {
+  display: inline-block;
+  height: 24px;
+  width: 24px;
+  margin: 0;
+  border-radius: unset;
+  font-size: 24px;
+  line-height: 22px;
+  color: #C4C4C4 !important;
+  text-shadow: none;
+  background: transparent;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.page--content a.remove:hover,
+.page--content a.remove:focus {
+  background-color: transparent !important;
+  color: #848484 !important;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -3756,6 +4128,35 @@ textarea[disabled] {
 
   .shop--product #review_form #respond {
     padding: 28px 30px 24px;
+  }
+
+  .page--header h1,
+  .page--header .shop--header__title {
+    font-size: 1.75rem;
+    margin-top: 60px;
+  }
+
+  .page--content .woocommerce-error,
+  .page--content .woocommerce-info,
+  .page--content .woocommerce-message {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    flex-direction: column-reverse;
+    -webkit-box-align: start;
+    align-items: flex-start;
+  }
+
+  .page--content .woocommerce-error:before,
+  .page--content .woocommerce-info:before,
+  .page--content .woocommerce-message:before {
+    top: 16px;
+    bottom: auto;
+  }
+
+  .page--content .woocommerce-error .button,
+  .page--content .woocommerce-info .button,
+  .page--content .woocommerce-message .button {
+    margin: 8px 0 0;
   }
 }
 

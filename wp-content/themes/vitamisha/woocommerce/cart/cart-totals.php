@@ -22,8 +22,6 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php do_action( 'woocommerce_before_cart_totals' ); ?>
 
-	<h2><?php esc_html_e( 'Cart totals', 'woocommerce' ); ?></h2>
-
 	<table cellspacing="0" class="shop_table shop_table_responsive">
 
 		<tr class="cart-subtotal">
@@ -103,10 +101,17 @@ defined( 'ABSPATH' ) || exit;
 
 	</table>
 
+	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
+
+</div>
+
+<div class="cart_totals_buttons">
+
+	<div class="wc-proceed-to-back">
+		<span class="button__wrapper"><a href="/" class="button button--gray">Продолжить покупки</a><svg class="wgl-dashes" width="100%" height="100%"><rect x="5" y="5" rx="25" ry="25" width="calc(100% - 10px)" height="calc(100% - 10px)"></rect></svg></span>
+	</div>
+
 	<div class="wc-proceed-to-checkout">
 		<?php do_action( 'woocommerce_proceed_to_checkout' ); ?>
 	</div>
-
-	<?php do_action( 'woocommerce_after_cart_totals' ); ?>
-
 </div>

@@ -78,38 +78,25 @@
 
 	}
 
-	var qtyminusButtons = document.querySelectorAll('.qtyminus_stat'),
-		qtyplusButtons = document.querySelectorAll('.qtyplus_stat');
+	jQuery(document).on("click", ".qtyminus_stat, .qtyplus_stat", function(t) {
+	    t.stopPropagation();
 
-		for (var i = 0; i < qtyminusButtons.length; i++) {
-			qtyminusButtons[i].addEventListener('click', function(e) {
-				e.stopPropagation();
+	    var a, n = jQuery(this),
+	        o = n.siblings(".quantity").find('.qty'),
+	        d = parseFloat(o.attr("step")),
+	        i = parseFloat(o.attr("max")),
+	        s = !1,
+	        r = parseFloat(o.val());
 
-			    var a, n = this.parentNode,
-			        o = n.querySelector(".quantity").querySelector('.qty'),
-			        d = parseFloat(o.getAttribute("step")),
-			        m = parseFloat(o.getAttribute("max")),
-			        s = !0,
-			        r = parseFloat(o.value);
+	    n.hasClass("qtyminus_stat") && (s = !0), s ? (a = r - d, a >= 1 ? o.val(a) : o.val(0)) : (a = r + d, void 0 === i ? o.val(a) : a >= i ? o.val(i) : o.val(a));
 
-			    s ? (a = r - d, a >= 1 ? o.value = a : o.value = 0) : (a = r + d, void 0 === m ? o.value = a : a >= m ? o.value = m : o.value = a);
+	    o.trigger("change");
 
-			});
-		}
-		for (var i = 0; i < qtyplusButtons.length; i++) {
-			qtyplusButtons[i].addEventListener('click', function(e) {
-				e.stopPropagation();
+	});
 
-			    var a, n = this.parentNode,
-			        o = n.querySelector(".quantity").querySelector('.qty'),
-			        d = parseFloat(o.getAttribute("step")),
-			        m = parseFloat(o.getAttribute("max")),
-			        s = !1,
-			        r = parseFloat(o.value);
-
-			    s ? (a = r - d, a >= 1 ? o.value = a : o.value = 0) : (a = r + d, void 0 === m ? o.value = a : a >= m ? o.value = m : o.value = a);
-
-			});
-		}
+	jQuery('div.woocommerce').on('change', '.qty', function(){
+       jQuery("[name='update_cart']").removeAttr('disabled');
+       jQuery("[name='update_cart']").trigger("click"); 
+    });
 
 })();

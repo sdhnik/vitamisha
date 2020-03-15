@@ -1,0 +1,409 @@
+0000.000 (0) Opened log file at time: Sun, 15 Mar 2020 16:20:16 +0000 on http://vitamisha.local
+0000.036 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.22 WP: 5.3.2 PHP: 7.4.1 (apache2handler, Windows NT SEVERNYUK 10.0 build 18362 (Windows 10) AMD64) MySQL: 10.4.11-MariaDB WPLANG: ru_RU Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 55.1M | 8M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.067 (0) Free space on disk containing Updraft's temporary directory: 265240.4 MB
+0000.125 (0) Deleting old log file: log.978c69d2df8a.txt
+0000.167 (0) Deleting old temporary file: log.f046a0d6da36-browser.txt
+0000.174 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.291 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.689 (0) Set semaphore last lock (fd) time to 2020-03-15 16:20:17
+0000.716 (0) Semaphore lock (fd) complete
+0000.825 (0) Backup run: resumption=0, nonce=57842a392168, file_nonce=57842a392168 begun at=1584289216 (1s ago), job type=backup
+0000.902 (0) Scheduling a resumption (1) after 300 seconds (1584289517) in case this run gets aborted
+0000.978 (0) Checking if we have a zip executable available
+0001.046 (0) Creation of backups of directories: beginning
+0001.141 (0) Beginning creation of dump of plugins (split every: 400 MB)
+0002.539 (0) Total entities for the zip file: 744 directories, 4216 files (0 skipped as non-modified), 57.4 MB
+0003.327 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.3 MB, 30 (30) files added so far); re-opening (prior size: 0 KB)
+0003.991 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 100 files added (on-disk size: 227.7 KB)
+0005.109 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 200 files added (on-disk size: 227.7 KB)
+0006.098 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 300 files added (on-disk size: 227.7 KB)
+0006.323 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.4 MB, 290 (320) files added so far); re-opening (prior size: 227.7 KB)
+0007.007 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 400 files added (on-disk size: 955 KB)
+0008.314 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 500 files added (on-disk size: 955 KB)
+0009.334 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.1 MB, 212 (532) files added so far); re-opening (prior size: 955 KB)
+0010.625 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 600 files added (on-disk size: 2150.3 KB)
+0011.752 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 700 files added (on-disk size: 2150.3 KB)
+0012.329 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (15.4 MB, 239 (771) files added so far); re-opening (prior size: 2150.3 KB)
+0014.301 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 800 files added (on-disk size: 6186.5 KB)
+0015.989 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 900 files added (on-disk size: 6186.5 KB)
+0016.324 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.3 MB, 149 (920) files added so far); re-opening (prior size: 6186.5 KB)
+0018.064 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1000 files added (on-disk size: 6331.9 KB)
+0019.292 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1100 files added (on-disk size: 6331.9 KB)
+0019.336 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.8 MB, 181 (1101) files added so far); re-opening (prior size: 6331.9 KB)
+0020.863 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1200 files added (on-disk size: 6557.9 KB)
+0022.095 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1300 files added (on-disk size: 6557.9 KB)
+0022.324 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.9 MB, 214 (1315) files added so far); re-opening (prior size: 6557.9 KB)
+0023.896 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1400 files added (on-disk size: 6937 KB)
+0025.275 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1500 files added (on-disk size: 6937 KB)
+0025.323 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.6 MB, 186 (1501) files added so far); re-opening (prior size: 6937 KB)
+0027.032 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1600 files added (on-disk size: 7362.7 KB)
+0028.137 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1700 files added (on-disk size: 7362.7 KB)
+0028.325 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.7 MB, 229 (1730) files added so far); re-opening (prior size: 7362.7 KB)
+0028.872 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1800 files added (on-disk size: 7698.5 KB)
+0029.418 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 1900 files added (on-disk size: 7698.5 KB)
+0030.348 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2000 files added (on-disk size: 7698.5 KB)
+0031.446 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (10 MB, 327 (2057) files added so far); re-opening (prior size: 7698.5 KB)
+0033.557 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2100 files added (on-disk size: 9616.7 KB)
+0034.348 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.5 MB, 59 (2116) files added so far); re-opening (prior size: 9616.7 KB)
+0037.335 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.5 MB, 61 (2177) files added so far); re-opening (prior size: 9754.1 KB)
+0038.066 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2200 files added (on-disk size: 9882.1 KB)
+0038.483 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2300 files added (on-disk size: 9882.1 KB)
+0039.178 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2400 files added (on-disk size: 9882.1 KB)
+0039.865 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2500 files added (on-disk size: 9882.1 KB)
+0040.321 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3.9 MB, 396 (2573) files added so far); re-opening (prior size: 9882.1 KB)
+0041.331 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2600 files added (on-disk size: 10965 KB)
+0042.469 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2700 files added (on-disk size: 10965 KB)
+0043.321 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4.5 MB, 200 (2773) files added so far); re-opening (prior size: 10965 KB)
+0044.090 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2800 files added (on-disk size: 12174.8 KB)
+0044.861 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 2900 files added (on-disk size: 12174.8 KB)
+0045.487 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3000 files added (on-disk size: 12174.8 KB)
+0046.048 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3100 files added (on-disk size: 12174.8 KB)
+0046.321 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1 MB, 361 (3134) files added so far); re-opening (prior size: 12174.8 KB)
+0047.254 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3200 files added (on-disk size: 12605.1 KB)
+0049.113 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3300 files added (on-disk size: 12605.1 KB)
+0049.328 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4.7 MB, 210 (3344) files added so far); re-opening (prior size: 12605.1 KB)
+0050.451 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3400 files added (on-disk size: 14302 KB)
+0051.064 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3500 files added (on-disk size: 14302 KB)
+0052.327 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (1.6 MB, 251 (3595) files added so far); re-opening (prior size: 14302 KB)
+0052.800 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3600 files added (on-disk size: 14705.8 KB)
+0054.989 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3700 files added (on-disk size: 14705.8 KB)
+0055.321 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.2 MB, 120 (3715) files added so far); re-opening (prior size: 14705.8 KB)
+0056.027 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3800 files added (on-disk size: 14827.2 KB)
+0056.923 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 3900 files added (on-disk size: 14827.2 KB)
+0058.377 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (4 MB, 261 (3976) files added so far); re-opening (prior size: 14827.2 KB)
+0059.340 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 4000 files added (on-disk size: 15919.7 KB)
+0060.178 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 4100 files added (on-disk size: 15919.7 KB)
+0060.565 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip.tmp: 4200 files added (on-disk size: 15919.7 KB)
+0061.142 (0) Created plugins zip (0) - 16264.6 KB in 60 s (271.2 KB/s) (sha1: 5e4c7ac4007fd371f3219adceedf603eb835c6c5, sha256: 5b3c57914ada2cbed406be0c35a264394b090fa2057546fb07cd6d9906622538)
+0061.323 (0) Beginning creation of dump of themes (split every: 400 MB)
+0065.728 (0) Total entities for the zip file: 1328 directories, 7473 files (0 skipped as non-modified), 29.3 MB
+0065.810 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0 MB, 1 (1) files added so far); re-opening (prior size: 0 KB)
+0067.123 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 100 files added (on-disk size: 248.6 KB)
+0068.323 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (3 MB, 179 (180) files added so far); re-opening (prior size: 248.6 KB)
+0069.201 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 200 files added (on-disk size: 2148.4 KB)
+0070.055 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 300 files added (on-disk size: 2148.4 KB)
+0070.639 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 400 files added (on-disk size: 2148.4 KB)
+0071.131 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 500 files added (on-disk size: 2148.4 KB)
+0071.323 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (2.1 MB, 338 (518) files added so far); re-opening (prior size: 2148.4 KB)
+0071.959 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 600 files added (on-disk size: 2824.1 KB)
+0072.482 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 700 files added (on-disk size: 2824.1 KB)
+0072.968 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 800 files added (on-disk size: 2824.1 KB)
+0073.418 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 900 files added (on-disk size: 2824.1 KB)
+0073.881 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1000 files added (on-disk size: 2824.1 KB)
+0074.011 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1 MB, 7473 files batched, 501 (1019) added so far); re-opening (prior size: 2824.1 KB)
+0074.611 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1100 files added (on-disk size: 3304.5 KB)
+0075.059 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1200 files added (on-disk size: 3304.5 KB)
+0075.634 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1300 files added (on-disk size: 3304.5 KB)
+0076.162 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1400 files added (on-disk size: 3304.5 KB)
+0076.324 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.8 MB, 399 (1418) files added so far); re-opening (prior size: 3304.5 KB)
+0077.030 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1500 files added (on-disk size: 3668.2 KB)
+0077.230 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1600 files added (on-disk size: 3668.2 KB)
+0077.508 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1700 files added (on-disk size: 3668.2 KB)
+0078.044 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1800 files added (on-disk size: 3668.2 KB)
+0078.443 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 1900 files added (on-disk size: 3668.2 KB)
+0078.527 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.5 MB, 7473 files batched, 501 (1919) added so far); re-opening (prior size: 3668.2 KB)
+0079.283 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2000 files added (on-disk size: 4258.3 KB)
+0079.895 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2100 files added (on-disk size: 4258.3 KB)
+0080.398 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2200 files added (on-disk size: 4258.3 KB)
+0080.978 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2300 files added (on-disk size: 4258.3 KB)
+0081.323 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 2.0 seconds have passed since the last write (0.4 MB, 436 (2355) files added so far); re-opening (prior size: 4258.3 KB)
+0081.875 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2400 files added (on-disk size: 4496.1 KB)
+0082.504 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2500 files added (on-disk size: 4496.1 KB)
+0082.964 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2600 files added (on-disk size: 4496.1 KB)
+0083.484 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2700 files added (on-disk size: 4496.1 KB)
+0084.018 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2800 files added (on-disk size: 4496.1 KB)
+0084.307 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.2 MB, 7473 files batched, 501 (2856) added so far); re-opening (prior size: 4496.1 KB)
+0084.912 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 2900 files added (on-disk size: 4705 KB)
+0085.599 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3000 files added (on-disk size: 4705 KB)
+0086.051 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3100 files added (on-disk size: 4705 KB)
+0086.376 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3200 files added (on-disk size: 4705 KB)
+0086.830 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3300 files added (on-disk size: 4705 KB)
+0087.059 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1 MB, 7473 files batched, 501 (3357) added so far); re-opening (prior size: 4705 KB)
+0087.616 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3400 files added (on-disk size: 5185.1 KB)
+0088.208 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3500 files added (on-disk size: 5185.1 KB)
+0088.610 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3600 files added (on-disk size: 5185.1 KB)
+0088.973 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3700 files added (on-disk size: 5185.1 KB)
+0089.253 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3800 files added (on-disk size: 5185.1 KB)
+0089.448 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1.1 MB, 7473 files batched, 501 (3858) added so far); re-opening (prior size: 5185.1 KB)
+0090.058 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 3900 files added (on-disk size: 5676.6 KB)
+0090.414 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4000 files added (on-disk size: 5676.6 KB)
+0090.608 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4100 files added (on-disk size: 5676.6 KB)
+0090.752 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4200 files added (on-disk size: 5676.6 KB)
+0090.874 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4300 files added (on-disk size: 5676.6 KB)
+0090.968 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (0.4 MB, 7473 files batched, 501 (4359) added so far); re-opening (prior size: 5676.6 KB)
+0091.368 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4400 files added (on-disk size: 5918 KB)
+0091.767 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4500 files added (on-disk size: 5918 KB)
+0091.916 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4600 files added (on-disk size: 5918 KB)
+0092.164 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4700 files added (on-disk size: 5918 KB)
+0092.407 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4800 files added (on-disk size: 5918 KB)
+0092.573 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (1 MB, 7473 files batched, 501 (4860) added so far); re-opening (prior size: 5918 KB)
+0093.040 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 4900 files added (on-disk size: 6326.6 KB)
+0093.219 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5000 files added (on-disk size: 6326.6 KB)
+0093.623 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5100 files added (on-disk size: 6326.6 KB)
+0093.884 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5200 files added (on-disk size: 6326.6 KB)
+0094.457 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5300 files added (on-disk size: 6326.6 KB)
+0094.685 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (3 MB, 7473 files batched, 501 (5361) added so far); re-opening (prior size: 6326.6 KB)
+0095.426 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5400 files added (on-disk size: 7194.8 KB)
+0095.774 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5500 files added (on-disk size: 7194.8 KB)
+0096.145 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5600 files added (on-disk size: 7194.8 KB)
+0096.354 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5700 files added (on-disk size: 7194.8 KB)
+0096.800 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5800 files added (on-disk size: 7194.8 KB)
+0097.126 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4.8 MB, 7473 files batched, 501 (5862) added so far); re-opening (prior size: 7194.8 KB)
+0098.191 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 5900 files added (on-disk size: 8932.5 KB)
+0098.534 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6000 files added (on-disk size: 8932.5 KB)
+0099.028 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6100 files added (on-disk size: 8932.5 KB)
+0099.382 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6200 files added (on-disk size: 8932.5 KB)
+0099.711 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6300 files added (on-disk size: 8932.5 KB)
+0099.905 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2 MB, 7473 files batched, 501 (6363) added so far); re-opening (prior size: 8932.5 KB)
+0100.789 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6400 files added (on-disk size: 9709.8 KB)
+0101.243 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6500 files added (on-disk size: 9709.8 KB)
+0101.550 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6600 files added (on-disk size: 9709.8 KB)
+0102.286 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6700 files added (on-disk size: 9709.8 KB)
+0102.799 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6800 files added (on-disk size: 9709.8 KB)
+0103.146 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (4 MB, 7473 files batched, 501 (6864) added so far); re-opening (prior size: 9709.8 KB)
+0104.156 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 6900 files added (on-disk size: 10841.2 KB)
+0104.499 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 7000 files added (on-disk size: 10841.2 KB)
+0104.939 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 7100 files added (on-disk size: 10841.2 KB)
+0105.371 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 7200 files added (on-disk size: 10841.2 KB)
+0105.545 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 7300 files added (on-disk size: 10841.2 KB)
+0106.075 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 500 files added on this batch (2.8 MB, 7473 files batched, 501 (7365) added so far); re-opening (prior size: 10841.2 KB)
+0107.294 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip.tmp: 7400 files added (on-disk size: 11942.4 KB)
+0109.031 (0) Created themes zip (0) - 12050.5 KB in 47.6 s (252.9 KB/s) (sha1: 2429577ad1ed83d002bea558fb21d4add0b38604, sha256: 6a7cf491e76e2863f6096f4dc2ebd1e6025d30941036e37497d0959f25038f8a)
+0109.262 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0109.457 (0) Looking for candidates to backup in: E:\xampp2\htdocs\vitamisha.local/wp-content/uploads
+0109.558 (0) finding files: 2020: adding to list (1)
+0109.615 (0) finding files: wc-logs: adding to list (2)
+0109.645 (0) finding files: woocommerce-placeholder-1024x1024.png: adding to list (3)
+0109.682 (0) finding files: woocommerce-placeholder-150x150.png: adding to list (4)
+0109.731 (0) finding files: woocommerce-placeholder-300x300.png: adding to list (5)
+0109.790 (0) finding files: woocommerce-placeholder-768x768.png: adding to list (6)
+0109.848 (0) finding files: woocommerce-placeholder.png: adding to list (7)
+0109.878 (0) finding files: woocommerce_uploads: adding to list (8)
+0109.914 (0) Beginning creation of dump of uploads (split every: 400 MB)
+0110.071 (0) Total entities for the zip file: 5 directories, 66 files (0 skipped as non-modified), 9.4 MB
+0111.015 (0) Created uploads zip (0) - 9556.5 KB in 1.1 s (8960.7 KB/s) (sha1: cc043c6f4148b3d4d1e83f7522e9b47f0fdeddfd, sha256: a03f76f82cb59befcc2fb04919d0f741800aacbb360bd5b14b00874ccd7caba2)
+0111.203 (0) Beginning backup of other directories found in the content directory (index: 0)
+0111.240 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0111.290 (0) Looking for candidates to backup in: E:\xampp2\htdocs\vitamisha.local/wp-content
+0111.320 (0) finding files: index.php: adding to list (1)
+0111.356 (0) finding files: languages: adding to list (2)
+0111.387 (0) finding files: plugins: skipping: this is the plugins directory
+0111.478 (0) finding files: themes: skipping: this is the themes directory
+0111.515 (0) finding files: updraft: skipping: this is the updraft directory
+0111.545 (0) finding files: upgrade: skipping: excluded by options
+0111.611 (0) finding files: uploads: skipping: this is the uploads directory
+0111.747 (0) Total entities for the zip file: 3 directories, 184 files (0 skipped as non-modified), 6 MB
+0112.676 (0) Zip: backup_2020-03-15-1920_Vitamisha_57842a392168-others.zip.tmp: 100 files added (on-disk size: 0 KB)
+0114.657 (0) Created others zip (0) - 1495.8 KB in 3 s (499 KB/s) (sha1: e78dffa5759f23c094815f9b2d688db0d11ce351, sha256: 4c7a41ac4f17b6dd8c06c115d675dd7c91bfaeb4ac0723500fc60ef63b14d465)
+0114.833 (0) Saving backup status to database (elements: 8)
+0114.965 (0) Beginning creation of database dump (WordPress DB)
+0115.247 (0) Table wp_options: Total expected rows (approximate): 453
+0115.319 (0) Table wp_options: Total rows added: 449 in 0.04 seconds
+0115.361 (0) Table wp_options: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_options.table.gz - 18.8 KB)
+0115.463 (0) Table wp_users: Total expected rows (approximate): 0
+0115.513 (0) Table wp_users: Total rows added: 1 in 0.02 seconds
+0115.560 (0) Table wp_users: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_users.table.gz - 0.5 KB)
+0115.696 (0) Table wp_usermeta: Total expected rows (approximate): 43
+0115.744 (0) Table wp_usermeta: Total rows added: 43 in 0.01 seconds
+0115.813 (0) Table wp_usermeta: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_usermeta.table.gz - 1.8 KB)
+0115.913 (0) Table wp_actionscheduler_actions: Total expected rows (approximate): 277
+0115.985 (0) Table wp_actionscheduler_actions: Total rows added: 277 in 0.04 seconds
+0116.028 (0) Table wp_actionscheduler_actions: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_actionscheduler_actions.table.gz - 8.3 KB)
+0116.154 (0) Table wp_actionscheduler_claims: Total expected rows (approximate): 0
+0116.301 (0) Table wp_actionscheduler_claims: Total rows added: 0 in 0.07 seconds
+0116.354 (0) Table wp_actionscheduler_claims: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_actionscheduler_claims.table.gz - 0.3 KB)
+0116.457 (0) Table wp_actionscheduler_groups: Total expected rows (approximate): 5
+0116.532 (0) Table wp_actionscheduler_groups: Total rows added: 5 in 0.04 seconds
+0116.567 (0) Table wp_actionscheduler_groups: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_actionscheduler_groups.table.gz - 0.4 KB)
+0116.676 (0) Table wp_actionscheduler_logs: Total expected rows (approximate): 944
+0116.773 (0) Table wp_actionscheduler_logs: Total rows added: 979 in 0.07 seconds
+0116.819 (0) Table wp_actionscheduler_logs: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_actionscheduler_logs.table.gz - 10.7 KB)
+0116.932 (0) Table wp_commentmeta: Total expected rows (approximate): 2
+0117.004 (0) Table wp_commentmeta: Total rows added: 2 in 0.04 seconds
+0117.044 (0) Table wp_commentmeta: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_commentmeta.table.gz - 0.4 KB)
+0117.139 (0) Table wp_comments: Total expected rows (approximate): 2
+0117.243 (0) Table wp_comments: Total rows added: 3 in 0.07 seconds
+0117.286 (0) Table wp_comments: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_comments.table.gz - 1.2 KB)
+0117.539 (0) Table wp_links: Total expected rows (approximate): 0
+0117.611 (0) Table wp_links: Total rows added: 0 in 0.02 seconds
+0117.652 (0) Table wp_links: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_links.table.gz - 0.4 KB)
+0117.766 (0) Table wp_postmeta: Total expected rows (approximate): 360
+0117.828 (0) Table wp_postmeta: Total rows added: 360 in 0.01 seconds
+0117.878 (0) Table wp_postmeta: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_postmeta.table.gz - 5.7 KB)
+0117.997 (0) Table wp_posts: Total expected rows (approximate): 49
+0118.054 (0) Table wp_posts: Total rows added: 50 in 0.02 seconds
+0118.112 (0) Table wp_posts: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_posts.table.gz - 13.9 KB)
+0118.224 (0) Table wp_term_relationships: Total expected rows (approximate): 44
+0118.299 (0) Table wp_term_relationships: Total rows added: 43 in 0.04 seconds
+0118.344 (0) Table wp_term_relationships: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_term_relationships.table.gz - 0.5 KB)
+0118.664 (0) Table wp_term_taxonomy: Total expected rows (approximate): 25
+0118.713 (0) Table wp_term_taxonomy: Total rows added: 25 in 0.02 seconds
+0118.760 (0) Table wp_term_taxonomy: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_term_taxonomy.table.gz - 0.6 KB)
+0118.897 (0) Table wp_termmeta: Total expected rows (approximate): 34
+0118.978 (0) Table wp_termmeta: Total rows added: 34 in 0.04 seconds
+0119.018 (0) Table wp_termmeta: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_termmeta.table.gz - 0.6 KB)
+0119.118 (0) Table wp_terms: Total expected rows (approximate): 22
+0119.174 (0) Table wp_terms: Total rows added: 25 in 0.03 seconds
+0119.221 (0) Table wp_terms: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_terms.table.gz - 0.9 KB)
+0119.388 (0) Table wp_wc_category_lookup: Total expected rows (approximate): 13
+0119.437 (0) Table wp_wc_category_lookup: Total rows added: 14 in 0.01 seconds
+0119.531 (0) Table wp_wc_category_lookup: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_category_lookup.table.gz - 0.4 KB)
+0119.724 (0) Table wp_wc_product_meta_lookup: Total expected rows (approximate): 9
+0119.766 (0) Table wp_wc_product_meta_lookup: Total rows added: 10 in 0.01 seconds
+0119.812 (0) Table wp_wc_product_meta_lookup: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_product_meta_lookup.table.gz - 0.6 KB)
+0119.924 (0) Table wp_wc_tax_rate_classes: Total expected rows (approximate): 2
+0119.997 (0) Table wp_wc_tax_rate_classes: Total rows added: 2 in 0.03 seconds
+0120.044 (0) Table wp_wc_tax_rate_classes: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_tax_rate_classes.table.gz - 0.5 KB)
+0120.189 (0) Table wp_woocommerce_order_itemmeta: Total expected rows (approximate): 33
+0120.293 (0) Table wp_woocommerce_order_itemmeta: Total rows added: 33 in 0.05 seconds
+0120.351 (0) Table wp_woocommerce_order_itemmeta: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_order_itemmeta.table.gz - 0.8 KB)
+0120.683 (0) Table wp_woocommerce_payment_tokenmeta: Total expected rows (approximate): 0
+0120.939 (0) Table wp_woocommerce_payment_tokenmeta: Total rows added: 0 in 0.07 seconds
+0120.986 (0) Table wp_woocommerce_payment_tokenmeta: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_payment_tokenmeta.table.gz - 0.4 KB)
+0121.064 (0) Skipping table (lacks our prefix (wp_)): wc_ukr_shipping_np_areas
+0121.098 (0) Skipping table (lacks our prefix (wp_)): wc_ukr_shipping_np_cities
+0121.130 (0) Skipping table (lacks our prefix (wp_)): wc_ukr_shipping_np_warehouses
+0121.223 (0) Table wp_wc_admin_note_actions: Total expected rows (approximate): 13
+0121.267 (0) Table wp_wc_admin_note_actions: Total rows added: 13 in 0.01 seconds
+0121.321 (0) Table wp_wc_admin_note_actions: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_admin_note_actions.table.gz - 1 KB)
+0121.482 (0) Table wp_wc_admin_notes: Total expected rows (approximate): 9
+0121.582 (0) Table wp_wc_admin_notes: Total rows added: 11 in 0.05 seconds
+0121.673 (0) Table wp_wc_admin_notes: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_admin_notes.table.gz - 1.9 KB)
+0121.857 (0) Table wp_wc_customer_lookup: Total expected rows (approximate): 1
+0122.040 (0) Table wp_wc_customer_lookup: Total rows added: 1 in 0.11 seconds
+0122.105 (0) Table wp_wc_customer_lookup: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_customer_lookup.table.gz - 0.6 KB)
+0122.225 (0) Table wp_wc_download_log: Total expected rows (approximate): 0
+0122.322 (0) Table wp_wc_download_log: Total rows added: 0 in 0.06 seconds
+0122.377 (0) Table wp_wc_download_log: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_download_log.table.gz - 0.4 KB)
+0122.525 (0) Table wp_wc_order_coupon_lookup: Total expected rows (approximate): 0
+0122.624 (0) Table wp_wc_order_coupon_lookup: Total rows added: 0 in 0.07 seconds
+0122.660 (0) Table wp_wc_order_coupon_lookup: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_order_coupon_lookup.table.gz - 0.4 KB)
+0122.756 (0) Table wp_wc_order_product_lookup: Total expected rows (approximate): 3
+0122.803 (0) Table wp_wc_order_product_lookup: Total rows added: 3 in 0.01 seconds
+0122.860 (0) Table wp_wc_order_product_lookup: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_order_product_lookup.table.gz - 0.5 KB)
+0122.995 (0) Table wp_wc_order_stats: Total expected rows (approximate): 1
+0123.119 (0) Table wp_wc_order_stats: Total rows added: 1 in 0.07 seconds
+0123.166 (0) Table wp_wc_order_stats: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_order_stats.table.gz - 0.5 KB)
+0123.298 (0) Table wp_wc_order_tax_lookup: Total expected rows (approximate): 0
+0123.364 (0) Table wp_wc_order_tax_lookup: Total rows added: 0 in 0.03 seconds
+0123.402 (0) Table wp_wc_order_tax_lookup: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_order_tax_lookup.table.gz - 0.4 KB)
+0123.607 (0) Table wp_wc_webhooks: Total expected rows (approximate): 0
+0123.757 (0) Table wp_wc_webhooks: Total rows added: 0 in 0.05 seconds
+0123.803 (0) Table wp_wc_webhooks: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_webhooks.table.gz - 0.5 KB)
+0123.931 (0) Table wp_woocommerce_api_keys: Total expected rows (approximate): 0
+0123.984 (0) Table wp_woocommerce_api_keys: Total rows added: 0 in 0.01 seconds
+0124.036 (0) Table wp_woocommerce_api_keys: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_api_keys.table.gz - 0.4 KB)
+0124.324 (0) Table wp_woocommerce_attribute_taxonomies: Total expected rows (approximate): 0
+0124.396 (0) Table wp_woocommerce_attribute_taxonomies: Total rows added: 0 in 0.01 seconds
+0124.453 (0) Table wp_woocommerce_attribute_taxonomies: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_attribute_taxonomies.table.gz - 0.4 KB)
+0124.831 (0) Table wp_woocommerce_downloadable_product_permissions: Total expected rows (approximate): 0
+0124.876 (0) Table wp_woocommerce_downloadable_product_permissions: Total rows added: 0 in 0.01 seconds
+0124.919 (0) Table wp_woocommerce_downloadable_product_permissions: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_downloadable_product_permissions.table.gz - 0.5 KB)
+0125.092 (0) Table wp_woocommerce_log: Total expected rows (approximate): 0
+0125.191 (0) Table wp_woocommerce_log: Total rows added: 0 in 0.01 seconds
+0125.261 (0) Table wp_woocommerce_log: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_log.table.gz - 0.4 KB)
+0125.418 (0) Table wp_woocommerce_order_items: Total expected rows (approximate): 4
+0125.588 (0) Table wp_woocommerce_order_items: Total rows added: 4 in 0.09 seconds
+0125.627 (0) Table wp_woocommerce_order_items: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_order_items.table.gz - 0.6 KB)
+0126.021 (0) Table wp_woocommerce_payment_tokens: Total expected rows (approximate): 0
+0126.089 (0) Table wp_woocommerce_payment_tokens: Total rows added: 0 in 0.02 seconds
+0126.155 (0) Table wp_woocommerce_payment_tokens: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_payment_tokens.table.gz - 0.4 KB)
+0126.285 (0) Table wp_woocommerce_sessions: Total expected rows (approximate): 1
+0126.351 (0) Table wp_woocommerce_sessions: Total rows added: 1 in 0.03 seconds
+0126.386 (0) Table wp_woocommerce_sessions: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_sessions.table.gz - 1.5 KB)
+0126.474 (0) Table wp_woocommerce_shipping_zone_locations: Total expected rows (approximate): 0
+0126.554 (0) Table wp_woocommerce_shipping_zone_locations: Total rows added: 1 in 0.05 seconds
+0126.602 (0) Table wp_woocommerce_shipping_zone_locations: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_shipping_zone_locations.table.gz - 0.4 KB)
+0126.751 (0) Table wp_woocommerce_shipping_zone_methods: Total expected rows (approximate): 1
+0126.836 (0) Table wp_woocommerce_shipping_zone_methods: Total rows added: 1 in 0.01 seconds
+0126.895 (0) Table wp_woocommerce_shipping_zone_methods: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_shipping_zone_methods.table.gz - 0.4 KB)
+0127.007 (0) Table wp_woocommerce_shipping_zones: Total expected rows (approximate): 0
+0127.081 (0) Table wp_woocommerce_shipping_zones: Total rows added: 1 in 0.02 seconds
+0127.157 (0) Table wp_woocommerce_shipping_zones: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_shipping_zones.table.gz - 0.4 KB)
+0127.325 (0) Table wp_woocommerce_tax_rate_locations: Total expected rows (approximate): 0
+0127.370 (0) Table wp_woocommerce_tax_rate_locations: Total rows added: 0 in 0.01 seconds
+0127.422 (0) Table wp_woocommerce_tax_rate_locations: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_tax_rate_locations.table.gz - 0.4 KB)
+0127.542 (0) Table wp_woocommerce_tax_rates: Total expected rows (approximate): 0
+0127.607 (0) Table wp_woocommerce_tax_rates: Total rows added: 0 in 0.03 seconds
+0127.661 (0) Table wp_woocommerce_tax_rates: finishing file (backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_tax_rates.table.gz - 0.4 KB)
+0127.775 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_options.table.gz (1/45): adding to final database dump
+0127.860 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_users.table.gz (2/45): adding to final database dump
+0127.898 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_usermeta.table.gz (3/45): adding to final database dump
+0127.932 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_actionscheduler_actions.table.gz (4/45): adding to final database dump
+0127.969 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_actionscheduler_claims.table.gz (5/45): adding to final database dump
+0127.999 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_actionscheduler_groups.table.gz (6/45): adding to final database dump
+0128.105 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_actionscheduler_logs.table.gz (7/45): adding to final database dump
+0128.197 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_commentmeta.table.gz (8/45): adding to final database dump
+0128.231 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_comments.table.gz (9/45): adding to final database dump
+0128.266 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_links.table.gz (10/45): adding to final database dump
+0128.298 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_postmeta.table.gz (11/45): adding to final database dump
+0128.337 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_posts.table.gz (12/45): adding to final database dump
+0128.369 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_term_relationships.table.gz (13/45): adding to final database dump
+0128.423 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_term_taxonomy.table.gz (14/45): adding to final database dump
+0128.458 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_termmeta.table.gz (15/45): adding to final database dump
+0128.490 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_terms.table.gz (16/45): adding to final database dump
+0128.524 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_category_lookup.table.gz (17/45): adding to final database dump
+0128.557 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_product_meta_lookup.table.gz (18/45): adding to final database dump
+0128.592 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_tax_rate_classes.table.gz (19/45): adding to final database dump
+0128.623 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_order_itemmeta.table.gz (20/45): adding to final database dump
+0128.658 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_payment_tokenmeta.table.gz (21/45): adding to final database dump
+0128.690 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_admin_note_actions.table.gz (22/45): adding to final database dump
+0128.724 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_admin_notes.table.gz (23/45): adding to final database dump
+0128.758 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_customer_lookup.table.gz (24/45): adding to final database dump
+0128.790 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_download_log.table.gz (25/45): adding to final database dump
+0128.823 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_order_coupon_lookup.table.gz (26/45): adding to final database dump
+0128.907 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_order_product_lookup.table.gz (27/45): adding to final database dump
+0129.014 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_order_stats.table.gz (28/45): adding to final database dump
+0129.056 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_order_tax_lookup.table.gz (29/45): adding to final database dump
+0129.091 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_wc_webhooks.table.gz (30/45): adding to final database dump
+0129.123 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_api_keys.table.gz (31/45): adding to final database dump
+0129.157 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_attribute_taxonomies.table.gz (32/45): adding to final database dump
+0129.189 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_downloadable_product_permissions.table.gz (33/45): adding to final database dump
+0129.224 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_log.table.gz (34/45): adding to final database dump
+0129.256 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_order_items.table.gz (35/45): adding to final database dump
+0129.290 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_payment_tokens.table.gz (36/45): adding to final database dump
+0129.323 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_sessions.table.gz (37/45): adding to final database dump
+0129.357 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_shipping_zone_locations.table.gz (38/45): adding to final database dump
+0129.390 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_shipping_zone_methods.table.gz (39/45): adding to final database dump
+0129.424 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_shipping_zones.table.gz (40/45): adding to final database dump
+0129.465 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_tax_rate_locations.table.gz (41/45): adding to final database dump
+0129.499 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db-table-wp_woocommerce_tax_rates.table.gz (42/45): adding to final database dump
+0129.558 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db.gz: finished writing out complete database file (48 KB)
+0129.707 (0) Total database tables backed up: 42 (backup_2020-03-15-1920_Vitamisha_57842a392168-db.gz, size: 70899, sha1: 48d5e112dbc96fe8df61e162ad08988aa5332faf, sha256: 8f5df2afe632d5e5c1d6a3029376c755d34ee69ee20e9c8904eeec1105ed429c)
+0129.867 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0129.906 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0129.973 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0130.008 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-others.zip: others: This file has not yet been successfully uploaded: will queue
+0130.039 (0) backup_2020-03-15-1920_Vitamisha_57842a392168-db.gz: db: This file has not yet been successfully uploaded: will queue
+0130.274 (0) Saving backup history. Total backup size: 38.5 MB
+0130.341 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0130.497 (0) Cloud backup selection (1/1): none with instance (1/1) (last)
+0130.548 (0) No remote despatch: user chose no remote backup service
+0130.589 (0) Recording as successfully uploaded: backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip
+0130.666 (0) Recording as successfully uploaded: backup_2020-03-15-1920_Vitamisha_57842a392168-themes.zip
+0130.724 (0) Recording as successfully uploaded: backup_2020-03-15-1920_Vitamisha_57842a392168-uploads.zip
+0130.806 (0) Recording as successfully uploaded: backup_2020-03-15-1920_Vitamisha_57842a392168-others.zip
+0130.906 (0) Recording as successfully uploaded: backup_2020-03-15-1920_Vitamisha_57842a392168-db.gz
+0131.041 (0) Retain: beginning examination of existing backup sets; user setting: retain_files=2, retain_db=2
+0131.073 (0) Number of backup sets in history: 2; groups (db): 1
+0131.122 (0) Examining (for databases) backup set with group_id=0, nonce=57842a392168, datestamp=1584289216 (Mar 15 2020 16:20:16)
+0131.159 (0) This backup set is the backup set just made, so will not be deleted.
+0131.159 (0) Examining (for databases) backup set with group_id=0, nonce=1c1f0fc82bd0, datestamp=1584037546 (Mar 12 2020 18:25:46)
+0131.159 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0131.189 (0) Number of backup sets in history: 2; groups (files): 1
+0131.216 (0) Examining (for files) backup set with nonce=57842a392168, datestamp=1584289216 (Mar 15 2020 16:20:16)
+0131.216 (0) This backup set is the backup set just made, so will not be deleted.
+0131.256 (0) This backup set is the backup set just made, so will not be deleted.
+0131.256 (0) This backup set is the backup set just made, so will not be deleted.
+0131.256 (0) This backup set is the backup set just made, so will not be deleted.
+0131.257 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0131.306 (0) Examining (for files) backup set with nonce=1c1f0fc82bd0, datestamp=1584037546 (Mar 12 2020 18:25:46)
+0131.306 (0) This backup set remains non-empty (f=1/d=1); will retain in history
+0131.307 (0) Retain: saving new backup history (sets now: 2) and finishing retain operation
+0131.514 (0) Resume backup (57842a392168, 0): finish run
+0131.649 (0) Decremented the semaphore (fd) by 1
+0131.731 (0) Semaphore (fd) unlocked
+0131.773 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0131.881 (0) The backup apparently succeeded and is now complete
+0131.931 (0) No email will/can be sent - the user has not configured an email address.
+0131.973 (0) Резервное копирование успешно завершено

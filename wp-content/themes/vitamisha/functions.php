@@ -271,3 +271,10 @@ add_theme_support( 'wc-product-gallery-slider' );
 
 remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 70 );
+
+function cs_woocommerce_remote_billing_fields( $fields ) {
+	unset( $fields['billing_company'] );
+	return $fields;
+}
+
+add_filter( 'woocommerce_billing_fields', 'cs_woocommerce_remote_billing_fields' );

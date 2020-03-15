@@ -27,7 +27,7 @@ if ( is_front_page() ): ?>
 				<div class="home--first__category">Привет! Я - Витамиша</div>
 				<h1 class="home--first__title">Чтобы Ваш ребенок был здоров, активен и полон сил, Вам нужны наши витамины</h1>
 				<div class="home--first__button">
-					<a href="/" class="button button--orange">
+					<a href="<?php echo esc_url( apply_filters( 'woocommerce_return_to_shop_redirect', wc_get_page_permalink( 'shop' ) ) ); ?>" class="button button--orange">
 						Заказать <i class="button--arrow"></i>
 						<svg class="button--dashes button--dashes__white"><rect x="5px" y="5px" rx="25px" ry="25px" width="calc(100% - 10px)" height="calc(100% - 10px)"></rect></svg>
 					</a>

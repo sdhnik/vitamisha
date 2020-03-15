@@ -1,0 +1,113 @@
+0000.053 () Opened log file at time: Sun, 15 Mar 2020 18:34:37 +0000 on http://vitamisha.local
+0000.054 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.22 WP: 5.3.2 PHP: 7.4.1 (apache2handler, Windows NT DESKTOP-ND9U86A 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.11-MariaDB WPLANG: ru_RU Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 56.2M | 6M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.054 () Free space on disk containing Updraft's temporary directory: 270063.3 MB
+0000.042 () Opened log file at time: Sun, 15 Mar 2020 18:34:39 +0000 on http://vitamisha.local
+0000.043 () UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.22 WP: 5.3.2 PHP: 7.4.1 (apache2handler, Windows NT DESKTOP-ND9U86A 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.11-MariaDB WPLANG: ru_RU Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 54.9M | 8M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.043 () Free space on disk containing Updraft's temporary directory: 270063 MB
+0000.079 () Ensuring WP_Filesystem is setup for a restore
+0000.083 () WP_Filesystem is setup and ready for a restore
+0000.124 () Restore job started. Entities to restore: plugins, uploads, others, db. Restore options: {"updraft_encryptionphrase":"","updraft_restorer_wpcore_includewpconfig":false,"updraft_incremental_restore_point":-1}
+0000.156 () Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.163 () Entity: db
+0000.163 () restore_backup(backup_file=backup_2020-03-15-1920_Vitamisha_57842a392168-db.gz, type=db, info=a:0:{}, last_one=)
+0000.164 () Распаковка резервной копии (backup_2020-03-15-1920_Vitamisha_57842a392168-db.gz, 0.1 Mb)
+0000.178 () Database successfully unpacked
+0000.180 () Восстановление базы данных (на больших сайтах это может занять много времени и привести к таймауту (если Ваш сервер сконфигурирован с ограничением ресурсов) - в этом случае придется воспользоватся альтернативным методом, например, прямым импортом файла резервной копии в phpMyAdmin)...
+0000.180 () Using direct MySQL access; value of use_mysqli is: 1
+0000.181 () SQL compatibility mode is: NO_ZERO_IN_DATE,NO_ENGINE_SUBSTITUTION
+0000.342 () Max packet size: 32 MB
+0000.342 () Entering maintenance mode
+0000.342 () Включение режима обслуживания&#8230;
+0000.351 () Backup of: http://vitamisha.local
+0000.351 () Content URL: http://vitamisha.local/wp-content
+0000.352 () Uploads URL: http://vitamisha.local/wp-content/uploads
+0000.352 () Old table prefix: wp_
+0000.352 () Site information: multisite=0
+0000.352 () Skipped tables: wc_ukr_shipping_np_areas, wc_ukr_shipping_np_cities, wc_ukr_shipping_np_warehouses
+0000.354 () New table prefix: wp_
+0000.389 () Processing table (InnoDB): wp_options
+0000.586 () Restoring prior UD configuration (table: wp_options; keys: 4)
+0000.634 () Processing table (InnoDB): wp_users
+0000.778 () Processing table (InnoDB): wp_usermeta
+0000.937 () Processing table (InnoDB): wp_actionscheduler_actions
+0001.165 () Processing table (InnoDB): wp_actionscheduler_claims
+0001.267 () Processing table (InnoDB): wp_actionscheduler_groups
+0001.439 () Processing table (InnoDB): wp_actionscheduler_logs
+0001.640 () Processing table (InnoDB): wp_commentmeta
+0001.750 () Processing table (InnoDB): wp_comments
+0002.137 () Processing table (InnoDB): wp_links
+0002.283 () Processing table (InnoDB): wp_postmeta
+0002.460 () Processing table (InnoDB): wp_posts
+0002.682 () Processing table (InnoDB): wp_term_relationships
+0002.826 () Processing table (InnoDB): wp_term_taxonomy
+0002.940 () Processing table (InnoDB): wp_termmeta
+0003.149 () Processing table (InnoDB): wp_terms
+0003.319 () Database queries processed: 50 in 3.13 seconds
+0003.375 () Processing table (InnoDB): wp_wc_category_lookup
+0003.483 () Processing table (InnoDB): wp_wc_product_meta_lookup
+0003.614 () Processing table (InnoDB): wp_wc_tax_rate_classes
+0003.724 () Processing table (InnoDB): wp_woocommerce_order_itemmeta
+0003.883 () Processing table (InnoDB): wp_woocommerce_payment_tokenmeta
+0003.978 () Processing table (InnoDB): wp_wc_admin_note_actions
+0004.106 () Processing table (InnoDB): wp_wc_admin_notes
+0004.252 () Processing table (InnoDB): wp_wc_customer_lookup
+0004.401 () Processing table (InnoDB): wp_wc_download_log
+0004.527 () Processing table (InnoDB): wp_wc_order_coupon_lookup
+0004.651 () Processing table (InnoDB): wp_wc_order_product_lookup
+0004.779 () Processing table (InnoDB): wp_wc_order_stats
+0004.897 () Processing table (InnoDB): wp_wc_order_tax_lookup
+0005.003 () Processing table (InnoDB): wp_wc_webhooks
+0005.117 () Processing table (InnoDB): wp_woocommerce_api_keys
+0005.226 () Processing table (InnoDB): wp_woocommerce_attribute_taxonomies
+0005.438 () Processing table (InnoDB): wp_woocommerce_downloadable_product_permissions
+0005.558 () Processing table (InnoDB): wp_woocommerce_log
+0005.646 () Processing table (InnoDB): wp_woocommerce_order_items
+0005.783 () Database queries processed: 100 in 5.60 seconds
+0005.784 () Processing table (InnoDB): wp_woocommerce_payment_tokens
+0005.890 () Processing table (InnoDB): wp_woocommerce_sessions
+0005.983 () Processing table (InnoDB): wp_woocommerce_shipping_zone_locations
+0006.088 () Processing table (InnoDB): wp_woocommerce_shipping_zone_methods
+0006.179 () Processing table (InnoDB): wp_woocommerce_shipping_zones
+0006.292 () Processing table (InnoDB): wp_woocommerce_tax_rate_locations
+0006.401 () Processing table (InnoDB): wp_woocommerce_tax_rates
+0006.645 () Unlocking database and leaving maintenance mode
+0006.646 () Отключение режима обслуживания&#8230;
+0006.647 () Finished: lines processed: 120 in 6.46 seconds
+0006.650 () Очистка мусора...
+0006.682 () Entity: plugins
+0006.682 () restore_backup(backup_file=backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip, type=plugins, info=a:2:{s:4:"path";s:50:"C:\xampp\htdocs\vitamisha.local/wp-content/plugins";s:11:"description";s:20:"Дополнения";}, last_one=)
+0006.684 () Распаковка резервной копии (backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip, 15.9 MB)
+0006.731 () Unzipping backup_2020-03-15-1920_Vitamisha_57842a392168-plugins.zip to C:/xampp/htdocs/vitamisha.local/wp-content/upgrade/59e4792c/ using UpdraftPlus_ZipArchive, starting index 0
+0013.362 () Unzip progress: 1002 out of 4960 files (1.5 MB, plugins/tinymce-advanced/mce/emoticons/img/icon_surprised.gif)
+0028.571 () Unzip progress: 1501 out of 4960 files (21.1 MB, plugins/updraftplus/updraftplus.php)
+0044.582 () Unzip progress: 2154 out of 4960 files (23.4 MB, plugins/updraftplus/vendor/phpseclib/phpseclib/phpseclib/Crypt/Blowfish.php)
+0061.250 () Unzip progress: 2802 out of 4960 files (35.5 MB, plugins/woocommerce/includes/admin/class-wc-admin-setup-wizard.php)
+0076.563 () Unzip progress: 3065 out of 4960 files (38 MB, plugins/woocommerce/includes/emails/class-wc-email-customer-refunded-order.php)
+0092.564 () Unzip progress: 3746 out of 4960 files (45.5 MB, plugins/woocommerce/packages/woocommerce-blocks/assets/js/blocks/handpicked-products/index.js)
+0108.561 () Unzip progress: 4421 out of 4960 files (52.2 MB, plugins/woocommerce/templates/myaccount/my-downloads.php)
+0119.019 () Unzip progress: 4960 out of 4960 files (57.4 MB, plugins/woocommerce-admin/woocommerce-admin.php)
+0119.024 () Moving old data: filesystem method / updraft_dir is potentially possible
+0119.025 () Moving old data: can potentially use wp_filesystem method / -old
+0119.025 () Удаление устаревших данных...
+0121.490 () Top-level entities being moved: akismet, classic-editor, cyrlitera, hello.php, index.php, tinymce-advanced, updraftplus, wc-ukr-shipping, woocommerce, woocommerce-admin
+0121.524 () Перемещение распакованной резервной копии на место...
+0123.041 () Top-level entities being moved: akismet, classic-editor, cyrlitera, hello.php, index.php, tinymce-advanced, updraftplus, wc-ukr-shipping, woocommerce, woocommerce-admin
+0123.069 () Очистка мусора...
+0123.086 () Entity: uploads
+0123.087 () restore_backup(backup_file=backup_2020-03-15-1920_Vitamisha_57842a392168-uploads.zip, type=uploads, info=a:2:{s:4:"path";s:50:"C:\xampp\htdocs\vitamisha.local/wp-content/uploads";s:11:"description";s:16:"Загрузки";}, last_one=)
+0123.088 () Распаковка резервной копии (backup_2020-03-15-1920_Vitamisha_57842a392168-uploads.zip, 9.3 MB)
+0123.091 () Unzipping backup_2020-03-15-1920_Vitamisha_57842a392168-uploads.zip to C:/xampp/htdocs/vitamisha.local/wp-content/upgrade/ec1ce44f/ using UpdraftPlus_ZipArchive, starting index 0
+0123.416 () Unzip progress: 71 out of 71 files (9.4 MB, uploads/woocommerce_uploads/index.html)
+0123.419 () Moving old data: filesystem method / updraft_dir is potentially possible
+0123.421 () Moving old data: can potentially use wp_filesystem method / -old
+0123.421 () Удаление устаревших данных...
+0123.474 () Перемещение распакованной резервной копии на место...
+0123.510 () Очистка мусора...
+0123.524 () Entity: others
+0123.524 () restore_backup(backup_file=backup_2020-03-15-1920_Vitamisha_57842a392168-others.zip, type=others, info=a:2:{s:4:"path";s:42:"C:\xampp\htdocs\vitamisha.local/wp-content";s:11:"description";s:12:"Другое";}, last_one=1)
+0123.525 () Распаковка резервной копии (backup_2020-03-15-1920_Vitamisha_57842a392168-others.zip, 1.5 MB)
+0123.526 () Unzipping backup_2020-03-15-1920_Vitamisha_57842a392168-others.zip to C:/xampp/htdocs/vitamisha.local/wp-content/upgrade/cc761327/ using UpdraftPlus_ZipArchive, starting index 0
+0125.799 () Unzip progress: 187 out of 187 files (6 MB, languages/themes/twentytwenty-ru_RU.po)
+0125.807 () Очистка мусора...
+0125.950 () Restore successful!
+0125.950 () Restore successful

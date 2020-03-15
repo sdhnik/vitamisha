@@ -407,3 +407,7 @@
 0131.881 (0) The backup apparently succeeded and is now complete
 0131.931 (0) No email will/can be sent - the user has not configured an email address.
 0131.973 (0) Резервное копирование успешно завершено
+0000.000 (1) Opened log file at time: Sun, 15 Mar 2020 18:35:40 +0000 on http://vitamisha.local
+0000.007 (1) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 1.16.22 WP: 5.3.2 PHP: 7.4.1 (apache2handler, Windows NT DESKTOP-ND9U86A 10.0 build 18363 (Windows 10) AMD64) MySQL: 10.4.11-MariaDB WPLANG: ru_RU Server: Apache/2.4.41 (Win64) OpenSSL/1.1.1c PHP/7.4.1 safe_mode: 0 max_execution_time: 900 memory_limit: 512M (used: 44.9M | 38M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.011 (1) Free space on disk containing Updraft's temporary directory: 269987.5 MB
+0000.016 (1) This backup task (57842a392168) is either complete or began over 2 days ago: ending (1584297340.8435, ) (existing jobdata keys: )

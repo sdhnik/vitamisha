@@ -241,6 +241,21 @@ function build_menu( $theme_location ) {
     echo $menu_list;
 }
 
+add_filter( 'get_the_archive_title', function ($title) {    
+    if ( is_category() ) {    
+            $title = single_cat_title( '', false );    
+        } elseif ( is_tag() ) {    
+            $title = single_tag_title( '', false );    
+        } elseif ( is_author() ) {    
+            $title = '<span class="vcard">' . get_the_author() . '</span>' ;    
+        } elseif ( is_tax() ) { //for custom post types
+            $title = sprintf( __( '%1$s' ), single_term_title( '', false ) );
+        } elseif (is_post_type_archive()) {
+            $title = post_type_archive_title( '', false );
+        }
+    return $title;    
+});
+
 remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
 remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
 
@@ -278,3 +293,28 @@ function cs_woocommerce_remote_billing_fields( $fields ) {
 }
 
 add_filter( 'woocommerce_billing_fields', 'cs_woocommerce_remote_billing_fields' );
+
+add_filter( 'woocommerce_account_menu_items', 'remove_my_account_dashboard' );
+function remove_my_account_dashboard( $menu_links ){
+ 
+	unset( $menu_links['dashboard'] );
+	unset( $menu_links['downloads'] );
+	return $menu_links;
+ 
+}
+
+add_action('template_redirect', 'redirect_to_orders_from_dashboard' );
+ 
+function redirect_to_orders_from_dashboard(){
+ 
+	if( is_account_page() ){
+		wp_safe_redirect( home_url() );
+		exit;
+	}
+ 
+}
+
+add_filter('woocommerce_login_redirect', 'login_redirect');
+function login_redirect($redirect_to) {
+    return home_url();
+}

@@ -1,0 +1,91 @@
+.blog {
+
+    &--header {
+        background: url(./img/backgrounds/page_title_bg.png) center bottom no-repeat;
+        background-size: cover;
+        height: 348px;
+        margin-bottom: 40px;
+        padding-top: 12px;
+        padding-bottom: 88px;
+
+        h1, .shop--header__title {
+            color: $color9;
+            font-size: 2.5rem;
+            font-weight: 900;
+            line-height: 120%;
+            text-align: center;
+            margin: 80px 0 30px;
+
+            @media(max-width: 767px) {
+                font-size: 1.75rem;
+                margin-top: 60px;
+            }
+        }
+
+        .breadcrumbs {
+            color: $color8;
+            font-size: 1.125rem;
+            font-weight: 800;
+            line-height: 24px;
+            text-align: center;
+            a {
+                color: inherit;
+                transition: opacity .3s ease;
+                &:hover {
+                    opacity: 1;
+                }
+            }
+            > * {
+                opacity: 0.7;
+                &.current {
+                    opacity: 1;
+                }
+            }
+
+            .divider:not(:last-child) {
+                color: inherit;
+                margin: 0 10px;
+                opacity: 1;
+
+                @include p_el(before, 5px, 5px) {
+                    display: inline-block;
+                    vertical-align: middle;
+                    background-color: $color10;
+                    border-radius: 50%;
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+
+    &--content {
+
+        @media(max-width: 767px) {
+            margin-top: -80px;
+        }
+
+
+    }
+
+    &--list {
+        @extend %flex;
+        flex-wrap: wrap;
+        
+        .post {
+            width: 50%;
+            padding: 0 15px;
+            margin-bottom: 40px;
+            
+            .post-thumbnail {
+                display: block;
+                img {
+                    width: 100%;
+                    height: auto;
+                    border-radius: 30px;
+                }
+            }
+            
+        }
+    }
+}
+

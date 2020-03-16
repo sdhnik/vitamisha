@@ -10,8 +10,18 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="blog">
+	<div class="blog--header">
+		<h1 class="blog--header-title page-title">
+			<?php 
+				$categories = get_the_category(); 
+				if ( ! empty( $categories ) ) echo esc_html( $categories[0]->name );
+			?>
+		</h1>
+		<?php woocommerce_breadcrumb(); ?>
+	</div>
+	<div class="blog--content">
+		<div class="container">
 
 		<?php
 		while ( have_posts() ) :
@@ -29,9 +39,9 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</div>
+	</div>
+</div>
 
 <?php
-get_sidebar();
 get_footer();

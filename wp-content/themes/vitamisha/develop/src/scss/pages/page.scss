@@ -487,6 +487,14 @@
 
                 .form-row {
                     margin-bottom: 15px;
+                    
+                    &.form-row-first, &.form-row-last {
+                        @media(max-width: 479px) {
+                            float: none;
+                            width: 100%;
+                        }
+                    }
+
                     label {
                         font-size: 1.125rem;
                         font-weight: 800;
@@ -571,6 +579,11 @@
             }
             .checkout--products {
                 table.shop_table {
+
+                    @media(max-width: 479px) {
+                        margin: 0 0 0 -20px;
+                    }
+
                     thead tr th.product-name {
                         padding-left: 30px;
                     }
@@ -664,6 +677,10 @@
 
                         .place-order-button {
                             text-align: right;
+                            @media(max-width: 479px) {
+                                text-align: center;
+                                margin: 0 -20px;
+                            }
                         }
 
                         .button__wrapper {
@@ -720,8 +737,177 @@
             }
         }
 
-    }
+        .woocommerce-order {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            
+            @media(max-width: 992px) {
+                display: block;
+            }
+            
+            .woocommerce-order-thanks, .woocommerce-order-info {
+                width: 50%;
+                padding: 40px 50px;
+                
+                @media(max-width: 992px) {
+                    width: 100%;
+                    padding: 20px 15px;
+                }
 
+                h2 {
+                    margin: 0 0 20px;
+                }
+
+            }
+
+            .woocommerce-order-thanks {
+                background-color: $color3;
+                border-radius: 30px;
+                
+                .woocommerce-thankyou-order-details {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0 0 70px;
+                    
+                    @media(max-width: 479px) {
+                        margin: 0;
+                    }
+                    
+                    li {
+                        position: relative;
+                        padding-right: 60%;
+                        margin-bottom: 15px;
+                        strong, p {
+                            @include position(absolute, null null null 45%);
+                        }
+                        &.woocommerce-order-overview__payment-method {
+                            margin-bottom: 45px;                            
+                        }
+                        p {
+                            width: 55%;
+                            font-size: 0.875rem;
+                            margin: 10px 0 0;
+                            line-height: 120%;
+                        }
+
+                        @media(max-width: 479px) {
+                            padding-right: 0;
+                            strong, p {
+                                position: static;
+                                width: auto;
+                            }
+                        }
+                    }
+                }
+
+                .col2-set .col-1, .col2-set .col-2 {
+                    float: none;
+                    width: 100%;
+                }
+                .col2-set .col-2 {
+                    margin-top: 30px;
+                }
+                .woocommerce-customer-details {
+                    margin: 0;
+                    address {
+                        padding: 20px;
+                        border: 0;
+                        border-radius: 30px;
+                        background-color: #f1eee8;
+                    }
+
+                    .woocommerce-customer-details--phone {
+                        padding-left: 40px;
+                        font-weight: 800;
+                        line-height: 23px;
+                        &:before {
+                            content: '';
+                            background-image: url(./img/icons/contacts_icon_02.png);
+                            background-size: 30px 23px;
+                            @include size(30px, 23px);
+                            margin-left: -40px;
+                        }
+                    }
+
+                    .woocommerce-customer-details--email {
+                        padding-left: 40px;
+                        font-weight: 800;
+                        line-height: 17px;
+                        &:before {
+                            content: '';
+                            background-image: url(./img/icons/contacts_icon_03.png);
+                            background-size: 30px 17px;
+                            @include size(30px, 17px);
+                            margin-left: -40px;
+                        }
+                    }
+                }
+            }
+
+            .woocommerce-order-info {
+                table.shop_table {
+
+                    @media(max-width: 479px) {
+                        margin: 0 0 0 -20px;
+                    }
+
+                    thead tr th.product-name {
+                        padding-left: 30px;
+                    }
+                    tbody tr td {
+                        &.product-name {
+                            padding-left: 30px;
+                            font-size: 1.25rem;
+                            color: $color8;
+                            .product-quantity {
+                                font-weight: 400;
+                                color: $color4;
+                            }
+                        }
+                    }
+                    tfoot tr {
+                        th {
+                            padding-left: 30px;
+                            text-align: left;
+                            border-top: 0;
+                            font-weight: 400;
+                            color: $color8;
+                        }
+                        th, td {
+                            border-top: 1px solid #f7f7f7;
+                        }
+                        td {
+                            padding: 9px 0;
+                            ul#shipping_method li label {
+                                font-size: 0.875rem;
+                                font-weight: 400;
+                                line-height: 120%;
+                                margin: 0 0 20px 0;
+                            }
+                            .woocommerce-Price-amount {
+                                font-size: 1.125rem;
+                                font-weight: 900;
+                                color: $color11;
+                                line-height: 28px;
+                            }
+                            small.shipped_via {
+                                display: block;
+                            }
+                        }
+                        &.order-total {
+                            td {
+                                .woocommerce-Price-amount {
+                                    font-size: 1.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
 }
 
 body .select2-dropdown {
@@ -729,4 +915,309 @@ body .select2-dropdown {
   border-radius: 0;
   ul li:before {
     display: none; }
+}
+
+.contact_form {
+    &-container {
+        @extend %flex;
+        margin-top: 60px;
+        
+        @media(max-width: 992px) {
+            display: block;
+        }
+    }
+
+    &-left {
+        width: 35%;
+        
+        #mapcanvas {
+            min-height: 450px;
+            width: calc(100% + 155px);
+            border-radius: 30px;
+            background-color: $color1;
+        }
+        
+        @media(max-width: 992px) {
+            width: 100%;
+            
+            #mapcanvas {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    }
+    &-right {
+        width: 65%;
+        background-color: $color3;
+        padding: 40px 40px 40px 200px;
+        border-radius: 30px;
+        
+        @media(max-width: 992px) {
+            width: 100%;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            line-height: 120%;
+            margin: 0 0 8px;
+            + p {
+                margin: 0 0 40px;
+            }
+        }
+
+        .contact-form-row {
+            margin-bottom: 16px;
+        }
+
+        input, textarea {
+            display: block;
+            width: 100%;
+            height: 52px;
+            max-width: 100%;
+            margin: 0;
+            border: 1px solid $color14;
+            border-radius: unset;
+            padding: 10px 20px;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: normal;
+            outline: 0;
+            border-radius: 26px;
+            transition: 0.3s;
+            background: $color1;
+        }
+
+        textarea {
+            height: 120px;
+            min-height: 120px;
+            resize: none;
+        }
+
+        span.wpcf7-not-valid-tip {
+            margin-top: 8px;
+            margin-left: 22px;
+            font-size: 0.875rem;
+            color: #ff5722;
+        }
+
+        div.wpcf7-response-output {
+            padding: 10px 20px;
+            font-size: 0.875rem;
+            border-radius: 30px;
+        }
+
+        .button__wrapper {
+            display: inline-block;
+            position: relative;
+            text-align: center;
+
+            .wpcf7-submit {
+                display: block;
+                margin: 0;
+                border: 0;
+                border-radius: 30px;
+                padding: 12px 25px;
+                font-size: 1.125rem;
+                font-weight: 900;
+                line-height: 1.5;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+                background-color: $color7;
+                color: $color1;
+
+                &:hover, &:focus {
+                    ~ svg {
+                        stroke: $color1;
+                        animation-play-state: running;
+                    }
+                }
+
+                &[disabled] {
+                    pointer-events: none;
+                    color: $color1;
+                    padding: 12px 25px;
+                    cursor: not-allowed;
+                }
+            }
+            .ajax-loader {
+                display: none !important;
+            }
+            svg {
+                @include position(absolute, 0 null null 0);
+                @include size(100%);
+                pointer-events: none;
+                animation: dashed_border_running 20s linear infinite both;
+                animation-play-state: paused;
+                stroke-width: 2;
+                stroke-dasharray: 9, 5;
+                stroke-dashoffset: 0;
+                stroke-linecap: round;
+                fill: none;
+                transition: 0.3s;
+                stroke: transparent;
+            }
+        }
+
+    }
+
+
+}
+
+.o_i_d {
+    &-container {
+        @extend %flex--start__vertical;
+        padding: 0 60px;
+
+        @media(max-width: 992px) {
+            display: block;
+            padding: 0 15px;
+        }
+    }
+    &-left, &-right {
+        width: 50%;
+        padding: 0 16px 0 0;
+        
+        @media(max-width: 992px) {
+            width: 100%;
+            padding: 0;
+            max-width: 60ch;
+            margin: 0 auto;
+        }
+    }
+    &-left {
+        .post-thumbnail {
+            position: relative;
+            @include p_el(before, 100%, 100%) {
+                @include position(absolute, -40px null null -40px);
+                background-color: $color1;
+                border: 2px dashed $color5;
+                border-radius: 30px;
+                z-index: 0;
+            }
+            img {
+                position: relative;
+                z-index: 1;
+                @include size(100%, auto);
+                border-radius: 30px;
+                border: 1px solid $color7;
+            }
+            @media(max-width: 767px) {
+                margin-left: 30px;
+            }
+        }
+    }
+    &-right {
+        padding: 0 0 0 24px;
+        @media(max-width: 992px) {
+            padding: 24px 0 0;
+        }
+
+        .h {
+            font-size: 2.5rem;
+            line-height: 120%;
+            margin: 0 0 24px;
+
+            span.h--2row__orange {
+                white-space: nowrap;
+                background-image: linear-gradient(to top, rgba($color7, 0.5), rgba($color7, 0.5));
+            }
+
+            @media(max-width: 1200px) {
+                font-size: 2.25rem;
+            }
+            @media(max-width: 767px) {
+                font-size: 2rem;
+            }
+        }
+
+    }
+}
+
+.contacts-container {
+    ul {
+        @extend %flex;
+        list-style: none;
+        padding: 0;
+        
+        @media(max-width: 767px) {
+            display: block;
+        }
+
+        li {
+            position: relative;
+            width: 32.33%;
+            padding: 100px 30px 30px 30px;
+            border-radius: 30px;
+            border: 2px dashed;
+            text-align: center;
+            transition: transform .3s ease;
+            color: $color2;
+            
+            @media(max-width: 767px) {
+                width: 100%;
+                margin-bottom: 16px;
+            }
+
+            @include p_el(before, null, null) {
+                @include position(absolute, 30px 0 null 0);
+                margin: auto;
+            }
+
+            &:hover {
+                transform: translateY(-16px);
+            }            
+
+            strong {
+                display: block;
+                font-size: 1.5rem;
+                font-weight: 900;
+                color: $color8;
+                margin-bottom: 8px;
+            }
+
+            a {
+                color: $color2;
+                border-bottom: 1px dashed transparent;
+                transition: border .3s ease;
+                &:hover, &:focus {
+                    color: $color2;
+                    border-color: $color2;
+                }
+            }
+
+            br {
+                display: none;
+            }
+
+            &:nth-of-type(1) {
+                border-color: $color10;
+                &:before {
+                    background-image: url(./img/icons/contacts_icon_01.png);
+                    background-size: 42px 46px;
+                    @include size(42px, 46px);
+                }
+            }
+            &:nth-of-type(2) {
+                border-color: $color5;
+                
+                &:before {
+                    background-image: url(./img/icons/contacts_icon_02.png);
+                    background-size: 59px 45px;
+                    @include size(59px, 45px);
+                }
+            }
+            &:nth-of-type(3) {
+                border-color: $color6;
+                
+                &:before {
+                    background-image: url(./img/icons/contacts_icon_03.png);
+                    background-size: 77px 43px;
+                    @include size(77px, 43px);
+                }
+            }
+        }
+    }
 }

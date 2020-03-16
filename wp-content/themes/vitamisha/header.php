@@ -41,7 +41,6 @@
 		</div>
 		<div class="header--buttons">
 			<ul>
-				<li><a href="/my-account/" class="header--button header--buttons__account"><i></i></a></li>
 				<?php if(!is_page( 'cart' ) && !is_cart() && !is_page( 'checkout' ) && !is_checkout()) { ?>
 				<li><a href="#" class="header--button header--buttons__cart"><i></i> <?php echo WC()->cart->get_cart_contents_count()>0 ? sprintf ( _n( '<span>%d</span>', '<span>%d</span>', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) : ''; ?></a></li>
 				<?php } ?>

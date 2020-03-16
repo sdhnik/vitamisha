@@ -1,0 +1,135 @@
+# Translation of Plugins - Contact Form 7 &#8211; reCaptcha v2 - Stable (latest release) in Russian
+# This file is distributed under the same license as the Plugins - Contact Form 7 &#8211; reCaptcha v2 - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2019-02-06 18:14:46+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: ru\n"
+"Project-Id-Version: Plugins - Contact Form 7 &#8211; reCaptcha v2 - Stable (latest release)\n"
+
+#. translators: %s is a link to the Contact Form 7 blog post regarding
+#. reCaptcha v3
+#: recaptcha-v2.php:338 recaptcha-v2.php:371 recaptcha-v2.php:382
+msgid "reCaptcha"
+msgstr "reCaptcha"
+
+#: wpcf7-recaptcha.php:168
+msgid "Click the image above and like us on Facebook! Facebook is where you will receive the latest news on both this plugin and all future IQComputing plugins."
+msgstr "Нажмите на изображение выше и поставьте нам \"лайк\" на Facebook. Также на Facebook вы можете узнать последние новости об этом плагине и всех будущих плагинах IQComputing."
+
+#: wpcf7-recaptcha.php:143
+msgid "Select the version of reCaptcha you would like to use. You will still need to use the %s shortcode tag in your Contact Form 7 forms."
+msgstr "Выберите версию reCaptcha для использования. Вам всё еще потребуется использовать шорткод %s в формах Contact Form 7."
+
+#. translators: Image alternative tag.
+#: wpcf7-recaptcha.php:165
+msgid "Like IQComputing on Facebook mascot"
+msgstr "Нравится Facebook маскот IQComputing"
+
+#: recaptcha-v2.php:71
+msgid "Please verify that you are not a robot."
+msgstr "Пожалуйста, докажите что вы не робот."
+
+#: wpcf7-recaptcha.php:156
+msgid "Submit"
+msgstr "Отправить"
+
+#: wpcf7-recaptcha.php:153
+msgid "reCaptcha Version 2"
+msgstr "reCaptcha версия 2"
+
+#: wpcf7-recaptcha.php:152
+msgid "Default Usage"
+msgstr "Использование по умолчанию"
+
+#: wpcf7-recaptcha.php:137
+msgid "Your reCaptcha settings have been updated."
+msgstr "Настройки reCaptcha обновлены."
+
+#: wpcf7-recaptcha.php:116
+msgid "This version of Contact Form 7 already uses reCaptcha version 2, you do not need 'Contact Form 7 - reCaptcha v2' installed at this time."
+msgstr "Эта версия Contact Form 7 уже использует reCaptcha 2, вам не нужен плагин  'Contact Form 7 - reCaptcha v2'."
+
+#: wpcf7-recaptcha.php:80 wpcf7-recaptcha.php:81
+msgid "reCaptcha Version"
+msgstr "Версия reCaptcha "
+
+#. translators: Insert shortcode tag into the page content
+#: recaptcha-v2.php:454
+msgid "Insert Tag"
+msgstr "Вставить тег"
+
+#. translators: HTML Attribute class for reCaptcha box
+#: recaptcha-v2.php:438
+msgid "Class attribute"
+msgstr "Атрибут class"
+
+#. translators: HTML Attribute ID for reCaptcha box
+#: recaptcha-v2.php:430
+msgid "Id attribute"
+msgstr "Id атрибуты"
+
+#. translators: ReCaptcha theme: dark
+#: recaptcha-v2.php:422
+msgid "Dark"
+msgstr "Тёмная"
+
+#. translators: ReCaptcha theme: light
+#: recaptcha-v2.php:420
+msgid "Light"
+msgstr "Светлая"
+
+#. translators: ReCaptcha theme (light or dark)
+#. translators: Screen reader text, reCaptcha theme (light or dark)
+#: recaptcha-v2.php:412 recaptcha-v2.php:418
+msgid "Theme"
+msgstr "Тема"
+
+#. translators: ReCaptcha size: compact
+#: recaptcha-v2.php:404
+msgid "Compact"
+msgstr "Компактный"
+
+#. translators: ReCaptcha size: normal
+#: recaptcha-v2.php:402
+msgid "Normal"
+msgstr "Обычный"
+
+#. translators: ReCaptcha size (normal or compact)
+#. translators: Screen reader text, reCaptcha size (normal or compact)
+#: recaptcha-v2.php:394 recaptcha-v2.php:400
+msgid "Size"
+msgstr "Размер"
+
+#. translators: %s is a link to the Contact Form 7 blog post regarding
+#. reCaptcha v3
+#: recaptcha-v2.php:381
+msgid "Generate a form-tag for a reCaptcha widget. For more details, see %s."
+msgstr "Создать тег формы для виджета reCAPTCHA. Для справки посмотрите %s."
+
+#. translators: %s is a link to the Contact Form 7 blog post regarding
+#. reCaptcha v3
+#: recaptcha-v2.php:371
+msgid "To use reCaptcha, first you need to install an API key pair. For more details, see %s."
+msgstr "Для использования reCAPTCHA вам потребуется пара ключей API. Для справки посмотрите %s. "
+
+#. Author URI of the plugin
+msgid "http://www.iqcomputing.com/"
+msgstr "http://www.iqcomputing.com/"
+
+#. Author of the plugin
+msgid "IQComputing"
+msgstr "IQComputing"
+
+#. Description of the plugin
+msgid "ReCaptcha v2 Fix for Contact Form 7 5.1 and later."
+msgstr "ReCaptcha v2 исправление для Contact Form 7 5.1 и более поздних версий."
+
+#. Plugin Name of the plugin
+#: wpcf7-recaptcha.php:115 wpcf7-recaptcha.php:132
+msgid "Contact Form 7 - reCaptcha v2"
+msgstr "Contact Form 7 - reCaptcha v2"

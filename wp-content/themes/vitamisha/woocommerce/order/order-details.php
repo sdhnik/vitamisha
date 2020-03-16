@@ -38,6 +38,13 @@ if ( $show_downloads ) {
 		)
 	);
 }
+
+if ( $show_customer_details ) {
+	wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
+}
+
+echo '</div><div class="woocommerce-order-info">';
+
 ?>
 <section class="woocommerce-order-details">
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
@@ -100,7 +107,3 @@ if ( $show_downloads ) {
 	<?php do_action( 'woocommerce_order_details_after_order_table', $order ); ?>
 </section>
 
-<?php
-if ( $show_customer_details ) {
-	wc_get_template( 'order/order-details-customer.php', array( 'order' => $order ) );
-}

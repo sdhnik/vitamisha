@@ -10,8 +10,13 @@
 get_header();
 ?>
 
-	<section id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div class="blog">
+	<div class="blog--header">
+		<h1 class="blog--header-title page-title"><?php the_archive_title(); ?></h1>
+		<?php woocommerce_breadcrumb(); ?>
+	</div>
+	<div class="blog--content">
+		<div class="container">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -47,8 +52,9 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+</div>
+</div>
+</div>
 
 <?php
 get_sidebar();

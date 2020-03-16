@@ -22,7 +22,7 @@ get_header();
 	</div>
 	<div class="blog--content">
 		<div class="container">
-
+			<div class="blog--single">
 		<?php
 		while ( have_posts() ) :
 			the_post();
@@ -38,7 +38,7 @@ get_header();
 
 		endwhile; // End of the loop.
 		?>
-
+			</div>
 		</div>
 	</div>
 </div>

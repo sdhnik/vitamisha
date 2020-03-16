@@ -1,0 +1,87 @@
+0000.130 (R) [notice] Поиск архива db: Имя файла: backup_2020-03-16-2031_Vitamisha_9dc1b0235a48-db.gz
+0000.131 (R) [notice] Архив должен быть следующего размера: 166.3 KB: О'кей
+0000.139 (R) [notice] Поиск архива plugins: Имя файла: backup_2020-03-16-2031_Vitamisha_9dc1b0235a48-plugins.zip
+0000.141 (R) [notice] Архив должен быть следующего размера: 16552.1 KB: О'кей
+0000.145 (R) [notice] Поиск архива uploads: Имя файла: backup_2020-03-16-2031_Vitamisha_9dc1b0235a48-uploads.zip
+0000.147 (R) [notice] Архив должен быть следующего размера: 9575 KB: О'кей
+0000.151 (R) [notice] Поиск архива others: Имя файла: backup_2020-03-16-2031_Vitamisha_9dc1b0235a48-others.zip
+0000.152 (R) [notice] Архив должен быть следующего размера: 1533 KB: О'кей
+0000.157 (R) [notice] Will not delete any archives after unpacking them, because there was no cloud storage for this backup
+0000.165 (R) [notice] Распаковка резервной копии (backup_2020-03-16-2031_Vitamisha_9dc1b0235a48-db.gz, 0.2 Mb)
+0000.178 (R) [notice] Восстановление базы данных (на больших сайтах это может занять много времени и привести к таймауту (если Ваш сервер сконфигурирован с ограничением ресурсов) - в этом случае придется воспользоватся альтернативным методом, например, прямым импортом файла резервной копии в phpMyAdmin)...
+0000.451 (R) [notice] Включение режима обслуживания&#8230;
+0000.461 (R) [notice] Backup of: http://vitamisha.local
+0000.461 (R) [notice] URL данных: http://vitamisha.local/wp-content
+0000.462 (R) [notice] Uploads URL: http://vitamisha.local/wp-content/uploads
+0000.462 (R) [notice] Старый префикс таблиц: wp_
+0000.462 (R) [notice] Описание сайта: multisite = 0
+0000.462 (R) [notice] Skipped tables: wc_ukr_shipping_np_areas, wc_ukr_shipping_np_cities, wc_ukr_shipping_np_warehouses
+0000.464 (R) [notice] New table prefix: wp_
+0000.524 (R) [notice] Processing table (InnoDB):  wp_options
+0000.962 (R) [notice] Processing table (InnoDB):  wp_users
+0001.074 (R) [notice] Processing table (InnoDB):  wp_usermeta
+0001.190 (R) [notice] Processing table (InnoDB):  wp_actionscheduler_actions
+0001.457 (R) [notice] Processing table (InnoDB):  wp_actionscheduler_claims
+0001.552 (R) [notice] Processing table (InnoDB):  wp_actionscheduler_groups
+0001.668 (R) [notice] Processing table (InnoDB):  wp_actionscheduler_logs
+0001.872 (R) [notice] Processing table (InnoDB):  wp_commentmeta
+0001.982 (R) [notice] Processing table (InnoDB):  wp_comments
+0002.126 (R) [notice] Processing table (InnoDB):  wp_links
+0002.211 (R) [notice] Processing table (InnoDB):  wp_postmeta
+0002.352 (R) [notice] Processing table (InnoDB):  wp_posts
+0002.823 (R) [notice] Processing table (InnoDB):  wp_term_relationships
+0002.921 (R) [notice] Processing table (InnoDB):  wp_term_taxonomy
+0003.040 (R) [notice] Processing table (InnoDB):  wp_termmeta
+0003.125 (R) [notice] Database queries processed: 50 in 2.94 seconds
+0003.126 (R) [notice] Processing table (InnoDB):  wp_terms
+0003.242 (R) [notice] Processing table (InnoDB):  wp_wc_category_lookup
+0003.355 (R) [notice] Processing table (InnoDB):  wp_wc_product_meta_lookup
+0003.479 (R) [notice] Processing table (InnoDB):  wp_wc_tax_rate_classes
+0003.583 (R) [notice] Processing table (InnoDB):  wp_woocommerce_order_itemmeta
+0003.702 (R) [notice] Processing table (InnoDB):  wp_woocommerce_payment_tokenmeta
+0003.966 (R) [notice] Processing table (InnoDB):  wp_wc_admin_note_actions
+0004.164 (R) [notice] Processing table (InnoDB):  wp_wc_admin_notes
+0004.302 (R) [notice] Processing table (InnoDB):  wp_wc_customer_lookup
+0004.452 (R) [notice] Processing table (InnoDB):  wp_wc_download_log
+0004.579 (R) [notice] Processing table (InnoDB):  wp_wc_order_coupon_lookup
+0004.704 (R) [notice] Processing table (InnoDB):  wp_wc_order_product_lookup
+0004.870 (R) [notice] Processing table (InnoDB):  wp_wc_order_stats
+0005.014 (R) [notice] Processing table (InnoDB):  wp_wc_order_tax_lookup
+0005.118 (R) [notice] Processing table (InnoDB):  wp_wc_webhooks
+0005.229 (R) [notice] Processing table (InnoDB):  wp_woocommerce_api_keys
+0005.345 (R) [notice] Processing table (InnoDB):  wp_woocommerce_attribute_taxonomies
+0005.455 (R) [notice] Processing table (InnoDB):  wp_woocommerce_downloadable_product_permissions
+0005.587 (R) [notice] Processing table (InnoDB):  wp_woocommerce_log
+0005.694 (R) [notice] Processing table (InnoDB):  wp_woocommerce_order_items
+0005.759 (R) [notice] Database queries processed: 100 in 5.58 seconds
+0005.824 (R) [notice] Processing table (InnoDB):  wp_woocommerce_payment_tokens
+0005.986 (R) [notice] Processing table (InnoDB):  wp_woocommerce_sessions
+0006.163 (R) [notice] Processing table (InnoDB):  wp_woocommerce_shipping_zone_locations
+0006.280 (R) [notice] Processing table (InnoDB):  wp_woocommerce_shipping_zone_methods
+0006.396 (R) [notice] Processing table (InnoDB):  wp_woocommerce_shipping_zones
+0006.529 (R) [notice] Processing table (InnoDB):  wp_woocommerce_tax_rate_locations
+0006.642 (R) [notice] Processing table (InnoDB):  wp_woocommerce_tax_rates
+0006.771 (R) [notice] Отключение режима обслуживания&#8230;
+0006.772 (R) [notice] Finished: lines processed: 121 in 6.59 seconds
+0006.773 (R) [notice] Очистка мусора...
+0006.796 (R) [notice] Распаковка резервной копии (backup_2020-03-16-2031_Vitamisha_9dc1b0235a48-plugins.zip, 16.2 MB)
+0014.949 (R) [notice] Unzip progress: 1002 out of 5068 files (1.8 MB, plugins/cyrlitera/libs/factory/forms/controls/dropdown-and-colors.php)
+0030.693 (R) [notice] Unzip progress: 1595 out of 5068 files (21.7 MB, plugins/updraftplus/templates/wp-admin/settings/tab-addons.php)
+0046.341 (R) [notice] Unzip progress: 2294 out of 5068 files (25.2 MB, plugins/updraftplus/vendor/rackspace/php-opencloud/lib/OpenCloud/Common/ArrayAccess.php)
+0062.374 (R) [notice] Unzip progress: 2909 out of 5068 files (36.2 MB, plugins/woocommerce/includes/admin/helper/class-wc-helper-api.php)
+0078.343 (R) [notice] Unzip progress: 3169 out of 5068 files (38.7 MB, plugins/woocommerce/includes/emails/class-wc-email-new-order.php)
+0094.345 (R) [notice] Unzip progress: 3811 out of 5068 files (46.1 MB, plugins/woocommerce/packages/woocommerce-blocks/assets/js/base/hooks/use-previous.js)
+0110.349 (R) [notice] Unzip progress: 4489 out of 5068 files (52.8 MB, plugins/woocommerce/templates/emails/plain/customer-reset-password.php)
+0122.899 (R) [notice] Unzip progress: 5068 out of 5068 files (58.1 MB, plugins/wpcf7-recaptcha/wpcf7-recaptcha.php)
+0122.905 (R) [notice] Удаление устаревших данных...
+0124.667 (R) [notice] Перемещение распакованной резервной копии на место...
+0126.213 (R) [notice] Очистка мусора...
+0126.234 (R) [notice] Распаковка резервной копии (backup_2020-03-16-2031_Vitamisha_9dc1b0235a48-uploads.zip, 9.4 MB)
+0126.670 (R) [notice] Unzip progress: 82 out of 82 files (9.3 MB, uploads/woocommerce_uploads/index.html)
+0126.673 (R) [notice] Удаление устаревших данных...
+0126.708 (R) [notice] Перемещение распакованной резервной копии на место...
+0126.737 (R) [notice] Очистка мусора...
+0126.755 (R) [notice] Распаковка резервной копии (backup_2020-03-16-2031_Vitamisha_9dc1b0235a48-others.zip, 1.5 MB)
+0128.877 (R) [notice] Unzip progress: 191 out of 191 files (6.1 MB, languages/themes/twentytwenty-ru_RU.po)
+0128.884 (R) [notice] Очистка мусора...
+0128.945 (R) [notice] Restore successful!

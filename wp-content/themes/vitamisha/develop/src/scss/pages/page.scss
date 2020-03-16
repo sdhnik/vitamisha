@@ -487,7 +487,7 @@
 
                 .form-row {
                     margin-bottom: 15px;
-                    
+
                     &.form-row-first, &.form-row-last {
                         @media(max-width: 479px) {
                             float: none;
@@ -741,15 +741,15 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            
+
             @media(max-width: 992px) {
                 display: block;
             }
-            
+
             .woocommerce-order-thanks, .woocommerce-order-info {
                 width: 50%;
                 padding: 40px 50px;
-                
+
                 @media(max-width: 992px) {
                     width: 100%;
                     padding: 20px 15px;
@@ -764,16 +764,16 @@
             .woocommerce-order-thanks {
                 background-color: $color3;
                 border-radius: 30px;
-                
+
                 .woocommerce-thankyou-order-details {
                     list-style: none;
                     padding: 0;
                     margin: 0 0 70px;
-                    
+
                     @media(max-width: 479px) {
                         margin: 0;
                     }
-                    
+
                     li {
                         position: relative;
                         padding-right: 60%;
@@ -782,7 +782,7 @@
                             @include position(absolute, null null null 45%);
                         }
                         &.woocommerce-order-overview__payment-method {
-                            margin-bottom: 45px;                            
+                            margin-bottom: 45px;
                         }
                         p {
                             width: 55%;
@@ -921,7 +921,7 @@ body .select2-dropdown {
     &-container {
         @extend %flex;
         margin-top: 60px;
-        
+
         @media(max-width: 992px) {
             display: block;
         }
@@ -929,17 +929,17 @@ body .select2-dropdown {
 
     &-left {
         width: 35%;
-        
+
         #mapcanvas {
             min-height: 450px;
             width: calc(100% + 155px);
             border-radius: 30px;
             background-color: $color1;
         }
-        
+
         @media(max-width: 992px) {
             width: 100%;
-            
+
             #mapcanvas {
                 width: 100%;
                 margin-bottom: 30px;
@@ -951,7 +951,7 @@ body .select2-dropdown {
         background-color: $color3;
         padding: 40px 40px 40px 200px;
         border-radius: 30px;
-        
+
         @media(max-width: 992px) {
             width: 100%;
             padding: 20px;
@@ -1079,7 +1079,7 @@ body .select2-dropdown {
     &-left, &-right {
         width: 50%;
         padding: 0 16px 0 0;
-        
+
         @media(max-width: 992px) {
             width: 100%;
             padding: 0;
@@ -1141,7 +1141,7 @@ body .select2-dropdown {
         @extend %flex;
         list-style: none;
         padding: 0;
-        
+
         @media(max-width: 767px) {
             display: block;
         }
@@ -1155,7 +1155,7 @@ body .select2-dropdown {
             text-align: center;
             transition: transform .3s ease;
             color: $color2;
-            
+
             @media(max-width: 767px) {
                 width: 100%;
                 margin-bottom: 16px;
@@ -1168,7 +1168,7 @@ body .select2-dropdown {
 
             &:hover {
                 transform: translateY(-16px);
-            }            
+            }
 
             strong {
                 display: block;
@@ -1202,7 +1202,7 @@ body .select2-dropdown {
             }
             &:nth-of-type(2) {
                 border-color: $color5;
-                
+
                 &:before {
                     background-image: url(./img/icons/contacts_icon_02.png);
                     background-size: 59px 45px;
@@ -1211,7 +1211,7 @@ body .select2-dropdown {
             }
             &:nth-of-type(3) {
                 border-color: $color6;
-                
+
                 &:before {
                     background-image: url(./img/icons/contacts_icon_03.png);
                     background-size: 77px 43px;

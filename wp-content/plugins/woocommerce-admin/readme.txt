@@ -4,7 +4,7 @@ Tags: ecommerce, e-commerce, store, sales, reports, analytics, dashboard, activi
 Requires at least: 5.3.0
 Tested up to: 5.3.2
 Requires PHP: 5.6.20
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv3
 License URI: https://github.com/woocommerce/woocommerce-admin/blob/master/license.txt
 
@@ -71,6 +71,18 @@ Release and roadmap notes are available on the [WooCommerce Developers Blog](htt
 
 == Changelog ==
 
+= 1.0.1 2020-03-12 =
+
+- Fix: Add Report Extension Example: Add default props to ReportFilters
+- Fix: Product report sorting by SKU when some products don't have SKUs
+- Dev: Add Changelog script
+- Fix: type warning on install timestamp in PHP 7.4
+- Fix: PHP error when WooCommerce core is Network Active on Multisites.
+- Fix: missing database table errors on WooCommerce upgrade.
+- Fix: undefined const WC_ADMIN_VERSION_NUMBER when WP < 5.3
+- Dev: Fix failing tests after WC core merge.
+- Dev: Bump WooCommerce tested up to tag
+
 = 1.0.0 2020-03-5 =
 
 - Fix: Customers Report: fix missing report param in search #3778
@@ -84,6 +96,17 @@ Release and roadmap notes are available on the [WooCommerce Developers Blog](htt
 - Fix: Taxes Report search bug and adds initial documentation. #3816
 - Fix: Activity Panels: Remove W Panel #3827
 - Fix: Tracking on migrated options #3828
+
+= 0.26.1 2020-02-26 =
+
+- Fix: Remove free text Search option when no query exists #3755
+- Fix: StoreAlert: Fix typo in API description #3757 👏 @akirk
+- Fix: WP Coding Standards PR Regressions #3760
+- Fix: OBW: sideloading image test error #3762
+- Fix: coding standards violations #3763
+- Fix: Product titles include encoded entities #3765
+- Fix: Add deactivation hook to Package.php #3770
+- Fix: Add active version functions #3772
 
 = 0.26.0 2020-02-21 =
 

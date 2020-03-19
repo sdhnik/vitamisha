@@ -17,6 +17,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<link rel="apple-touch-icon" sizes="180x180" href="<?= get_template_directory_uri() ?>/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="<?= get_template_directory_uri() ?>/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="<?= get_template_directory_uri() ?>/favicon-16x16.png">
+	<link rel="manifest" href="<?= get_template_directory_uri() ?>/site.webmanifest">
+	<link rel="mask-icon" href="<?= get_template_directory_uri() ?>/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="apple-mobile-web-app-title" content="Витамиша">
+	<meta name="application-name" content="Витамиша">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
 	<?php wp_head(); ?>
 
 	<link href="https://fonts.googleapis.com/css?family=Nunito:400,600,900&display=swap&subset=cyrillic" rel="stylesheet">
@@ -74,12 +84,11 @@
 			<div class="header--mobile__links">
 				<?php build_menu('header'); ?>
 
+				<?php if(!is_page( 'cart' ) && !is_cart() && !is_page( 'checkout' ) && !is_checkout()) { ?>
 				<ul class="header--mobile__buttons">
-					<li><a href="/my-account/" class="header--button header--buttons__account"><i></i></a></li>
-					<?php if(!is_page( 'cart' ) && !is_cart() && !is_page( 'checkout' ) && !is_checkout()) { ?>
 					<li><a id="cart-button" href="#" class="header--button header--buttons__cart"><i></i> <?php echo WC()->cart->get_cart_contents_count()>0 ? sprintf ( _n( '<span>%d</span>', '<span>%d</span>', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ) : ''; ?></a></li>
-					<?php } ?>
 				</ul>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

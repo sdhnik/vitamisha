@@ -187,6 +187,7 @@
 				display: inline-block;
 				position: relative;
 				@include size(20px);
+				min-width: 20px;
 				vertical-align: top;
 				cursor: pointer;
 				pointer-events: none;
@@ -196,6 +197,7 @@
 					margin: auto;
 					background: url(./img/icons/cart.svg) center center no-repeat;
 					background-size: 20px 20px;
+					z-index: 2;
 				}
 			}
 			span {

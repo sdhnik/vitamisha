@@ -165,6 +165,7 @@
 					padding: 48px 24px;
 					height: 100%;
 					border-radius: 30px;
+					text-align: center;
 
 					img {
 						display: block;
@@ -228,6 +229,24 @@
 						color: $color11;
 					}
 
+	                ins {
+	                	display: inline-block;
+	                    text-decoration: none;
+	                    .woocommerce-Price-amount {
+	                        color: $color11;
+	                    }
+	                }
+
+	                del {
+	                	display: inline-block;
+	                    color: $color4;
+	                    margin-right: 8px;
+	                    .woocommerce-Price-amount {
+	                    	font-size: 1.25rem;
+	                        color: $color4;
+	                    }
+	                }
+
 					&:hover, &:focus {
 						svg {
 							animation-play-state: running;
@@ -243,10 +262,6 @@
 		background-color: $color3;
 		margin: 100px 0 -160px;
 		padding: 125px 0 160px;
-
-		@media(max-width: 767px) {
-			padding: 125px 0 60px;
-		}
 
 		@include p_el(before, 100%, 100px) {
 			@include position(absolute, -100px 0 null 0);

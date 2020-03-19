@@ -29,7 +29,7 @@
 					<div class="contact_form-right">
 						<h2 class="h h--pink"><span>Контактная форма</span></h2>
 						<p>Если у вас возникли вопросы, напишите нам!</p>
-						<?php echo do_shortcode( '[contact-form-7 id="239" title="Contact form"]' ); ?>
+						<?php echo do_shortcode( '[contact-form-7 id="10" title="Contact form"]' ); ?>
 					</div>
 				</div>
 
@@ -50,7 +50,7 @@
 					<div class="contact_form-right">
 						<h2 class="h h--pink"><span>Контактная форма</span></h2>
 						<p>Если у вас возникли вопросы, напишите нам!</p>
-						<?php echo do_shortcode( '[contact-form-7 id="239" title="Contact form"]' ); ?>
+						<?php echo do_shortcode( '[contact-form-7 id="10" title="Contact form"]' ); ?>
 					</div>
 				</div>
 			<?php else: ?>

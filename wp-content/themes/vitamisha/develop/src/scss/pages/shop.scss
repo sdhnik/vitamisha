@@ -140,15 +140,27 @@
                 }
 
                 ins {
+                    text-decoration: none;
                     .woocommerce-Price-amount {
                         color: $color11;
                     }
                 }
 
                 del {
+                    color: $color4;
                     .woocommerce-Price-amount {
                         color: $color4;
                     }
+                }
+
+                span.onsale {
+                    border-radius: 30px;
+                    padding: 10px 15px;
+                    min-height: 0;
+                    line-height: 120%;
+                    top: 20px;
+                    right: 10px;
+                    z-index: 1;
                 }
             }
 
@@ -227,6 +239,108 @@
             }
         }
     }
+
+    nav.woocommerce-pagination {
+        margin-top: 6px;
+        padding-bottom: 30px;
+        text-align: left;
+        list-style: none;
+        ul {
+            display: block;
+            white-space: nowrap;
+            clear: both;
+            border: 0;
+            border-right: 0;
+            margin: 0;
+            text-align: center;
+            font-size: 0;
+
+            li {
+                display: inline-block;
+                vertical-align: top;
+                padding: 0;
+                border: 0;
+                margin: 0 5px;
+                float: none;
+
+                span {
+                    &.current {
+                        background: transparent;
+                        &:after {
+                            background-color: $color7;
+                        }
+                    }
+                }
+
+                span, a {
+                    display: block;
+                    position: relative;
+                    z-index: 1;
+                    width: 30px;
+                    height: 34px;
+                    border: none;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 34px;
+                    border-radius: 0;
+                    padding: 0;
+                    text-align: center;
+                    box-sizing: content-box;
+                    transition: 0.4s;
+
+                    &:after {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 3px;
+                        border-radius: 2px;
+                        background: $color3;
+                        transition: 0.4s;
+                    }
+
+                    &:hover, &:focus, &:active {
+                        background: transparent;
+                        &:after {
+                            background-color: $color7;
+                        }
+                    }
+
+                    &.next, &.prev {
+                        width: 34px;
+                        border-radius: 50%;
+                        background-color: $color7;
+                        color: $color1;
+
+                        &:after {
+                            content: unset;
+                        }
+
+                        &:hover, &:focus {
+                            background-color: $color8;
+                        }
+                    }
+                }
+
+                &:first-child {
+                    margin-left: 0;
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                &:before {
+                    display: none;
+                }
+                a.current, span {
+                    cursor: default;
+                }
+            }
+        }
+    }
+
+
 
     &--products {
         .woocommerce-error, .woocommerce-info, .woocommerce-message {
@@ -1082,6 +1196,13 @@
                 .woocommerce-Tabs-panel--description {
                     b, strong {
                         color: $color11;
+                    }
+                    a {
+                        font-weight: 900;
+                        color: $color5;
+                        &:hover, &:focus {
+                            color: $color7;
+                        }
                     }
                     ul {
                         list-style: none;
